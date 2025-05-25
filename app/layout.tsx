@@ -3,14 +3,74 @@ import { Inter, Nunito_Sans } from "next/font/google"
 import type React from "react"
 import Script from "next/script"
 import { Analytics } from "@vercel/analytics/react"
-import { Suspense } from "react" // Add this import
+import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "DYNAMIC",
-  description: "Dynamic Growth Partners and Fund",
+  title: {
+    default: "Dynamic - Venture Capital & Growth Partners for Technical Founders",
+    template: "%s | Dynamic",
+  },
+  description:
+    "Dynamic provides venture capital funding and growth partnership for technical founders building developer tools, infrastructure, and B2B SaaS. Led by Dakota McKenzie.",
+  keywords: [
+    "venture capital",
+    "technical founders",
+    "developer tools",
+    "B2B SaaS",
+    "startup funding",
+    "growth partners",
+    "GTM expertise",
+    "Dynamic Fund",
+    "Dakota McKenzie",
+  ],
+  authors: [{ name: "Dynamic" }],
+  creator: "Dynamic",
+  publisher: "Dynamic",
+  metadataBase: new URL("https://dynamic.vc"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://dynamic.vc",
+    siteName: "Dynamic",
+    title: "Dynamic - Venture Capital & Growth Partners for Technical Founders",
+    description:
+      "We provide venture capital funding and growth partnership for technical founders building developer tools, infrastructure, and B2B SaaS.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dynamic - Venture Capital & Growth Partners",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dynamic - Venture Capital & Growth Partners for Technical Founders",
+    description:
+      "We provide venture capital funding and growth partnership for technical founders building developer tools, infrastructure, and B2B SaaS.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
     generator: 'v0.dev'
 }
 
@@ -21,6 +81,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="canonical" href="https://dynamic.vc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#000000" />
+      </head>
       <body className={inter.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
         <Script id="koala-tracking" strategy="afterInteractive">
