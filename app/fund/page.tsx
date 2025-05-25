@@ -33,10 +33,7 @@ export default function Fund() {
         {/* Fund Investments Section */}
         <section className="mb-40">
           <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl font-medium tracking-tight mb-4" style={{ color: "#ABBDBD" }}>
-              Fund Investments to Date
-            </h2>
-            <div className="w-24 h-px bg-gray-800 mx-auto mt-8" />
+            <div className="w-24 h-px bg-gray-800 mx-auto" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16 max-w-5xl mx-auto">
