@@ -183,76 +183,68 @@ export default function Fund() {
                 <span className="text-white font-medium">Segment (Acq)</span>.
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* Personal Equity Section */}
-        <section className="mb-12">
-          {/* Muted divider */}
-          <div className="w-full h-px bg-gray-800 my-12" />
+            {/* Personal Investments Section - Now part of the same section */}
+            <div className="mt-12 w-full max-w-5xl">
+              {/* Personal Investments Heading */}
+              <h2 className="text-lg sm:text-xl font-medium text-center mb-4" style={{ color: "#ABBDBD" }}>
+                Personal Investments
+              </h2>
 
-          <div className="max-w-5xl mx-auto">
-            {/* Personal Equity Heading */}
-            <h2 className="text-lg sm:text-xl font-medium text-center mb-4" style={{ color: "#ABBDBD" }}>
-              Personal Investments
-            </h2>
+              {/* Subtitle */}
+              <p className="text-sm text-gray-400 text-center mb-6">
+                A selection of angel investments made by Dakota prior to launching Dynamic Fund.
+              </p>
 
-            {/* Subtitle */}
-            <p className="text-sm text-gray-400 text-center mb-6">
-              A selection of angel investments made by Dakota prior to launching Dynamic Fund.
-            </p>
-
-            {/* Personal Equity Logo Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {[
-                {
-                  src: "/images/thatch-logo.png",
-                  alt: "Thatch",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
-                  alt: "Clay",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
-                  alt: "Liveblocks",
-                },
-                { src: "/placeholder.svg?height=28&width=56&query=Dock logo", alt: "Dock" },
-                { src: "/placeholder.svg?height=28&width=56&query=Malachyte logo", alt: "Malachyte" },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
-                  alt: "Nango",
-                },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
-                  alt: "Zuplo",
-                },
-                {
-                  src: "/safetycli-logo.svg",
-                  alt: "SafetyCLI",
-                },
-                { src: "/placeholder.svg?height=28&width=56&query=Heyday logo", alt: "Heyday.xyz" },
-                {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-K9xDL7IAgUhXm1YQteFuCI6nCUIWbV.png",
-                  alt: "Dopt",
-                },
-                { src: "/placeholder.svg?height=28&width=56&query=Airplane logo", alt: "Airplane" },
-              ].map((logo, index) => (
-                <div
-                  key={index}
-                  className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
-                >
-                  <div className="relative overflow-hidden rounded-lg">
-                    <Image
-                      src={logo.src || "/placeholder.svg"}
-                      alt={logo.alt}
-                      width={56}
-                      height={28}
-                      className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-                    />
+              {/* Personal Investments Logo Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                {[
+                  {
+                    src: "/images/thatch-logo.png",
+                    alt: "Thatch",
+                  },
+                  {
+                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
+                    alt: "Clay",
+                  },
+                  {
+                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
+                    alt: "Liveblocks",
+                  },
+                  { src: "/images/dock-logo.png", alt: "Dock" },
+                  { src: "/images/malachyte-logo.svg", alt: "Malachyte" },
+                  {
+                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
+                    alt: "Nango",
+                  },
+                  {
+                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
+                    alt: "Zuplo",
+                  },
+                  {
+                    src: "/safetycli-logo.svg",
+                    alt: "SafetyCLI",
+                  },
+                  { src: "/images/heyday-logo.png", alt: "Heyday" },
+                  { src: "/images/mtf-logo.png", alt: "MTF.vc" },
+                  { src: "/placeholder.svg?height=28&width=56&query=Airplane logo", alt: "Airplane" },
+                ].map((logo, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
+                  >
+                    <div className="relative overflow-hidden rounded-lg">
+                      <Image
+                        src={logo.src || "/placeholder.svg"}
+                        alt={logo.alt}
+                        width={56}
+                        height={28}
+                        className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
