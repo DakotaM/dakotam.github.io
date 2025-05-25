@@ -141,7 +141,7 @@ export default function Fund() {
               </div>
               <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
-                  src="/images/sumo-logic-logo.png"
+                  src="/images/sumo-logic-new-logo.png"
                   alt="Sumo Logic"
                   width={50}
                   height={20}
