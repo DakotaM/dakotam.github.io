@@ -87,169 +87,173 @@ export default function Fund() {
           </div>
         </section>
 
-        {/* Combined About Dakota & Personal Equity Section */}
+        {/* About Dakota Section (Full Width) */}
         <section className="mb-12">
           {/* Subtle divider */}
           <div className="w-full h-px bg-gray-900 mb-10" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-            {/* Left Column - About Dakota */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              {/* Dakota's Photo */}
-              <div className="w-24 sm:w-28 h-24 sm:h-28 mb-4 rounded-full overflow-hidden ring-1 ring-gray-800">
+          <div className="flex flex-col items-center text-center md:text-left md:items-start max-w-4xl mx-auto">
+            {/* Dakota's Photo */}
+            <div className="w-24 sm:w-28 h-24 sm:h-28 mb-4 rounded-full overflow-hidden ring-1 ring-gray-800">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg"
+                alt="Dakota McKenzie"
+                width={112}
+                height={112}
+                className="object-cover w-full h-full"
+                priority
+              />
+            </div>
+
+            {/* Name and Title */}
+            <h3 className="text-xl sm:text-2xl font-medium text-white mb-1 tracking-wide">Dakota McKenzie</h3>
+            <p className="text-base sm:text-lg tracking-wide mb-4" style={{ color: "#ABBDBD" }}>
+              General Partner, Dynamic
+            </p>
+
+            {/* Past Experience Logos - Horizontal Row */}
+            <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-4 mb-6">
+              <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg"
-                  alt="Dakota McKenzie"
-                  width={112}
-                  height={112}
-                  className="object-cover w-full h-full"
-                  priority
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5eHEnzgCHQldzuCGOOmfQPYHYeArEM.png"
+                  alt="Databricks"
+                  width={50}
+                  height={20}
+                  className="h-5 sm:h-6 object-contain"
                 />
               </div>
-
-              {/* Name and Title */}
-              <h3 className="text-xl sm:text-2xl font-medium text-white mb-1 tracking-wide">Dakota McKenzie</h3>
-              <p className="text-base sm:text-lg tracking-wide mb-4" style={{ color: "#ABBDBD" }}>
-                General Partner, Dynamic
-              </p>
-
-              {/* Past Experience Logos - Horizontal Row */}
-              <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-4 mb-6">
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5eHEnzgCHQldzuCGOOmfQPYHYeArEM.png"
-                    alt="Databricks"
-                    width={50}
-                    height={20}
-                    className="h-5 sm:h-6 object-contain"
-                  />
-                </div>
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n2zQYDcuoaZHXmGrIONp78DO7Q6Pxw.png"
-                    alt="Segment"
-                    width={50}
-                    height={20}
-                    className="h-5 sm:h-6 object-contain"
-                  />
-                </div>
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="/images/unusual-ventures-logo.png"
-                    alt="Unusual Ventures"
-                    width={50}
-                    height={20}
-                    className="h-5 sm:h-6 object-contain"
-                  />
-                </div>
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="/images/sumo-logic-logo.png"
-                    alt="Sumo Logic"
-                    width={50}
-                    height={20}
-                    className="h-5 sm:h-6 object-contain"
-                  />
-                </div>
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="/images/demandware-logo.png"
-                    alt="Demandware"
-                    width={50}
-                    height={20}
-                    className="h-5 sm:h-6 object-contain"
-                  />
-                </div>
+              <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n2zQYDcuoaZHXmGrIONp78DO7Q6Pxw.png"
+                  alt="Segment"
+                  width={50}
+                  height={20}
+                  className="h-5 sm:h-6 object-contain"
+                />
               </div>
-
-              {/* Bio */}
-              <div className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-md">
-                <p className="mb-2">
-                  Dakota supports founding teams at companies like{" "}
-                  <span className="text-white font-medium">Clay (Sequoia)</span>,{" "}
-                  <span className="text-white font-medium">Thatch (Index)</span>,{" "}
-                  <span className="text-white font-medium">WorkOS (Greenoaks)</span>, and{" "}
-                  <span className="text-white font-medium">Plain (Index)</span> to accelerate their current sales
-                  efforts to the next level or build their first GTM motion from the ground up.
-                </p>
-                <p className="mb-2">
-                  His experience includes working for firms led by Midas-list investors{" "}
-                  <span className="text-white font-medium">(Unusual Ventures)</span>, operating for world-class GTM
-                  teams from pre-$1M to $150M+ ARR, and being in the seat with founders on their journey from $0-100M
-                  ARR prior to raising subsequent rounds from Tier-1 investors.
-                </p>
-                <p>
-                  Before running his firm, Dakota was on early GTM teams of companies like{" "}
-                  <span className="text-white font-medium">Demandware (IPO/Acq)</span>,{" "}
-                  <span className="text-white font-medium">Sumo Logic (IPO)</span>,{" "}
-                  <span className="text-white font-medium">Databricks</span>, and{" "}
-                  <span className="text-white font-medium">Segment (Acq)</span>.
-                </p>
+              <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <Image
+                  src="/images/unusual-ventures-logo.png"
+                  alt="Unusual Ventures"
+                  width={50}
+                  height={20}
+                  className="h-5 sm:h-6 object-contain"
+                />
+              </div>
+              <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <Image
+                  src="/images/sumo-logic-logo.png"
+                  alt="Sumo Logic"
+                  width={50}
+                  height={20}
+                  className="h-5 sm:h-6 object-contain"
+                />
+              </div>
+              <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <Image
+                  src="/images/demandware-logo.png"
+                  alt="Demandware"
+                  width={50}
+                  height={20}
+                  className="h-5 sm:h-6 object-contain"
+                />
               </div>
             </div>
 
-            {/* Right Column - Personal Equity */}
-            <div>
-              {/* Personal Equity Heading */}
-              <h2
-                className="text-xl sm:text-2xl font-medium tracking-tight mb-6 text-center md:text-left"
-                style={{ color: "#ABBDBD" }}
-              >
-                Personal Equity
-              </h2>
+            {/* Full Width Bio */}
+            <div className="mt-6 text-gray-200 space-y-4 leading-relaxed text-sm sm:text-base w-full">
+              <p>
+                Dakota supports founding teams at companies like{" "}
+                <span className="text-white font-medium">Clay (Sequoia)</span>,{" "}
+                <span className="text-white font-medium">Thatch (Index)</span>,{" "}
+                <span className="text-white font-medium">WorkOS (Greenoaks)</span>, and{" "}
+                <span className="text-white font-medium">Plain (Index)</span> to accelerate their current sales efforts
+                to the next level or build their first GTM motion from the ground up.
+              </p>
+              <p>
+                His experience includes working for firms led by Midas-list investors{" "}
+                <span className="text-white font-medium">(Unusual Ventures)</span>, operating for world-class GTM teams
+                from pre-$1M to $150M+ ARR, and being in the seat with founders on their journey from $0-100M ARR prior
+                to raising subsequent rounds from Tier-1 investors.
+              </p>
+              <p>
+                Before running his firm, Dakota was on early GTM teams of companies like{" "}
+                <span className="text-white font-medium">Demandware (IPO/Acq)</span>,{" "}
+                <span className="text-white font-medium">Sumo Logic (IPO)</span>,{" "}
+                <span className="text-white font-medium">Databricks</span>, and{" "}
+                <span className="text-white font-medium">Segment (Acq)</span>.
+              </p>
+            </div>
+          </div>
+        </section>
 
-              {/* Personal Equity Logo Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-                {[
-                  {
-                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QSmzCfZV6Ndw2a0rJthhZuJMKCIXgj.png",
-                    alt: "Thatch",
-                  },
-                  {
-                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
-                    alt: "Clay",
-                  },
-                  {
-                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
-                    alt: "Liveblocks",
-                  },
-                  { src: "/placeholder.svg?height=28&width=56&query=Dock logo", alt: "Dock" },
-                  { src: "/placeholder.svg?height=28&width=56&query=Malachyte logo", alt: "Malachyte" },
-                  {
-                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
-                    alt: "Nango",
-                  },
-                  {
-                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
-                    alt: "Zuplo",
-                  },
-                  {
-                    src: "/safetycli-logo.svg",
-                    alt: "SafetyCLI",
-                  },
-                  { src: "/placeholder.svg?height=28&width=56&query=Heyday logo", alt: "Heyday.xyz" },
-                  {
-                    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-K9xDL7IAgUhXm1YQteFuCI6nCUIWbV.png",
-                    alt: "Dopt",
-                  },
-                  { src: "/placeholder.svg?height=28&width=56&query=Airplane logo", alt: "Airplane" },
-                ].map((logo, index) => (
-                  <div
-                    key={index}
-                    className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
-                  >
-                    <div className="relative overflow-hidden rounded-lg">
-                      <Image
-                        src={logo.src || "/placeholder.svg"}
-                        alt={logo.alt}
-                        width={56}
-                        height={28}
-                        className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-                      />
-                    </div>
+        {/* Personal Equity Section */}
+        <section className="mb-12">
+          {/* Muted divider */}
+          <div className="w-full h-px bg-gray-800 my-12" />
+
+          <div className="max-w-5xl mx-auto">
+            {/* Personal Equity Heading */}
+            <h2 className="text-lg sm:text-xl font-medium text-center mb-4" style={{ color: "#ABBDBD" }}>
+              Personal Investments by Dakota
+            </h2>
+
+            {/* Subtitle */}
+            <p className="text-sm text-gray-400 text-center mb-6">
+              A selection of angel investments made by Dakota prior to launching Dynamic Fund.
+            </p>
+
+            {/* Personal Equity Logo Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              {[
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QSmzCfZV6Ndw2a0rJthhZuJMKCIXgj.png",
+                  alt: "Thatch",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
+                  alt: "Clay",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
+                  alt: "Liveblocks",
+                },
+                { src: "/placeholder.svg?height=28&width=56&query=Dock logo", alt: "Dock" },
+                { src: "/placeholder.svg?height=28&width=56&query=Malachyte logo", alt: "Malachyte" },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
+                  alt: "Nango",
+                },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
+                  alt: "Zuplo",
+                },
+                {
+                  src: "/safetycli-logo.svg",
+                  alt: "SafetyCLI",
+                },
+                { src: "/placeholder.svg?height=28&width=56&query=Heyday logo", alt: "Heyday.xyz" },
+                {
+                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-K9xDL7IAgUhXm1YQteFuCI6nCUIWbV.png",
+                  alt: "Dopt",
+                },
+                { src: "/placeholder.svg?height=28&width=56&query=Airplane logo", alt: "Airplane" },
+              ].map((logo, index) => (
+                <div
+                  key={index}
+                  className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="relative overflow-hidden rounded-lg">
+                    <Image
+                      src={logo.src || "/placeholder.svg"}
+                      alt={logo.alt}
+                      width={56}
+                      height={28}
+                      className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                    />
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
