@@ -160,8 +160,8 @@ export default function Fund() {
             </div>
 
             {/* Full Width Bio */}
-            <div className="mt-6 text-gray-200 space-y-4 leading-relaxed text-sm sm:text-base w-full">
-              <p>
+            <div className="mt-6 text-gray-200 space-y-4 leading-relaxed text-sm sm:text-base w-full max-w-4xl">
+              <p className="text-left">
                 Dakota supports founding teams at companies like{" "}
                 <span className="text-white font-medium">Clay (Sequoia)</span>,{" "}
                 <span className="text-white font-medium">Thatch (Index)</span>,{" "}
@@ -169,13 +169,13 @@ export default function Fund() {
                 <span className="text-white font-medium">Plain (Index)</span> to accelerate their current sales efforts
                 to the next level or build their first GTM motion from the ground up.
               </p>
-              <p>
+              <p className="text-left">
                 His experience includes working for firms led by Midas-list investors{" "}
                 <span className="text-white font-medium">(Unusual Ventures)</span>, operating for world-class GTM teams
                 from pre-$1M to $150M+ ARR, and being in the seat with founders on their journey from $0-100M ARR prior
                 to raising subsequent rounds from Tier-1 investors.
               </p>
-              <p>
+              <p className="text-left">
                 Before running his firm, Dakota was on early GTM teams of companies like{" "}
                 <span className="text-white font-medium">Demandware (IPO/Acq)</span>,{" "}
                 <span className="text-white font-medium">Sumo Logic (IPO)</span>,{" "}
