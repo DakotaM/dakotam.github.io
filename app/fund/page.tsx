@@ -197,7 +197,7 @@ export default function Fund() {
               </p>
 
               {/* Personal Investments Logo Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
                 {[
                   {
                     src: "/images/thatch-logo.png",
@@ -212,7 +212,6 @@ export default function Fund() {
                     alt: "Liveblocks",
                   },
                   { src: "/images/dock-logo.png", alt: "Dock" },
-                  { src: "/images/malachyte-logo.svg", alt: "Malachyte" },
                   {
                     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
                     alt: "Nango",
@@ -227,7 +226,6 @@ export default function Fund() {
                   },
                   { src: "/images/heyday-logo.png", alt: "Heyday" },
                   { src: "/images/mtf-logo.png", alt: "MTF.vc" },
-                  { src: "/placeholder.svg?height=28&width=56&query=Airplane logo", alt: "Airplane" },
                 ].map((logo, index) => (
                   <div
                     key={index}
