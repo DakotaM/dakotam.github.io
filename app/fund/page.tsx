@@ -147,7 +147,7 @@ export default function Fund() {
               className="text-2xl sm:text-3xl font-medium text-center mb-8"
               style={{ color: "#ABBDBD" }}
             >
-              Portfolio Companies
+              Investments
             </h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
