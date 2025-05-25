@@ -76,8 +76,8 @@ export default function Fund() {
             <div className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105">
               <div className="relative overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=45&width=90&query=Gist Security logo"
-                  alt="Gist Security"
+                  src="/images/gist-logo.png"
+                  alt="Gist"
                   width={90}
                   height={45}
                   className="h-12 sm:h-14 lg:h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
