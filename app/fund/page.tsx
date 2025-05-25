@@ -206,7 +206,7 @@ export default function Fund() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
               {[
                 {
-                  src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QSmzCfZV6Ndw2a0rJthhZuJMKCIXgj.png",
+                  src: "/images/thatch-logo.png",
                   alt: "Thatch",
                 },
                 {
