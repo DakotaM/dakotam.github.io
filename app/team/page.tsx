@@ -29,8 +29,8 @@ export default function Page() {
               through the best practices and learnings from world-class companies.
             </p>
             <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
-              We are the de-facto firm to complement the strengths of technical founders -- &gt;25% of our clients have
-              raised Tier-1 investments.
+              We're the go-to partner for technical founders who want to turn product excellence into commercial
+              outcomes — over 25% of our clients have gone on to raise Tier-1 venture rounds.
             </p>
           </div>
         </section>
@@ -91,9 +91,10 @@ export default function Page() {
             </p>
 
             <p>
-              We are the de-facto firm to complement the strengths of technical founders -- &gt;25% of our clients have
-              raised Tier-1 investments, and know how and when to deploy the right tools to ensure you're making the{" "}
-              <em>right</em> strides towards product-market fit and building the best GTM team possible.
+              We're the go-to partner for technical founders who want to turn product excellence into commercial
+              outcomes — over 25% of our clients have gone on to raise Tier-1 venture rounds, and know how and when to
+              deploy the right tools to ensure you're making the right strides towards product-market fit and building
+              the best GTM team possible.
             </p>
           </div>
         </section>
