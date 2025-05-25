@@ -91,7 +91,7 @@ export default function Fund() {
           {/* Subtle divider */}
           <div className="w-full h-px bg-gray-900 mb-10" />
 
-          <div className="flex flex-col items-center text-center md:text-left md:items-start max-w-4xl mx-auto">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             {/* Dakota's Photo */}
             <div className="w-24 sm:w-28 h-24 sm:h-28 mb-4 rounded-full overflow-hidden ring-1 ring-gray-800">
               <Image
@@ -116,45 +116,45 @@ export default function Fund() {
                 <Image
                   src="/images/databricks-new-logo.png"
                   alt="Databricks"
-                  width={50}
-                  height={20}
-                  className="h-5 sm:h-6 object-contain"
+                  width={75}
+                  height={30}
+                  className="h-8 sm:h-9 object-contain"
                 />
               </div>
               <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n2zQYDcuoaZHXmGrIONp78DO7Q6Pxw.png"
                   alt="Segment"
-                  width={50}
-                  height={20}
-                  className="h-5 sm:h-6 object-contain"
+                  width={75}
+                  height={30}
+                  className="h-8 sm:h-9 object-contain"
                 />
               </div>
               <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
                   src="/images/unusual-ventures-new-logo.png"
                   alt="Unusual Ventures"
-                  width={50}
-                  height={20}
-                  className="h-5 sm:h-6 object-contain"
+                  width={75}
+                  height={30}
+                  className="h-8 sm:h-9 object-contain"
                 />
               </div>
               <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
                   src="/images/sumo-logic-new-logo.png"
                   alt="Sumo Logic"
-                  width={50}
-                  height={20}
-                  className="h-5 sm:h-6 object-contain"
+                  width={75}
+                  height={30}
+                  className="h-8 sm:h-9 object-contain"
                 />
               </div>
               <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
                   src="/images/demandware-new-logo.png"
                   alt="Demandware"
-                  width={50}
-                  height={20}
-                  className="h-5 sm:h-6 object-contain"
+                  width={75}
+                  height={30}
+                  className="h-8 sm:h-9 object-contain"
                 />
               </div>
             </div>
