@@ -63,7 +63,7 @@ export default function Fund() {
             <div className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105">
               <div className="relative overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=45&width=90&query=Judgment Labs logo"
+                  src="/images/judgment-labs-logo.png"
                   alt="Judgment Labs"
                   width={90}
                   height={45}
@@ -187,14 +187,9 @@ export default function Fund() {
             {/* Personal Investments Section - Now part of the same section */}
             <div className="mt-12 w-full max-w-5xl">
               {/* Personal Investments Heading */}
-              <h2 className="text-lg sm:text-xl font-medium text-center mb-4" style={{ color: "#ABBDBD" }}>
+              <h2 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#ABBDBD" }}>
                 Personal Investments
               </h2>
-
-              {/* Subtitle */}
-              <p className="text-sm text-gray-400 text-center mb-6">
-                A selection of angel investments made by Dakota prior to launching Dynamic Fund.
-              </p>
 
               {/* Personal Investments Logo Grid */}
               <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
