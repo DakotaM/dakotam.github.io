@@ -114,7 +114,7 @@ export default function Fund() {
             <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-4 mb-6">
               <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5eHEnzgCHQldzuCGOOmfQPYHYeArEM.png"
+                  src="/images/databricks-new-logo.png"
                   alt="Databricks"
                   width={50}
                   height={20}
@@ -150,7 +150,7 @@ export default function Fund() {
               </div>
               <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                 <Image
-                  src="/images/demandware-logo.png"
+                  src="/images/demandware-new-logo.png"
                   alt="Demandware"
                   width={50}
                   height={20}
