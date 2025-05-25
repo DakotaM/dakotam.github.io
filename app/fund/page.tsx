@@ -130,41 +130,14 @@ export default function Fund() {
 
             <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-6 lg:mt-8">
               <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
-                Dynamic invests in the best <strong>technical founders</strong> looking to accelerate growth from{" "}
+                Dynamic invests in the best <strong>technical Founders</strong> looking to accelerate growth from{" "}
                 <strong>pre-seed onward</strong>.
               </p>
               <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
-                We prioritize long-term partnerships and obsess over your business with <strong>GTM expertise</strong>{" "}
-                and <strong>sales acceleration</strong>.
+                We prioritize long-term partnerships and obsess over your business.
               </p>
             </div>
           </header>
-
-          {/* Investment Focus Section */}
-          <section className="mb-12" aria-labelledby="investment-focus">
-            <div className="w-full h-px bg-gray-900 mb-8" />
-            <div className="max-w-4xl mx-auto text-center mb-8">
-              <h2 id="investment-focus" className="text-2xl sm:text-3xl font-medium mb-4" style={{ color: "#ABBDBD" }}>
-                Investment Focus
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-200">
-                <div>
-                  <h3 className="text-lg font-medium text-white mb-2">Developer Tools</h3>
-                  <p className="text-sm">
-                    Infrastructure, APIs, and platforms that help developers build better software
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-white mb-2">B2B SaaS</h3>
-                  <p className="text-sm">Enterprise software solutions with strong technical moats and PLG potential</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-white mb-2">Pre-Seed to Series A</h3>
-                  <p className="text-sm">Early-stage investments from $50K to $2M+ with follow-on capability</p>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* Portfolio Companies Section */}
           <section className="mb-12" aria-labelledby="portfolio">

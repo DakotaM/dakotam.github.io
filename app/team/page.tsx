@@ -25,11 +25,12 @@ export default function Page() {
 
           <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-6 lg:mt-8">
             <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
-              We support founding teams looking to accelerate their current sales efforts to the next level or build
-              their first GTM motion from the ground up.
+              We support founding teams looking to accelerate their business and achieve fundraising milestones faster
+              through the best practices and learnings from world-class companies.
             </p>
             <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
-              Our goal is to be the de-facto firm to complement the strengths of technical founders.
+              We are the de-facto firm to complement the strengths of technical founders -- &gt;25% of our clients have
+              raised Tier-1 investments.
             </p>
           </div>
         </section>
@@ -82,19 +83,17 @@ export default function Page() {
 
           <div className="max-w-4xl mx-auto text-gray-200 space-y-4 leading-relaxed text-sm sm:text-base">
             <p>
-              We support founding teams looking to accelerate their current sales efforts to the next level or build
-              their first GTM motion from the ground up. Our experience includes working for firms led by Midas-list
-              investors, operating at world-class GTM teams from pre-$1m in ARR to $1.5B ARR, and being in the seat with
-              founders on their journey from $0-100M+ ARR prior to raising their next fundraising rounds from Tier-1
-              investors.
+              We support founding teams looking to accelerate their business and achieve fundraising milestones faster
+              through the best practices and learnings from world-class companies. Our experience includes working for
+              firms led by Midas-list investors, operating at world-class GTM teams from pre-$1m in ARR to $1.5B ARR,
+              and being in the seat with founders on their journey from $0-100M+ ARR prior to raising their next
+              fundraising rounds from Tier-1 investors.
             </p>
 
             <p>
-              Our goal is to be the de-facto firm to complement the strengths of technical founders, and ramp them
-              faster through expertise and repeat patterns we see on a day-to-day basis. We are{" "}
-              <strong className="text-white">not a playbook firm,</strong> but know how and when to deploy the right
-              tools to ensure you're making the <em>right</em> strides towards product-market fit and building the best
-              GTM team possible.
+              We are the de-facto firm to complement the strengths of technical founders -- &gt;25% of our clients have
+              raised Tier-1 investments, and know how and when to deploy the right tools to ensure you're making the{" "}
+              <em>right</em> strides towards product-market fit and building the best GTM team possible.
             </p>
           </div>
         </section>
