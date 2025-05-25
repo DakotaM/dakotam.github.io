@@ -178,7 +178,7 @@ export default function Fund() {
             <div className="w-24 h-px bg-gray-800 mx-auto mt-8" />
           </div>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 lg:gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 lg:gap-12 max-w-5xl mx-auto">
             {[
               {
                 src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QSmzCfZV6Ndw2a0rJthhZuJMKCIXgj.png",
@@ -188,40 +188,30 @@ export default function Fund() {
                 src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
                 alt: "Clay",
               },
+              {
+                src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
+                alt: "Liveblocks",
+              },
+              { src: "/placeholder.svg?height=50&width=90&query=Dock logo", alt: "Dock" },
               { src: "/placeholder.svg?height=50&width=90&query=Malachyte logo", alt: "Malachyte" },
+              {
+                src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
+                alt: "Nango",
+              },
               {
                 src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
                 alt: "Zuplo",
               },
               {
-                src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yqnZLfK3KaHvOz62iPsP77t1qdLqZ2.png",
-                alt: "Metaview",
+                src: "/safetycli-logo.svg",
+                alt: "SafetyCLI",
               },
-              { src: "/placeholder.svg?height=50&width=90&query=Airplane logo", alt: "Airplane" },
-              { src: "/placeholder.svg?height=50&width=90&query=Metaphor logo", alt: "Metaphor" },
-              {
-                src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
-                alt: "Liveblocks",
-              },
-              { src: "/placeholder.svg?height=50&width=90&query=Heyday logo", alt: "Heyday" },
-              {
-                src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
-                alt: "Nango",
-              },
-              { src: "/placeholder.svg?height=50&width=90&query=Dock logo", alt: "Dock" },
+              { src: "/placeholder.svg?height=50&width=90&query=Heyday logo", alt: "Heyday.xyz" },
               {
                 src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-K9xDL7IAgUhXm1YQteFuCI6nCUIWbV.png",
                 alt: "Dopt",
               },
-              {
-                src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XqYDodZTYxd7vD1XADRO3lzcnTG1f4.png",
-                alt: "HumanSignal",
-              },
-              { src: "/placeholder.svg?height=50&width=90&query=Decipher logo", alt: "Decipher" },
-              {
-                src: "/placeholder.svg?height=50&width=90&query=Modern Technical Fund logo",
-                alt: "Modern Technical Fund",
-              },
+              { src: "/placeholder.svg?height=50&width=90&query=Airplane logo", alt: "Airplane" },
             ].map((logo, index) => (
               <div
                 key={index}
