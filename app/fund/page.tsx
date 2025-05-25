@@ -22,7 +22,8 @@ export default function Fund() {
 
           <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-6 lg:mt-8">
             <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
-              Founding teams work with Dynamic to accelerate company-building from pre-seed onward.
+              Dynamic invests in the best Technical Founders and founding teams looking to accelerate growth from
+              pre-seed onward.
             </p>
             <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
               We prioritize long-term partnerships and obsess over your business.
