@@ -51,7 +51,7 @@ export default function Fund() {
             <div className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105">
               <div className="relative overflow-hidden rounded-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-z7q6qYrQwigaIDJ1qd8qYZbFzIeLjl.png"
+                  src="/images/flightcrew-new-logo.png"
                   alt="Flightcrew"
                   width={90}
                   height={45}
