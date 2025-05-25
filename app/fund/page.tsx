@@ -194,7 +194,7 @@ export default function Fund() {
           <div className="max-w-5xl mx-auto">
             {/* Personal Equity Heading */}
             <h2 className="text-lg sm:text-xl font-medium text-center mb-4" style={{ color: "#ABBDBD" }}>
-              Personal Investments by Dakota
+              Personal Investments
             </h2>
 
             {/* Subtitle */}
@@ -262,7 +262,7 @@ export default function Fund() {
           {/* Subtle divider */}
           <div className="w-full h-px bg-gray-900 mb-8" />
 
-          <div className="max-w-[600px] mx-auto">
+          <div className="max-w-[800px] mx-auto">
             <p className="text-base sm:text-lg text-gray-400 mb-6 tracking-wide">
               Founders seeking investment or prospective LPs can email us{" "}
               <Link
