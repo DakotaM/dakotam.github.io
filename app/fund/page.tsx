@@ -135,7 +135,7 @@ export default function Fund() {
                 </div>
                 <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                   <Image
-                    src="/placeholder.svg?height=20&width=50&query=Unusual Ventures logo"
+                    src="/images/unusual-ventures-logo.png"
                     alt="Unusual Ventures"
                     width={50}
                     height={20}
@@ -144,7 +144,7 @@ export default function Fund() {
                 </div>
                 <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                   <Image
-                    src="/placeholder.svg?height=20&width=50&query=Sumo Logic logo"
+                    src="/images/sumo-logic-logo.png"
                     alt="Sumo Logic"
                     width={50}
                     height={20}
@@ -153,7 +153,7 @@ export default function Fund() {
                 </div>
                 <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
                   <Image
-                    src="/placeholder.svg?height=20&width=50&query=Demandware logo"
+                    src="/images/demandware-logo.png"
                     alt="Demandware"
                     width={50}
                     height={20}
