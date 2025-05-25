@@ -36,50 +36,50 @@ export default function Fund() {
           <div className="w-full h-px bg-gray-900 mb-8" />
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
-            <div className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105">
+            <div className="group flex items-center justify-center h-16 sm:h-20 lg:h-24 transition-all duration-300 hover:scale-105">
               <div className="relative overflow-hidden rounded-lg">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-99gXgXFOh3uEuyvywS9O1BjZ2UfamZ.png"
                   alt="Infisical"
-                  width={90}
-                  height={45}
-                  className="h-12 sm:h-14 lg:h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  width={120}
+                  height={60}
+                  className="h-16 sm:h-20 lg:h-24 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             </div>
 
-            <div className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105">
+            <div className="group flex items-center justify-center h-16 sm:h-20 lg:h-24 transition-all duration-300 hover:scale-105">
               <div className="relative overflow-hidden rounded-lg">
                 <Image
                   src="/images/flightcrew-new-logo.png"
                   alt="Flightcrew"
-                  width={90}
-                  height={45}
-                  className="h-12 sm:h-14 lg:h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  width={120}
+                  height={60}
+                  className="h-16 sm:h-20 lg:h-24 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             </div>
 
-            <div className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105">
+            <div className="group flex items-center justify-center h-16 sm:h-20 lg:h-24 transition-all duration-300 hover:scale-105">
               <div className="relative overflow-hidden rounded-lg">
                 <Image
                   src="/images/judgment-labs-logo.png"
                   alt="Judgment Labs"
-                  width={90}
-                  height={45}
-                  className="h-12 sm:h-14 lg:h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  width={120}
+                  height={60}
+                  className="h-16 sm:h-20 lg:h-24 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             </div>
 
-            <div className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105">
+            <div className="group flex items-center justify-center h-16 sm:h-20 lg:h-24 transition-all duration-300 hover:scale-105">
               <div className="relative overflow-hidden rounded-lg">
                 <Image
                   src="/images/gist-logo.png"
                   alt="Gist"
-                  width={90}
-                  height={45}
-                  className="h-12 sm:h-14 lg:h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  width={120}
+                  height={60}
+                  className="h-16 sm:h-20 lg:h-24 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             </div>
