@@ -109,9 +109,34 @@ export default function Fund() {
 
               {/* Name and Title */}
               <h3 className="text-xl sm:text-2xl font-medium text-white mb-1 tracking-wide">Dakota McKenzie</h3>
-              <p className="text-base sm:text-lg tracking-wide mb-6" style={{ color: "#ABBDBD" }}>
+              <p className="text-base sm:text-lg tracking-wide mb-4" style={{ color: "#ABBDBD" }}>
                 General Partner, Dynamic
               </p>
+
+              {/* Bio */}
+              <div className="text-sm sm:text-base text-gray-300 leading-relaxed mb-6 max-w-md">
+                <p className="mb-3">
+                  Dakota supports founding teams at companies like{" "}
+                  <span className="text-white font-medium">Clay (Sequoia)</span>,{" "}
+                  <span className="text-white font-medium">Thatch (Index)</span>,{" "}
+                  <span className="text-white font-medium">WorkOS (Greenoaks)</span>, and{" "}
+                  <span className="text-white font-medium">Plain (Index)</span> to accelerate their current sales
+                  efforts to the next level or build their first GTM motion from the ground up.
+                </p>
+                <p className="mb-3">
+                  His experience includes working for firms led by Midas-list investors{" "}
+                  <span className="text-white font-medium">(Unusual Ventures)</span>, operating for world-class GTM
+                  teams from pre-$1M to $150M+ ARR, and being in the seat with founders on their journey from $0-100M
+                  ARR prior to raising subsequent rounds from Tier-1 investors.
+                </p>
+                <p>
+                  Before running his firm, Dakota was on early GTM teams of companies like{" "}
+                  <span className="text-white font-medium">Demandware (IPO/Acq)</span>,{" "}
+                  <span className="text-white font-medium">Sumo Logic (IPO)</span>,{" "}
+                  <span className="text-white font-medium">Databricks</span>, and{" "}
+                  <span className="text-white font-medium">Segment (Acq)</span>.
+                </p>
+              </div>
 
               {/* Past Experience Logos - Horizontal Row */}
               <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-4">
