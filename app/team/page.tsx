@@ -265,13 +265,25 @@ export default function Page() {
               Book an intro call
             </Link>
 
-            <div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
               <Link
                 href="/"
                 className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <span className="relative">
                   Back to Home
+                  <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                </span>
+              </Link>
+
+              <Link
+                href="https://www.yellingatcloud.ai/archive?sort=top"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <span className="relative">
+                  Insights
                   <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
                 </span>
               </Link>

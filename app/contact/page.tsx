@@ -31,6 +31,21 @@ export default function ContactPage() {
         </div>
 
         <ContactFormWrapper />
+
+        {/* Subtle blog link */}
+        <div className="text-center mt-8">
+          <Link
+            href="https://www.yellingatcloud.ai/archive?sort=top"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300"
+          >
+            <span className="relative">
+              Insights
+              <span className="absolute bottom-0 left-1/2 w-0 h-px bg-gray-300 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   )
