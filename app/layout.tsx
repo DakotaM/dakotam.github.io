@@ -25,8 +25,14 @@ export const metadata = {
     "GTM expertise",
     "Dynamic Fund",
     "Dakota McKenzie",
+    "pre-seed funding",
+    "seed funding",
+    "series A",
+    "infrastructure investing",
+    "sales acceleration",
+    "technical startup funding",
   ],
-  authors: [{ name: "Dynamic" }],
+  authors: [{ name: "Dynamic", url: "https://dynamic.vc" }],
   creator: "Dynamic",
   publisher: "Dynamic",
   metadataBase: new URL("https://dynamic.vc"),
@@ -56,6 +62,7 @@ export const metadata = {
     description:
       "We provide venture capital funding and growth partnership for technical founders building developer tools, infrastructure, and B2B SaaS.",
     images: ["/og-image.jpg"],
+    creator: "@dakotajmckenzie",
   },
   robots: {
     index: true,
@@ -87,6 +94,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#000000" />
+        <meta name="format-detection" content="telephone=no" />
       </head>
       <body className={inter.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>

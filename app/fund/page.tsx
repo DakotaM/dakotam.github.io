@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Dynamic Fund invests in technical founders building developer tools, infrastructure, and B2B SaaS. We provide capital and GTM expertise from pre-seed onward. Portfolio includes Infisical, Flightcrew, Judgment Labs.",
   keywords: [
-    "venture capital",
+    "venture capital fund",
     "VC fund",
     "technical founders",
     "developer tools",
@@ -18,12 +18,15 @@ export const metadata: Metadata = {
     "B2B SaaS",
     "pre-seed funding",
     "seed funding",
+    "series A funding",
     "startup investment",
     "GTM expertise",
     "sales acceleration",
     "Dynamic Fund",
     "Dakota McKenzie",
     "technical startup funding",
+    "venture capital portfolio",
+    "startup accelerator",
   ],
   openGraph: {
     title: "Dynamic Fund - Venture Capital for Technical Founders",
@@ -46,6 +49,7 @@ export const metadata: Metadata = {
     title: "Dynamic Fund - Venture Capital for Technical Founders",
     description: "We invest in the best technical founders looking to accelerate growth from pre-seed onward.",
     images: ["https://dynamic.vc/og-fund.jpg"],
+    creator: "@dakotajmckenzie",
   },
   alternates: {
     canonical: "https://dynamic.vc/fund",
@@ -63,51 +67,184 @@ export const metadata: Metadata = {
   },
 }
 
-// Structured data for search engines
+// Enhanced structured data for AI search engines
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Dynamic Fund",
-  description:
-    "Venture capital fund investing in technical founders building developer tools, infrastructure, and B2B SaaS from pre-seed onward",
-  url: "https://dynamic.vc/fund",
-  logo: "https://dynamic.vc/logo.png",
-  foundingDate: "2023",
-  founder: {
-    "@type": "Person",
-    name: "Dakota McKenzie",
-    jobTitle: "General Partner",
-    description: "Former GTM leader at Databricks, Segment, Sumo Logic, and Demandware. Investor at Unusual Ventures.",
-    url: "https://linkedin.com/in/dakotajmckenzie",
-  },
-  investmentFocus: ["Developer Tools", "Infrastructure", "B2B SaaS", "Technical Founders", "Pre-seed", "Seed Stage"],
-  portfolio: [
+  "@graph": [
     {
       "@type": "Organization",
-      name: "Infisical",
-      description: "Open-source secret management platform",
+      "@id": "https://dynamic.vc/fund/#organization",
+      name: "Dynamic Fund",
+      alternateName: "Dynamic",
+      url: "https://dynamic.vc/fund",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://dynamic.vc/logo.png",
+        width: 400,
+        height: 400,
+      },
+      description:
+        "Venture capital fund investing in technical founders building developer tools, infrastructure, and B2B SaaS from pre-seed onward",
+      foundingDate: "2023",
+      industry: "Venture Capital",
+      investmentFocus: [
+        "Developer Tools",
+        "Infrastructure Software",
+        "B2B SaaS",
+        "Technical Founders",
+        "Pre-seed Stage",
+        "Seed Stage",
+        "Series A",
+      ],
+      areaServed: "Global",
+      founder: {
+        "@id": "https://dynamic.vc/fund/#dakota-mckenzie",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Investment Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Pre-seed Funding",
+              description: "Early-stage funding for technical founders with proven product-market fit signals",
+              serviceType: "Investment",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Seed Funding",
+              description: "Growth capital for technical startups with validated business models",
+              serviceType: "Investment",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Series A Funding",
+              description: "Scale funding for proven technical companies ready for rapid growth",
+              serviceType: "Investment",
+            },
+          },
+        ],
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "Investment Inquiries",
+        email: "dakota@dynamicgrowth.partners",
+        availableLanguage: "English",
+      },
+      knowsAbout: [
+        "Venture Capital",
+        "Technical Founders",
+        "Developer Tools",
+        "Infrastructure Software",
+        "B2B SaaS",
+        "Startup Funding",
+        "Go-to-Market Strategy",
+        "Sales Acceleration",
+      ],
     },
     {
-      "@type": "Organization",
-      name: "Flightcrew",
-      description: "AI-powered customer success platform",
+      "@type": "Person",
+      "@id": "https://dynamic.vc/fund/#dakota-mckenzie",
+      name: "Dakota McKenzie",
+      jobTitle: "General Partner",
+      worksFor: {
+        "@id": "https://dynamic.vc/fund/#organization",
+      },
+      url: "https://www.linkedin.com/in/dakotajmckenzie/",
+      image: {
+        "@type": "ImageObject",
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg",
+        width: 400,
+        height: 400,
+      },
+      description:
+        "General Partner at Dynamic Fund. Former GTM leader at Databricks, Segment, Sumo Logic, and Demandware. Former investor at Unusual Ventures specializing in technical founder investments.",
+      alumniOf: [
+        {
+          "@type": "Organization",
+          name: "Databricks",
+          description: "Former GTM team member",
+        },
+        {
+          "@type": "Organization",
+          name: "Segment",
+          description: "Former GTM team member",
+        },
+        {
+          "@type": "Organization",
+          name: "Unusual Ventures",
+          description: "Former investor",
+        },
+        {
+          "@type": "Organization",
+          name: "Sumo Logic",
+          description: "Former GTM team member",
+        },
+        {
+          "@type": "Organization",
+          name: "Demandware",
+          description: "Former GTM team member",
+        },
+      ],
+      knowsAbout: [
+        "Venture Capital",
+        "Go-to-Market Strategy",
+        "Sales Acceleration",
+        "Technical Founders",
+        "B2B SaaS",
+        "Developer Tools",
+        "Infrastructure Software",
+        "Startup Growth",
+        "Investment Strategy",
+      ],
+      sameAs: ["https://www.linkedin.com/in/dakotajmckenzie/"],
     },
     {
-      "@type": "Organization",
-      name: "Judgment Labs",
-      description: "AI decision-making platform",
-    },
-    {
-      "@type": "Organization",
-      name: "Gist",
-      description: "Developer productivity platform",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What stage companies does Dynamic Fund invest in?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Dynamic Fund invests in technical founders from pre-seed onward, including seed and Series A stages. We focus on companies building developer tools, infrastructure, and B2B SaaS.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What types of companies does Dynamic Fund invest in?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We invest in technical founders building developer tools, infrastructure software, and B2B SaaS platforms. Our portfolio includes companies like Infisical, Flightcrew, Judgment Labs, and Gist.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who is the General Partner of Dynamic Fund?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Dakota McKenzie is the General Partner of Dynamic Fund. He has extensive experience in GTM roles at companies like Databricks, Segment, Sumo Logic, and Demandware, and was previously an investor at Unusual Ventures.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How can founders apply for investment from Dynamic Fund?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Founders seeking investment can email dakota@dynamicgrowth.partners with their pitch deck and company information. We prioritize long-term partnerships and focus on technical founders building developer-focused products.",
+          },
+        },
+      ],
     },
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "dakota@dynamicgrowth.partners",
-    contactType: "Investment Inquiries",
-  },
 }
 
 export default function Fund() {
@@ -118,15 +255,13 @@ export default function Fund() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
           {/* Hero Section */}
           <header className="text-center mb-12">
-            <div className="relative inline-block">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 lg:mb-8">
-                Dynamic Fund
-              </h1>
-              <div
-                className="absolute -bottom-1 left-0 right-0 h-0.5 opacity-80"
-                style={{ backgroundColor: "#ABBDBD" }}
-              />
-            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 lg:mb-8">
+              Dynamic Fund
+            </h1>
+            <div
+              className="absolute -bottom-1 left-0 right-0 h-0.5 opacity-80"
+              style={{ backgroundColor: "#ABBDBD" }}
+            />
 
             <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-6 lg:mt-8">
               <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
@@ -199,6 +334,17 @@ export default function Fund() {
                 </div>
               </div>
             </div>
+
+            {/* Portfolio descriptions for AI crawlers */}
+            <div className="sr-only">
+              <h3>Portfolio Company Descriptions</h3>
+              <ul>
+                <li>Infisical: Open-source secret management platform for developers and DevOps teams</li>
+                <li>Flightcrew: AI-powered customer success platform for B2B SaaS companies</li>
+                <li>Judgment Labs: AI decision-making platform for enterprise applications</li>
+                <li>Gist: Developer productivity platform for code collaboration and review</li>
+              </ul>
+            </div>
           </section>
 
           {/* About Dakota Section */}
@@ -223,7 +369,7 @@ export default function Fund() {
                 rel="noopener noreferrer"
                 className="text-xl sm:text-2xl font-medium text-white mb-1 tracking-wide hover:text-gray-300 transition-colors duration-300"
               >
-                Dakota McKenzie
+                <h3 id="general-partner">Dakota McKenzie</h3>
               </Link>
               <p className="text-base sm:text-lg tracking-wide mb-4" style={{ color: "#ABBDBD" }}>
                 General Partner, Dynamic Fund
@@ -305,9 +451,9 @@ export default function Fund() {
 
               {/* Personal Investments */}
               <div className="mt-12 w-full max-w-5xl">
-                <h2 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#ABBDBD" }}>
+                <h4 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#ABBDBD" }}>
                   Personal Investments
-                </h2>
+                </h4>
 
                 <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
                   {[
