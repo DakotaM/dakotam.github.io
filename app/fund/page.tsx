@@ -178,7 +178,7 @@ export default function Fund() {
               <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
                   <Image
-                    src="/images/judgment-labs-new-logo.png"
+                    src="https://www.dynamicgrowth.partners/images/judgment-labs-logo.png"
                     alt="Judgment Labs - AI decision-making platform"
                     width={180}
                     height={90}
