@@ -217,9 +217,14 @@ export default function Fund() {
                 />
               </div>
 
-              <h3 id="general-partner" className="text-xl sm:text-2xl font-medium text-white mb-1 tracking-wide">
+              <Link
+                href="https://www.linkedin.com/in/dakotajmckenzie/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl sm:text-2xl font-medium text-white mb-1 tracking-wide hover:text-gray-300 transition-colors duration-300"
+              >
                 Dakota McKenzie
-              </h3>
+              </Link>
               <p className="text-base sm:text-lg tracking-wide mb-4" style={{ color: "#ABBDBD" }}>
                 General Partner, Dynamic Fund
               </p>
