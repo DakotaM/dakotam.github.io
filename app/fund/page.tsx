@@ -433,8 +433,9 @@ export default function Fund() {
                 <p className="text-left">
                   His experience includes working for firms led by <strong>Midas-list investors</strong>{" "}
                   <strong className="text-white font-medium">(Unusual Ventures)</strong>, operating for world-class GTM
-                  teams from pre-$1M to $150M+ ARR, and being in the seat with founders on their journey from $0-100M
-                  ARR prior to raising subsequent rounds from Tier-1 investors.
+                  teams from pre-$1M to $150M+ ARR{" "}
+                  <strong className="text-white font-medium">(Databricks, Segment)</strong>, and being in the seat with
+                  founders on their journey from $0-100M ARR prior to raising subsequent rounds from Tier-1 investors.
                 </p>
                 <p className="text-left">
                   Before running his fund, Dakota was on early GTM teams of companies like{" "}
