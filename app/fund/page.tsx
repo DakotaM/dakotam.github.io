@@ -258,10 +258,6 @@ export default function Fund() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 lg:mb-8">
               Dynamic Fund
             </h1>
-            <div
-              className="absolute -bottom-1 left-0 right-0 h-0.5 opacity-80"
-              style={{ backgroundColor: "#ABBDBD" }}
-            />
 
             <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-6 lg:mt-8">
               <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
