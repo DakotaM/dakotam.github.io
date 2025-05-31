@@ -452,7 +452,7 @@ export default function Fund() {
                   Personal Investments
                 </h4>
 
-                <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+                <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
                   {[
                     { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform" },
                     {
@@ -475,6 +475,7 @@ export default function Fund() {
                     { src: "/safetycli-logo.svg", alt: "SafetyCLI - Security scanning tool" },
                     { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI" },
                     { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund" },
+                    { src: "/images/ours-privacy-logo.webp", alt: "Ours Privacy - Privacy-focused platform" },
                   ].map((logo, index) => (
                     <div
                       key={index}
