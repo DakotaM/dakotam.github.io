@@ -464,10 +464,7 @@ export default function Fund() {
                       alt: "Liveblocks - Collaborative software platform",
                     },
                     { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform" },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
-                      alt: "Nango - API integration platform",
-                    },
+                    { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund" },
                     {
                       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
                       alt: "Zuplo - API management platform",
@@ -475,7 +472,10 @@ export default function Fund() {
                     { src: "/safetycli-logo.svg", alt: "SafetyCLI - Security scanning tool" },
                     { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform" },
                     { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI" },
-                    { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund" },
+                    {
+                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
+                      alt: "Nango - API integration platform",
+                    },
                   ].map((logo, index) => (
                     <div
                       key={index}
