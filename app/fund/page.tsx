@@ -473,9 +473,9 @@ export default function Fund() {
                       alt: "Zuplo - API management platform",
                     },
                     { src: "/safetycli-logo.svg", alt: "SafetyCLI - Security scanning tool" },
+                    { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform" },
                     { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI" },
                     { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund" },
-                    { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform" },
                   ].map((logo, index) => (
                     <div
                       key={index}
