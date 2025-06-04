@@ -9,47 +9,48 @@ import type { Metadata } from "next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
+  title: "Dynamic Growth Partners | Company Building & Growth for Technical Founders",
   description:
-    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie and Trey Johnson. Over 25% of clients raise Tier-1 venture rounds.",
+    "Dynamic Growth Partners helps technical founders build and scale. We offer 'Company Building' (Pre-seed to Series A) for product-GTM fit & strategic hires, and 'Company Growth' (Series A+) for scaling GTM organizations. Success with CrewAI, Clay, WorkOS.",
   keywords: [
-    "growth partners",
-    "GTM consulting",
-    "go-to-market strategy",
+    "company building",
+    "company growth",
+    "GTM strategy",
     "sales acceleration",
     "technical founders",
     "startup consulting",
-    "business development",
-    "sales process optimization",
-    "PLG optimization",
-    "product-led growth",
+    "pre-seed funding support",
+    "series A preparation",
+    "scaling GTM teams",
+    "founder-led sales",
     "Dakota McKenzie",
     "Trey Johnson",
-    "startup growth",
-    "venture capital preparation",
+    "strategic hires",
+    "product positioning",
+    "pricing strategy",
   ],
   openGraph: {
-    title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
+    title: "Dynamic Growth Partners | Company Building & Growth for Technical Founders",
     description:
-      "We support founding teams looking to accelerate their business and achieve fundraising milestones faster. Over 25% of our clients have gone on to raise Tier-1 venture rounds.",
+      "Empowering technical founders from pre-seed to Series A and beyond. We specialize in building foundational GTM motions and scaling high-performing organizations.",
     url: "https://dynamic.vc/team",
     siteName: "Dynamic",
     type: "website",
     images: [
       {
-        url: "https://dynamic.vc/og-team.jpg",
+        url: "https://dynamic.vc/og-team-updated.jpg", // Consider a new OG image
         width: 1200,
         height: 630,
-        alt: "Dynamic Growth Partners - GTM Consulting Team",
+        alt: "Dynamic Growth Partners - Building and Scaling Companies",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
+    title: "Dynamic Growth Partners | Company Building & Growth for Technical Founders",
     description:
-      "We support founding teams looking to accelerate their business and achieve fundraising milestones faster.",
-    images: ["https://dynamic.vc/og-team.jpg"],
+      "Partnering with technical founders to build strong GTM foundations and scale their organizations for market leadership.",
+    images: ["https://dynamic.vc/og-team-updated.jpg"],
     creator: "@dakotajmckenzie",
   },
   alternates: {
@@ -58,17 +59,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 }
 
-// Enhanced structured data for AI search engines
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -80,18 +73,24 @@ const structuredData = {
       url: "https://dynamic.vc/team",
       logo: {
         "@type": "ImageObject",
-        url: "https://dynamic.vc/logo.png",
+        url: "https://dynamic.vc/logo.png", // Ensure this logo exists
         width: 400,
         height: 400,
       },
       description:
-        "Growth partnership firm providing go-to-market consulting, sales acceleration, and business development for technical founders building developer tools and B2B SaaS",
+        "Dynamic Growth Partners specializes in 'Company Building' for pre-seed to Series A technical founders, focusing on product-GTM fit and strategic hires, and 'Company Growth' for Series A+ companies, focusing on scaling GTM organizations.",
       foundingDate: "2023",
-      industry: ["Business Consulting", "Sales Consulting", "Go-to-Market Strategy"],
+      industry: ["Business Consulting", "Go-to-Market Strategy", "Sales Training", "Startup Advisory"],
       areaServed: "Global",
-      serviceArea: {
-        "@type": "Place",
-        name: "Global",
+      employee: [
+        { "@id": "https://dynamic.vc/team/#dakota-mckenzie" },
+        { "@id": "https://dynamic.vc/team/#trey-johnson" },
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "General Inquiries",
+        url: "https://dynamic.vc/contact",
+        availableLanguage: "English",
       },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -101,48 +100,33 @@ const structuredData = {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Go-to-Market Strategy",
+              name: "Company Building (Pre-seed → Series A)",
               description:
-                "Comprehensive GTM strategy development for technical founders building developer tools and B2B SaaS",
-              serviceType: "Consulting",
+                "Focus on building the right product and GTM motion (from positioning to pricing), and support with key strategic hires to continue to scale beyond Founder-led GTM. 25%+ of our clients raised Tier-1 Series A's last year including CrewAI, Granola, Infisical, Plain, Gradient.",
+              serviceType: "Startup Consulting",
               areaServed: "Global",
+              audience: {
+                "@type": "Audience",
+                audienceType: "Pre-seed to Series A technical founders",
+              },
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Sales Process Optimization",
-              description: "Sales process reviews and optimization to find repeatability and accelerate growth",
-              serviceType: "Consulting",
+              name: "Company Growth (Series A+)",
+              description:
+                "Focus on scaling Founder-led company building to build, train, and scale your organization around learnings and cohesive GTM focus both pre- and post-sales. A modern human-centered company design approach. Clients include Clay, Metronome, WorkOS, Metaview.",
+              serviceType: "Organizational Development Consulting",
               areaServed: "Global",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Product-Led Growth Optimization",
-              description: "PLG and open source optimization to improve conversion and user adoption",
-              serviceType: "Consulting",
-              areaServed: "Global",
+              audience: {
+                "@type": "Audience",
+                audienceType: "Series A+ companies",
+              },
             },
           },
         ],
-      },
-      employee: [
-        {
-          "@id": "https://dynamic.vc/team/#dakota-mckenzie",
-        },
-        {
-          "@id": "https://dynamic.vc/team/#trey-johnson",
-        },
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "General Inquiries",
-        url: "https://dynamic.vc/contact",
-        availableLanguage: "English",
       },
       knowsAbout: [
         "Go-to-Market Strategy",
@@ -153,8 +137,10 @@ const structuredData = {
         "B2B SaaS",
         "Startup Growth",
         "Sales Process Optimization",
-        "Open Source Strategy",
-        "Venture Capital Preparation",
+        "Strategic Hiring",
+        "Pricing Strategy",
+        "Organizational Scaling",
+        "Sales Training",
       ],
     },
     {
@@ -162,9 +148,7 @@ const structuredData = {
       "@id": "https://dynamic.vc/team/#dakota-mckenzie",
       name: "Dakota McKenzie",
       jobTitle: "Co-Founder",
-      worksFor: {
-        "@id": "https://dynamic.vc/team/#organization",
-      },
+      worksFor: { "@id": "https://dynamic.vc/team/#organization" },
       url: "https://linkedin.com/in/dakotajmckenzie",
       image: {
         "@type": "ImageObject",
@@ -173,38 +157,13 @@ const structuredData = {
         height: 400,
       },
       description:
-        "Co-Founder of Dynamic Growth Partners. Former GTM leader at Databricks, Segment, Sumo Logic, and Demandware. Former investor at Unusual Ventures.",
+        "Co-Founder of Dynamic Growth Partners. Expert in GTM strategy, sales leadership, and helping technical founders build and scale their companies.",
       alumniOf: [
-        {
-          "@type": "Organization",
-          name: "Databricks",
-        },
-        {
-          "@type": "Organization",
-          name: "Segment",
-        },
-        {
-          "@type": "Organization",
-          name: "Unusual Ventures",
-        },
-        {
-          "@type": "Organization",
-          name: "Sumo Logic",
-        },
-        {
-          "@type": "Organization",
-          name: "Demandware",
-        },
+        { "@type": "Organization", name: "Databricks" },
+        { "@type": "Organization", name: "Segment" },
+        { "@type": "Organization", name: "Unusual Ventures" },
       ],
-      knowsAbout: [
-        "Go-to-Market Strategy",
-        "Sales Acceleration",
-        "Venture Capital",
-        "Technical Founders",
-        "B2B SaaS",
-        "Developer Tools",
-        "Startup Growth",
-      ],
+      knowsAbout: ["Go-to-Market Strategy", "Sales Acceleration", "Venture Capital", "B2B SaaS", "Developer Tools"],
       sameAs: ["https://linkedin.com/in/dakotajmckenzie"],
     },
     {
@@ -212,9 +171,7 @@ const structuredData = {
       "@id": "https://dynamic.vc/team/#trey-johnson",
       name: "Trey Johnson",
       jobTitle: "Co-Founder",
-      worksFor: {
-        "@id": "https://dynamic.vc/team/#organization",
-      },
+      worksFor: { "@id": "https://dynamic.vc/team/#organization" },
       url: "https://www.linkedin.com/in/trey-j-07156924/",
       image: {
         "@type": "ImageObject",
@@ -222,14 +179,9 @@ const structuredData = {
         width: 400,
         height: 400,
       },
-      description: "Co-Founder of Dynamic Growth Partners specializing in sales operations and business development.",
-      knowsAbout: [
-        "Sales Operations",
-        "Business Development",
-        "Go-to-Market Strategy",
-        "Technical Founders",
-        "Startup Growth",
-      ],
+      description:
+        "Co-Founder of Dynamic Growth Partners, specializing in sales operations, business development, and scaling GTM functions.",
+      knowsAbout: ["Sales Operations", "Business Development", "Go-to-Market Strategy", "Startup Growth"],
       sameAs: ["https://www.linkedin.com/in/trey-j-07156924/"],
     },
     {
@@ -237,18 +189,18 @@ const structuredData = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What services does Dynamic Growth Partners provide?",
+          name: "What is 'Company Building' at Dynamic Growth Partners?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Dynamic Growth Partners provides go-to-market consulting, sales process optimization, product-led growth optimization, hiring and recruiting, pricing strategy, and sales management for technical founders building developer tools and B2B SaaS.",
+            text: "Our 'Company Building' service is for Pre-seed to Series A companies. We focus on establishing the right product and GTM motion, including positioning, pricing, and supporting key strategic hires to scale beyond founder-led GTM. Over 25% of these clients raised Tier-1 Series A's last year, including companies like CrewAI, Granola, and Infisical.",
           },
         },
         {
           "@type": "Question",
-          name: "Who are the founders of Dynamic Growth Partners?",
+          name: "What is 'Company Growth' at Dynamic Growth Partners?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Dynamic Growth Partners is founded by Dakota McKenzie and Trey Johnson. Dakota has extensive GTM experience at companies like Databricks, Segment, and was an investor at Unusual Ventures.",
+            text: "Our 'Company Growth' service is for Series A+ companies. We focus on scaling founder-led company building by helping to build, train, and scale the organization with a cohesive GTM focus for pre- and post-sales, using a modern human-centered design approach. We've supported clients like Clay, Metronome, and WorkOS in this capacity.",
           },
         },
         {
@@ -256,15 +208,15 @@ const structuredData = {
           name: "What types of companies does Dynamic Growth Partners work with?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We work with technical founders building developer tools, infrastructure software, and B2B SaaS platforms. Over 25% of our clients have gone on to raise Tier-1 venture rounds.",
+            text: "We partner with technical founders building developer tools, infrastructure software, and B2B SaaS platforms, from pre-seed stage through Series A and beyond.",
           },
         },
         {
           "@type": "Question",
-          name: "How successful are Dynamic Growth Partners clients?",
+          name: "How does Dynamic Growth Partners help with GTM strategy?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Over 25% of our clients have gone on to raise Tier-1 venture rounds. We help technical founders turn product excellence into commercial outcomes through proven GTM strategies.",
+            text: "We provide hands-on support in developing and executing GTM strategies, covering everything from market positioning and pricing models to sales process optimization and building high-performing sales teams.",
           },
         },
       ],
@@ -279,33 +231,22 @@ export default function Page() {
       <div className={`min-h-screen bg-black text-white ${inter.className} antialiased`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
           {/* Hero Section */}
-          <header className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 lg:mb-8">
+          <header className="text-center mb-12 lg:mb-16">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4">
               Dynamic Growth Partners
             </h1>
-
-            <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-6 lg:mt-8">
-              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
-                We support founding teams looking to accelerate their business and achieve fundraising milestones faster
-                through the best practices and learnings from world-class companies.
-              </p>
-              <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
-                We're the go-to partner for technical founders who want to turn product excellence into commercial
-                outcomes — over 25% of our clients have gone on to raise Tier-1 venture rounds.
-              </p>
-            </div>
+            <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide max-w-3xl mx-auto">
+              We partner with technical founders to build category-defining products and scale impactful go-to-market
+              organizations, from pre-seed through Series A and beyond.
+            </p>
           </header>
 
           {/* Team Section */}
-          <section className="mb-12" aria-labelledby="team">
-            {/* Subtle divider */}
-            <div className="w-full h-px bg-gray-900 mb-10" />
-
-            <h2 id="team" className="sr-only">
+          <section className="mb-12 lg:mb-16" aria-labelledby="team-heading">
+            <h2 id="team-heading" className="sr-only">
               Our Team
             </h2>
-
-            <div className="flex flex-col sm:flex-row justify-center sm:gap-8 md:gap-16 mb-12 space-y-8 sm:space-y-0 max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center sm:gap-8 md:gap-16 mb-10 space-y-8 sm:space-y-0 max-w-4xl mx-auto">
               <div className="flex flex-col items-center">
                 <div className="w-64 h-64 sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] relative mb-4 team-photo-container">
                   <Image
@@ -314,7 +255,6 @@ export default function Page() {
                     fill
                     priority
                     className="object-cover team-photo"
-                    style={{ borderRadius: "8px" }}
                     sizes="(max-width: 640px) 256px, (max-width: 768px) 250px, 300px"
                   />
                 </div>
@@ -334,7 +274,6 @@ export default function Page() {
                     fill
                     priority
                     className="object-cover team-photo"
-                    style={{ borderRadius: "8px" }}
                     sizes="(max-width: 640px) 256px, (max-width: 768px) 250px, 300px"
                   />
                 </div>
@@ -347,169 +286,108 @@ export default function Page() {
                 <p className="text-sm text-gray-400">Co-Founder</p>
               </div>
             </div>
-
-            <div className="max-w-4xl mx-auto text-gray-200 space-y-4 leading-relaxed text-sm sm:text-base">
+            <div className="max-w-3xl mx-auto text-gray-300 space-y-4 leading-relaxed text-sm sm:text-base text-center">
               <p>
-                We support founding teams looking to accelerate their business and achieve fundraising milestones faster
-                through the best practices and learnings from world-class companies. Our experience includes working for
-                firms led by Midas-list investors, operating at world-class GTM teams from pre-$1m in ARR to $1.5B ARR,
-                and being in the seat with founders on their journey from $0-100M+ ARR prior to raising their next
-                fundraising rounds from Tier-1 investors.
-              </p>
-
-              <p>
-                We're the go-to partner for technical founders who want to turn product excellence into commercial
-                outcomes — over 25% of our clients have gone on to raise Tier-1 venture rounds, and know how and when to
-                deploy the right tools to ensure you're making the right strides towards product-market fit and building
-                the best GTM team possible.
+                Founded by Dakota McKenzie and Trey Johnson, Dynamic Growth Partners brings decades of combined
+                experience from the front lines of iconic technology companies and venture capital. We've been in your
+                shoes as operators and investors, understanding the unique challenges and opportunities technical
+                founders face.
               </p>
             </div>
           </section>
 
-          {/* Areas of Focus Section */}
-          <section className="mb-12" aria-labelledby="services">
-            {/* Subtle divider */}
-            <div className="w-full h-px bg-gray-900 mb-10" />
+          {/* Core Offerings Introduction */}
+          <section className="mb-12 lg:mb-16 text-center" aria-labelledby="core-offerings-heading">
+            <div className="w-full h-px bg-gray-800 my-10" />
+            <h2
+              id="core-offerings-heading"
+              className="text-2xl sm:text-3xl font-medium mb-8"
+              style={{ color: "#ABBDBD" }}
+            >
+              How We Partner With You
+            </h2>
+            <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-lg">
+              We provide tailored support across two critical stages of your company's journey: establishing a strong
+              foundation and scaling for market leadership.
+            </p>
+          </section>
 
+          {/* Company Building Section */}
+          <section className="mb-12 lg:mb-16" aria-labelledby="company-building-heading">
             <div className="max-w-4xl mx-auto">
               <h2
-                id="services"
-                className="text-2xl sm:text-3xl font-medium text-center mb-8"
-                style={{ color: "#ABBDBD" }}
+                id="company-building-heading"
+                className="text-2xl sm:text-3xl font-medium text-center mb-4"
+                style={{ color: "#FFFFFF" }}
               >
-                Areas of Focus
+                Company Building <span className="text-gray-400">(Pre-Seed → Series A)</span>
               </h2>
+              <p className="text-center text-gray-400 mb-8 text-lg">
+                Laying the groundwork for sustainable growth and market traction.
+              </p>
+              <div className="bg-gray-900/30 p-6 sm:p-8 rounded-lg border border-gray-800 shadow-xl">
+                <p className="text-gray-200 leading-relaxed space-y-4 text-base sm:text-lg">
+                  At this crucial stage, our focus is on helping you build the right product and craft a compelling
+                  go-to-market motion. This includes refining your positioning, developing effective pricing strategies,
+                  and making pivotal early hires to transition beyond founder-led GTM.
+                  <br />
+                  <br />
+                  We're proud that{" "}
+                  <strong>over 25% of our clients in this phase raised Tier-1 Series A rounds last year</strong>,
+                  including innovative companies like{" "}
+                  <strong className="text-white">CrewAI, Granola, Infisical, Plain,</strong> and{" "}
+                  <strong className="text-white">Gradient</strong>.
+                </p>
+              </div>
+            </div>
+          </section>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Sales Process & Repeatability</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Conducting comprehensive reviews of current opportunities and guiding through existing sales
-                      processes to find repeatability.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Open Source + PLG Optimization</h3>
-                    <p className="mb-4 text-sm sm:text-base text-gray-200">
-                      Uncover the key motivations and reasons why your top users leverage your open source project and
-                      what are they key levers to conversion.
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Understand the adoption path of top-of-funnel users leveraging your self-service product to
-                      acknowledge what levers are required to justify a purchase (or upgrades).
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">User / Buyer Journey</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Ensuring a solid user/buyer journey to help navigate tougher "bottoms up" sales cycles.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Hiring and Recruiting</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Conducting interviews and recruiting at all levels (SDR to VP of Sales)
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Finding high potential revenue</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Identifying expansion or conversion paths with initial customers/users.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Pricing</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Make it easy to buy from.™️ (Self-Service {"->"} Strategic Enterprise $1M+). Optimizing and
-                      refining pricing models through data and buyer feedback.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Sales Management</h3>
-                    <p className="mb-4 text-sm sm:text-base text-gray-200">
-                      Coaching and partnering with sales leadership
-                    </p>
-                    <p className="mb-4 text-sm sm:text-base text-gray-200">
-                      Conducting pipeline and deal reviews with AEs
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Managing Account Executives on full-sales cycles
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Pipeline Focus</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Exercises to test and building pipeline (outbound and leveraging inbound for faster wins).
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Optimize Selling</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Providing coaching and support to founders on discovery, leveraging roadmap to drive deals, their
-                      expertise to win markets and beat competitors.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">ICP Development</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Developing Ideal Customer Profile (ICP), customer conversations, learning what, how, why to build
-                      things that generate revenue (current and future state)
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Implementing sales systems</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Ensuring the right solutions are in place for sales growth and enablement
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Build the right product</h3>
-                    <p className="mb-4 text-sm sm:text-base text-gray-200">
-                      Collecting product feedback to identify current and future roadmap opportunities
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Look for ways to identify what your developer community needs to be successful through discovery
-                    </p>
-                  </div>
-                </div>
+          {/* Company Growth Section */}
+          <section className="mb-12 lg:mb-16" aria-labelledby="company-growth-heading">
+            <div className="max-w-4xl mx-auto">
+              <h2
+                id="company-growth-heading"
+                className="text-2xl sm:text-3xl font-medium text-center mb-4"
+                style={{ color: "#FFFFFF" }}
+              >
+                Company Growth <span className="text-gray-400">(Series A+)</span>
+              </h2>
+              <p className="text-center text-gray-400 mb-8 text-lg">
+                Scaling your organization and GTM engine for enduring success.
+              </p>
+              <div className="bg-gray-900/30 p-6 sm:p-8 rounded-lg border border-gray-800 shadow-xl">
+                <p className="text-gray-200 leading-relaxed space-y-4 text-base sm:text-lg">
+                  As you move past Series A, the challenge shifts to scaling. We partner with you to evolve your
+                  founder-led successes into a robust, scalable organization. Our approach involves building, training,
+                  and scaling your teams around proven learnings and a cohesive GTM strategy that covers both pre- and
+                  post-sales.
+                  <br />
+                  <br />
+                  We employ a modern, human-centered company design methodology, chosen over traditional training firms.
+                  We've supported the growth of leading companies such as <strong className="text-white">Clay</strong>{" "}
+                  (where we onboarded and trained their first 16 GTM Engineers, including the Head of GTM Engineering),{" "}
+                  <strong className="text-white">Metronome, WorkOS,</strong> and{" "}
+                  <strong className="text-white">Metaview</strong>.
+                </p>
               </div>
             </div>
           </section>
 
           {/* Experience Section */}
-          <section className="mb-12" aria-labelledby="experience">
-            {/* Subtle divider */}
-            <div className="w-full h-px bg-gray-900 mb-10" />
-
+          <section className="mb-12 lg:mb-16" aria-labelledby="experience-heading">
+            <div className="w-full h-px bg-gray-800 my-10" />
             <div className="max-w-4xl mx-auto">
               <h2
-                id="experience"
+                id="experience-heading"
                 className="text-2xl sm:text-3xl font-medium text-center mb-8"
                 style={{ color: "#ABBDBD" }}
               >
-                Experience
+                Our Collective Experience
               </h2>
-
-              <p className="mb-8 text-sm sm:text-base text-gray-200 leading-relaxed">
-                We have worked at a range of SaaS companies in the earlier stages of growth based on our drive to build
-                and grow new functions. We are inspired by building alongside world-class founders and teams.
+              <p className="mb-8 text-sm sm:text-base text-gray-300 leading-relaxed text-center">
+                We've worked with and invested in a diverse range of pioneering technology companies. The logos below
+                represent a part of our journey and the ecosystem we're deeply embedded in.
               </p>
-
-              {/* Wrap LogoGrid in Suspense */}
               <Suspense
                 fallback={
                   <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 sm:gap-6 items-center justify-items-center">
@@ -518,7 +396,7 @@ export default function Page() {
                       .map((_, i) => (
                         <div
                           key={i}
-                          className="w-24 sm:w-28 md:w-32 h-16 sm:h-20 flex items-center justify-center logo-container animate-pulse"
+                          className="w-24 sm:w-28 md:w-32 h-16 sm:h-20 flex items-center justify-center logo-container animate-pulse bg-gray-800 rounded-md"
                         ></div>
                       ))}
                   </div>
@@ -526,33 +404,26 @@ export default function Page() {
               >
                 <LogoGrid />
               </Suspense>
-
-              {/* Experience descriptions for AI crawlers */}
-              <div className="sr-only">
-                <h3>Company Experience</h3>
-                <p>
-                  Our team has experience at leading technology companies including Databricks, Segment, Mintlify, Clay,
-                  Infisical, Datameer, WorkOS, Plain, Thatch, Granola, Zuplo, HumanSignal, Flightcrew, Radial, Nango,
-                  Metaview, The Mednet, Liveblocks, Ambrook, DOPT, CrewAI, Pi Labs, OpsLevel, Metronome, and Restate.
-                </p>
-              </div>
             </div>
           </section>
 
           {/* Contact Section */}
-          <section className="text-center py-6" aria-labelledby="contact">
-            {/* Subtle divider */}
-            <div className="w-full h-px bg-gray-900 mb-8" />
-
+          <section className="text-center py-6" aria-labelledby="contact-heading">
+            <div className="w-full h-px bg-gray-800 my-10" />
             <div className="max-w-[800px] mx-auto">
+              <h2 id="contact-heading" className="text-2xl sm:text-3xl font-medium mb-6" style={{ color: "#ABBDBD" }}>
+                Let's Build Together
+              </h2>
+              <p className="text-gray-300 mb-8 text-lg">
+                Ready to accelerate your company's trajectory? We're here to help.
+              </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-10 py-3 text-base font-medium text-black bg-white rounded-full shadow-sm hover:bg-gray-100 transition-colors duration-300 min-w-[220px] mb-6"
               >
                 Book an intro call
               </Link>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-4">
                 <Link
                   href="/"
                   className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
@@ -562,7 +433,6 @@ export default function Page() {
                     <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
                   </span>
                 </Link>
-
                 <Link
                   href="https://www.yellingatcloud.ai/archive?sort=top"
                   target="_blank"
