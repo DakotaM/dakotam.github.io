@@ -208,14 +208,11 @@ export default function Page() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 lg:mb-8">
               Dynamic Growth Partners
             </h1>
-            <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-6 lg:mt-8">
+            <div className="max-w-[800px] mx-auto mt-6 lg:mt-8">
               <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
-                We support founding teams looking to accelerate their business and achieve fundraising milestones faster
-                through the best practices and learnings from world-class companies.
-              </p>
-              <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
-                We're the go-to partner for technical founders who want to turn product excellence into commercial
-                outcomes — over 25% of our clients have gone on to raise Tier-1 venture rounds.
+                We support technical Founders and their teams pre-seed to pre-IPO in accelerating growth and hitting
+                fundraising milestones faster by applying best practices and learnings from hands-on execution alongside
+                the best GTM and Product leaders in the world.
               </p>
             </div>
           </header>
