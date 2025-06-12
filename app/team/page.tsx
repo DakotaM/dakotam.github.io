@@ -151,7 +151,7 @@ const structuredData = {
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#dakota-mckenzie",
       name: "Dakota McKenzie",
-      jobTitle: "CEO",
+      jobTitle: "CEO", // Updated title
       worksFor: { "@id": "https://dynamic.vc/team/#organization" },
       url: "https://linkedin.com/in/dakotajmckenzie",
       image: {
@@ -174,7 +174,7 @@ const structuredData = {
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#trey-johnson",
       name: "Trey Johnson",
-      jobTitle: "Operating Partner",
+      jobTitle: "Operating Partner", // Updated title
       worksFor: { "@id": "https://dynamic.vc/team/#organization" },
       url: "https://www.linkedin.com/in/trey-j-07156924/",
       image: {
@@ -190,15 +190,15 @@ const structuredData = {
     },
     {
       "@type": "Person",
-      "@id": "https://dynamic.vc/team/#ben-cappellacci",
+      "@id": "https://dynamic.vc/team/#ben-cappellacci", // New team member
       name: "Ben Cappellacci",
       jobTitle: "Deployment Advisor",
       worksFor: { "@id": "https://dynamic.vc/team/#organization" },
       url: "https://www.linkedin.com/in/bencappellacci/",
       image: {
         "@type": "ImageObject",
-        url: "/images/ben-cappellacci.jpeg", // Using the local path
-        width: 400, // Assuming similar dimensions for consistency
+        url: "/images/ben-cappellacci.jpeg",
+        width: 400,
         height: 400,
       },
       description: "Deployment Advisor at Dynamic Growth Partners, focusing on technical implementation and strategy.",
@@ -267,6 +267,7 @@ export default function Page() {
             <h2 id="team-heading" className="sr-only">
               Our Team
             </h2>
+            {/* Updated grid layout for 3 team members */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-10 max-w-5xl mx-auto">
               {/* Dakota McKenzie */}
               <div className="flex flex-col items-center">
@@ -286,7 +287,7 @@ export default function Page() {
                 >
                   <h3>Dakota McKenzie</h3>
                 </Link>
-                <p className="text-sm text-gray-400">CEO</p>
+                <p className="text-sm text-gray-400">CEO</p> {/* Updated title */}
               </div>
 
               {/* Trey Johnson */}
@@ -307,14 +308,14 @@ export default function Page() {
                 >
                   <h3>Trey Johnson</h3>
                 </Link>
-                <p className="text-sm text-gray-400">Operating Partner</p>
+                <p className="text-sm text-gray-400">Operating Partner</p> {/* Updated title */}
               </div>
 
-              {/* Ben Cappellacci */}
+              {/* Ben Cappellacci - New Team Member */}
               <div className="flex flex-col items-center">
                 <div className="w-56 h-56 sm:w-64 sm:h-64 relative mb-4 team-photo-container">
                   <Image
-                    src="/images/ben-cappellacci.jpeg" // Using local path after adding the file
+                    src="/images/ben-cappellacci.jpeg"
                     alt="Ben Cappellacci - Deployment Advisor at Dynamic Growth Partners"
                     fill
                     priority
@@ -333,10 +334,10 @@ export default function Page() {
             </div>
             <div className="max-w-3xl mx-auto text-gray-300 space-y-4 leading-relaxed text-sm sm:text-base text-center">
               <p>
-                Founded by Dakota McKenzie and Trey Johnson, with key advisory from Ben Cappellacci, Dynamic Growth
-                Partners brings decades of combined experience from the front lines of iconic technology companies and
-                venture capital. We've been in your shoes as operators and investors, understanding the unique
-                challenges and opportunities technical founders face.
+                Led by Dakota McKenzie and Trey Johnson, with key advisory from Ben Cappellacci, Dynamic Growth Partners
+                brings decades of combined experience from the front lines of iconic technology companies and venture
+                capital. We've been in your shoes as operators and investors, understanding the unique challenges and
+                opportunities technical founders face.
               </p>
             </div>
           </section>
