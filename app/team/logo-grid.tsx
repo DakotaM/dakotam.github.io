@@ -17,7 +17,7 @@ export default function LogoGrid() {
     setIsVisible(true)
   }, [])
 
-  // All logos data
+  // All logos data (reverted to v110 state - Gradient removed)
   const logos: Logo[] = [
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5eHEnzgCHQldzuCGOOmfQPYHYeArEM.png",
@@ -98,10 +98,6 @@ export default function LogoGrid() {
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-K9xDL7IAgUhXm1YQteFuCI6nCUIWbV.png",
       alt: "DOPT logo",
-    },
-    {
-      src: "/gradient-tech-logo.png", // Placeholder for Gradient
-      alt: "Gradient logo",
     },
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/crew_only_logo-a8bPDxvc3alLTW2ZsgjcMUmf4Fj2RX.png",
