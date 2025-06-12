@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Dynamic Growth Partners | Company Building & Growth for Technical Founders",
   description:
-    "Dynamic Growth Partners helps technical founders build and scale. We offer 'Company Building' (Pre-seed to Series A) for product-GTM fit & strategic hires, and 'Company Growth' (Series A+) for scaling GTM organizations. Success with CrewAI, Clay, WorkOS.",
+    "Dynamic Growth Partners helps technical founders build and scale. We offer 'Company Building' (Pre-seed to Series A) for product-GTM fit & strategic hires, and 'Company Growth' (Series A+) for scaling GTM organizations. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), and Ben Cappellacci (Deployment Advisor). Success with CrewAI, Clay, WorkOS.",
   keywords: [
     "company building",
     "company growth",
@@ -25,9 +25,11 @@ export const metadata: Metadata = {
     "founder-led sales",
     "Dakota McKenzie",
     "Trey Johnson",
+    "Ben Cappellacci",
     "strategic hires",
     "product positioning",
     "pricing strategy",
+    "deployment advisory",
   ],
   openGraph: {
     title: "Dynamic Growth Partners | Company Building & Growth for Technical Founders",
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://dynamic.vc/og-team-updated.jpg", // Consider a new OG image
+        url: "https://dynamic.vc/og-team-updated.jpg",
         width: 1200,
         height: 630,
         alt: "Dynamic Growth Partners - Building and Scaling Companies",
@@ -73,7 +75,7 @@ const structuredData = {
       url: "https://dynamic.vc/team",
       logo: {
         "@type": "ImageObject",
-        url: "https://dynamic.vc/logo.png", // Ensure this logo exists
+        url: "https://dynamic.vc/logo.png",
         width: 400,
         height: 400,
       },
@@ -85,6 +87,7 @@ const structuredData = {
       employee: [
         { "@id": "https://dynamic.vc/team/#dakota-mckenzie" },
         { "@id": "https://dynamic.vc/team/#trey-johnson" },
+        { "@id": "https://dynamic.vc/team/#ben-cappellacci" },
       ],
       contactPoint: {
         "@type": "ContactPoint",
@@ -141,13 +144,14 @@ const structuredData = {
         "Pricing Strategy",
         "Organizational Scaling",
         "Sales Training",
+        "Deployment Advisory",
       ],
     },
     {
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#dakota-mckenzie",
       name: "Dakota McKenzie",
-      jobTitle: "Co-Founder",
+      jobTitle: "CEO",
       worksFor: { "@id": "https://dynamic.vc/team/#organization" },
       url: "https://linkedin.com/in/dakotajmckenzie",
       image: {
@@ -157,7 +161,7 @@ const structuredData = {
         height: 400,
       },
       description:
-        "Co-Founder of Dynamic Growth Partners. Expert in GTM strategy, sales leadership, and helping technical founders build and scale their companies.",
+        "CEO of Dynamic Growth Partners. Expert in GTM strategy, sales leadership, and helping technical founders build and scale their companies.",
       alumniOf: [
         { "@type": "Organization", name: "Databricks" },
         { "@type": "Organization", name: "Segment" },
@@ -170,7 +174,7 @@ const structuredData = {
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#trey-johnson",
       name: "Trey Johnson",
-      jobTitle: "Co-Founder",
+      jobTitle: "Operating Partner",
       worksFor: { "@id": "https://dynamic.vc/team/#organization" },
       url: "https://www.linkedin.com/in/trey-j-07156924/",
       image: {
@@ -180,9 +184,26 @@ const structuredData = {
         height: 400,
       },
       description:
-        "Co-Founder of Dynamic Growth Partners, specializing in sales operations, business development, and scaling GTM functions.",
+        "Operating Partner at Dynamic Growth Partners, specializing in sales operations, business development, and scaling GTM functions.",
       knowsAbout: ["Sales Operations", "Business Development", "Go-to-Market Strategy", "Startup Growth"],
       sameAs: ["https://www.linkedin.com/in/trey-j-07156924/"],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://dynamic.vc/team/#ben-cappellacci",
+      name: "Ben Cappellacci",
+      jobTitle: "Deployment Advisor",
+      worksFor: { "@id": "https://dynamic.vc/team/#organization" },
+      url: "https://www.linkedin.com/in/bencappellacci/",
+      image: {
+        "@type": "ImageObject",
+        url: "/images/ben-cappellacci.jpeg", // Using the local path
+        width: 400, // Assuming similar dimensions for consistency
+        height: 400,
+      },
+      description: "Deployment Advisor at Dynamic Growth Partners, focusing on technical implementation and strategy.",
+      knowsAbout: ["Deployment Strategy", "Technical Advisory", "Cloud Infrastructure", "DevOps"],
+      sameAs: ["https://www.linkedin.com/in/bencappellacci/"],
     },
     {
       "@type": "FAQPage",
@@ -246,16 +267,17 @@ export default function Page() {
             <h2 id="team-heading" className="sr-only">
               Our Team
             </h2>
-            <div className="flex flex-col sm:flex-row justify-center sm:gap-8 md:gap-16 mb-10 space-y-8 sm:space-y-0 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-10 max-w-5xl mx-auto">
+              {/* Dakota McKenzie */}
               <div className="flex flex-col items-center">
-                <div className="w-64 h-64 sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] relative mb-4 team-photo-container">
+                <div className="w-56 h-56 sm:w-64 sm:h-64 relative mb-4 team-photo-container">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg"
-                    alt="Dakota McKenzie - Co-Founder of Dynamic Growth Partners"
+                    alt="Dakota McKenzie - CEO of Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 256px, (max-width: 768px) 250px, 300px"
+                    sizes="(max-width: 640px) 224px, 256px"
                   />
                 </div>
                 <Link
@@ -264,17 +286,19 @@ export default function Page() {
                 >
                   <h3>Dakota McKenzie</h3>
                 </Link>
-                <p className="text-sm text-gray-400">Co-Founder</p>
+                <p className="text-sm text-gray-400">CEO</p>
               </div>
+
+              {/* Trey Johnson */}
               <div className="flex flex-col items-center">
-                <div className="w-64 h-64 sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] relative mb-4 team-photo-container">
+                <div className="w-56 h-56 sm:w-64 sm:h-64 relative mb-4 team-photo-container">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Trey-EPgexA01iWSJgBZzf8NZQUyuSh0R4y.jpeg"
-                    alt="Trey Johnson - Co-Founder of Dynamic Growth Partners"
+                    alt="Trey Johnson - Operating Partner at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 256px, (max-width: 768px) 250px, 300px"
+                    sizes="(max-width: 640px) 224px, 256px"
                   />
                 </div>
                 <Link
@@ -283,15 +307,36 @@ export default function Page() {
                 >
                   <h3>Trey Johnson</h3>
                 </Link>
-                <p className="text-sm text-gray-400">Co-Founder</p>
+                <p className="text-sm text-gray-400">Operating Partner</p>
+              </div>
+
+              {/* Ben Cappellacci */}
+              <div className="flex flex-col items-center">
+                <div className="w-56 h-56 sm:w-64 sm:h-64 relative mb-4 team-photo-container">
+                  <Image
+                    src="/images/ben-cappellacci.jpeg" // Using local path after adding the file
+                    alt="Ben Cappellacci - Deployment Advisor at Dynamic Growth Partners"
+                    fill
+                    priority
+                    className="object-cover team-photo"
+                    sizes="(max-width: 640px) 224px, 256px"
+                  />
+                </div>
+                <Link
+                  href="https://www.linkedin.com/in/bencappellacci/"
+                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                >
+                  <h3>Ben Cappellacci</h3>
+                </Link>
+                <p className="text-sm text-gray-400">Deployment Advisor</p>
               </div>
             </div>
             <div className="max-w-3xl mx-auto text-gray-300 space-y-4 leading-relaxed text-sm sm:text-base text-center">
               <p>
-                Founded by Dakota McKenzie and Trey Johnson, Dynamic Growth Partners brings decades of combined
-                experience from the front lines of iconic technology companies and venture capital. We've been in your
-                shoes as operators and investors, understanding the unique challenges and opportunities technical
-                founders face.
+                Founded by Dakota McKenzie and Trey Johnson, with key advisory from Ben Cappellacci, Dynamic Growth
+                Partners brings decades of combined experience from the front lines of iconic technology companies and
+                venture capital. We've been in your shoes as operators and investors, understanding the unique
+                challenges and opportunities technical founders face.
               </p>
             </div>
           </section>
