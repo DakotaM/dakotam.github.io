@@ -294,17 +294,14 @@ export default function Page() {
 
             <div className="max-w-4xl mx-auto text-gray-200 space-y-4 leading-relaxed text-sm sm:text-base">
               <p>
-                We support founding teams looking to accelerate their business and achieve fundraising milestones faster
-                through the best practices and learnings from world-class companies. Our experience includes working for
-                firms led by Midas-list investors, operating at world-class GTM teams from pre-$1m in ARR to $1.5B ARR,
-                and being in the seat with founders on their journey from $0-100M+ ARR prior to raising their next
-                fundraising rounds from Tier-1 investors.
+                Our experience includes working for and partnering with firms led by Midas-list investors, operating at
+                world-class GTM teams from pre-$1m in ARR to $1.5B ARR, and being in the seat with founders on their
+                journey from $0-100M+ ARR through strong product execution and a GTM machine bolted on.
               </p>
               <p>
-                We're the go-to partner for technical founders who want to turn product excellence into commercial
-                outcomes — over 25% of our clients have gone on to raise Tier-1 venture rounds, and know how and when to
-                deploy the right tools to ensure you're making the right strides towards product-market fit and building
-                the best GTM team possible.
+                Dynamic is the go-to partner for technical Founders because we know how and when to deploy the right
+                tools to ensure you're making the right strides towards product-market fit and building the best team
+                possible to achieve your goals as a business.
               </p>
             </div>
           </section>
