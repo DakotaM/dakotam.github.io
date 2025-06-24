@@ -269,7 +269,6 @@ const investmentLogos = [
   {
     src: "/images/scalar-field-logo.png",
     alt: "Scalar Field logo",
-    className: "md:col-start-2", // For centering in the last row on md+ screens
   },
   {
     src: "/images/clado-logo.png",
@@ -313,13 +312,11 @@ export default function Fund() {
               Investments
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
               {investmentLogos.map((logo) => (
                 <div
                   key={logo.alt}
-                  className={`group flex items-center justify-center transition-all duration-300 hover:scale-105 ${
-                    logo.className || ""
-                  }`}
+                  className="group flex items-center justify-center transition-all duration-300 hover:scale-105"
                 >
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 overflow-hidden rounded-lg">
                     <Image
@@ -491,7 +488,7 @@ export default function Fund() {
                         <Image
                           src={logo.src || "/placeholder.svg"}
                           alt={logo.alt}
-                          width={56} // These are smaller than investment logos, keeping as is unless specified
+                          width={56}
                           height={28}
                           className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                         />
