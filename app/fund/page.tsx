@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Dynamic Fund - Venture Capital for Technical Founders | Pre-Seed to Series A",
   description:
-    "Dynamic Fund invests in technical founders building developer tools, infrastructure, and B2B SaaS. We provide capital and GTM expertise from pre-seed onward. Portfolio includes Infisical, Flightcrew, Judgment Labs.",
+    "Dynamic Fund invests in technical founders building developer tools, infrastructure, and B2B SaaS. We provide capital and GTM expertise from pre-seed onward. Portfolio includes Infisical, Flightcrew, Judgment Labs, Gist, Scalar Field, Clado.",
   keywords: [
     "venture capital fund",
     "VC fund",
@@ -27,11 +27,13 @@ export const metadata: Metadata = {
     "technical startup funding",
     "venture capital portfolio",
     "startup accelerator",
+    "Scalar Field",
+    "Clado",
   ],
   openGraph: {
     title: "Dynamic Fund - Venture Capital for Technical Founders",
     description:
-      "We invest in the best technical founders looking to accelerate growth from pre-seed onward. Portfolio includes Infisical, Flightcrew, Judgment Labs, and Gist.",
+      "We invest in the best technical founders looking to accelerate growth from pre-seed onward. Portfolio includes Infisical, Flightcrew, Judgment Labs, Gist, Scalar Field, Clado.",
     url: "https://dynamic.vc/fund",
     siteName: "Dynamic",
     type: "website",
@@ -223,7 +225,7 @@ const structuredData = {
           name: "What types of companies does Dynamic Fund invest in?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We invest in technical founders building developer tools, infrastructure software, and B2B SaaS platforms. Our portfolio includes companies like Infisical, Flightcrew, Judgment Labs, and Gist.",
+            text: "We invest in technical founders building developer tools, infrastructure software, and B2B SaaS platforms. Our portfolio includes companies like Infisical, Flightcrew, Judgment Labs, Gist, Scalar Field, and Clado.",
           },
         },
         {
@@ -329,6 +331,28 @@ export default function Fund() {
                   />
                 </div>
               </div>
+              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
+                <div className="relative overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/scalar-field-logo.png"
+                    alt="Scalar Field logo"
+                    width={180}
+                    height={90}
+                    className="h-24 sm:h-28 lg:h-32 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              </div>
+              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
+                <div className="relative overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/clado-logo.png"
+                    alt="Clado logo"
+                    width={180}
+                    height={90}
+                    className="h-24 sm:h-28 lg:h-32 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Portfolio descriptions for AI crawlers */}
@@ -339,6 +363,8 @@ export default function Fund() {
                 <li>Flightcrew: AI-powered customer success platform for B2B SaaS companies</li>
                 <li>Judgment Labs: AI decision-making platform for enterprise applications</li>
                 <li>Gist: Developer productivity platform for code collaboration and review</li>
+                <li>Scalar Field: [Description of Scalar Field - please provide]</li>
+                <li>Clado: [Description of Clado - please provide]</li>
               </ul>
             </div>
           </section>
