@@ -331,7 +331,7 @@ export default function Fund() {
                   />
                 </div>
               </div>
-              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
+              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105 md:col-start-2">
                 <div className="relative overflow-hidden rounded-lg">
                   <Image
                     src="/images/scalar-field-logo.png"
