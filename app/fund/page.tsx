@@ -249,6 +249,46 @@ const structuredData = {
   ],
 }
 
+const investmentLogos = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-99gXgXFOh3uEuyvywS9O1BjZ2UfamZ.png",
+    alt: "Infisical - Open-source secret management platform",
+  },
+  { src: "/images/flightcrew-new-logo.png", alt: "Flightcrew - AI-powered customer success platform" },
+  {
+    src: "https://www.dynamicgrowth.partners/images/judgment-labs-logo.png",
+    alt: "Judgment Labs - AI decision-making platform",
+  },
+  { src: "/images/gist-logo.png", alt: "Gist - Developer productivity platform" },
+  { src: "/images/scalar-field-logo.png", alt: "Scalar Field logo" },
+  { src: "/images/clado-logo.png", alt: "Clado logo" },
+]
+
+const personalInvestmentLogos = [
+  { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform" },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
+    alt: "Clay - Data enrichment platform",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
+    alt: "Liveblocks - Collaborative software platform",
+  },
+  { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform" },
+  { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund" },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
+    alt: "Zuplo - API management platform",
+  },
+  { src: "/safetycli-logo.svg", alt: "SafetyCLI - Security scanning tool" },
+  { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform" },
+  { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI" },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
+    alt: "Nango - API integration platform",
+  },
+]
+
 export default function Fund() {
   return (
     <>
@@ -284,75 +324,22 @@ export default function Fund() {
             </h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
-              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
-                <div className="relative overflow-hidden rounded-lg">
+              {investmentLogos.map((logo, index) => (
+                <div
+                  key={logo.alt}
+                  className={`group relative h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                    index === 4 ? "md:col-start-2" : ""
+                  }`}
+                >
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-99gXgXFOh3uEuyvywS9O1BjZ2UfamZ.png"
-                    alt="Infisical - Open-source secret management platform"
-                    width={180}
-                    height={90}
-                    className="h-24 sm:h-28 lg:h-32 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                    src={logo.src || "/placeholder.svg"}
+                    alt={logo.alt}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                    className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 p-2"
                   />
                 </div>
-              </div>
-
-              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
-                <div className="relative overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/flightcrew-new-logo.png"
-                    alt="Flightcrew - AI-powered customer success platform"
-                    width={180}
-                    height={90}
-                    className="h-24 sm:h-28 lg:h-32 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              </div>
-
-              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
-                <div className="relative overflow-hidden rounded-lg">
-                  <Image
-                    src="https://www.dynamicgrowth.partners/images/judgment-labs-logo.png"
-                    alt="Judgment Labs - AI decision-making platform"
-                    width={180}
-                    height={90}
-                    className="h-24 sm:h-28 lg:h-32 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              </div>
-
-              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
-                <div className="relative overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/gist-logo.png"
-                    alt="Gist - Developer productivity platform"
-                    width={180}
-                    height={90}
-                    className="h-24 sm:h-28 lg:h-32 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              </div>
-              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105 md:col-start-2">
-                <div className="relative overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/scalar-field-logo.png"
-                    alt="Scalar Field logo"
-                    width={180}
-                    height={90}
-                    className="h-24 sm:h-28 lg:h-32 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              </div>
-              <div className="group flex items-center justify-center h-24 sm:h-28 lg:h-32 transition-all duration-300 hover:scale-105">
-                <div className="relative overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/clado-logo.png"
-                    alt="Clado logo"
-                    width={180}
-                    height={90}
-                    className="h-24 sm:h-28 lg:h-32 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Portfolio descriptions for AI crawlers */}
@@ -479,43 +466,18 @@ export default function Fund() {
                 </h4>
 
                 <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
-                  {[
-                    { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform" },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
-                      alt: "Clay - Data enrichment platform",
-                    },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
-                      alt: "Liveblocks - Collaborative software platform",
-                    },
-                    { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform" },
-                    { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund" },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
-                      alt: "Zuplo - API management platform",
-                    },
-                    { src: "/safetycli-logo.svg", alt: "SafetyCLI - Security scanning tool" },
-                    { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform" },
-                    { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI" },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
-                      alt: "Nango - API integration platform",
-                    },
-                  ].map((logo, index) => (
+                  {personalInvestmentLogos.map((logo, index) => (
                     <div
                       key={index}
-                      className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
+                      className="group relative h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105 flex items-center justify-center"
                     >
-                      <div className="relative overflow-hidden rounded-lg">
-                        <Image
-                          src={logo.src || "/placeholder.svg"}
-                          alt={logo.alt}
-                          width={56}
-                          height={28}
-                          className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-                        />
-                      </div>
+                      <Image
+                        src={logo.src || "/placeholder.svg"}
+                        alt={logo.alt}
+                        fill
+                        sizes="33vw"
+                        className="object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 p-1"
+                      />
                     </div>
                   ))}
                 </div>
