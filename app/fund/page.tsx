@@ -479,6 +479,8 @@ export default function Fund() {
                       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
                       alt: "Nango - API integration platform",
                     },
+                    { src: "/images/metaview-new-logo.png", alt: "Metaview - Interview intelligence platform" },
+                    { src: "/images/plain-new-logo.png", alt: "Plain - Customer support platform" },
                   ].map((logo, index) => (
                     <div
                       key={index}
