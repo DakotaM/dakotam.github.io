@@ -104,8 +104,8 @@ export default function LogoGrid() {
       alt: "CrewAI logo",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pi%20labs-z7AxhHUrM9PBOX9mhk4zka3Piwu9KZ.svg",
-      alt: "Pi Labs logo",
+      src: "/images/gradient-labs-logo.png",
+      alt: "Gradient Labs logo",
     },
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-01%20at%208.44.25%E2%80%AFAM-K7ISL5OYS39OZuueksHg8AdD6bWgU2.png",
