@@ -60,8 +60,8 @@ export default function LogoGrid() {
       alt: "Granola logo",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
-      alt: "Zuplo logo",
+      src: "/images/grepr-logo.png",
+      alt: "Grepr logo",
     },
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XqYDodZTYxd7vD1XADRO3lzcnTG1f4.png",
