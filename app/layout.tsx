@@ -49,7 +49,7 @@ export const metadata = {
       "We provide venture capital funding and growth partnership for technical founders building developer tools, infrastructure, and B2B SaaS.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dynamic - Venture Capital & Growth Partners",
@@ -61,7 +61,7 @@ export const metadata = {
     title: "Dynamic - Venture Capital & Growth Partners for Technical Founders",
     description:
       "We provide venture capital funding and growth partnership for technical founders building developer tools, infrastructure, and B2B SaaS.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
     creator: "@dakotajmckenzie",
   },
   robots: {

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://dynamic.vc/og-fund.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dynamic Fund - Venture Capital for Technical Founders",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dynamic Fund - Venture Capital for Technical Founders",
     description: "We invest in the best technical founders looking to accelerate growth from pre-seed onward.",
-    images: ["https://dynamic.vc/og-fund.jpg"],
+    images: ["/og-image.png"],
     creator: "@dakotajmckenzie",
   },
   alternates: {

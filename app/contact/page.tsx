@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://dynamic.vc/og-contact.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Contact Dynamic - Get in Touch",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Dynamic - Get in Touch with Our Team",
     description: "Contact Dynamic for venture capital investment inquiries or growth partnership consulting.",
-    images: ["https://dynamic.vc/og-contact.jpg"],
+    images: ["/og-image.png"],
     creator: "@dakotajmckenzie",
   },
   alternates: {

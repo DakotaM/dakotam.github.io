@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://dynamic.vc/og-team.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dynamic Growth Partners - GTM Consulting Team",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
     description:
       "We support founding teams looking to accelerate their business and achieve fundraising milestones faster.",
-    images: ["https://dynamic.vc/og-team.jpg"],
+    images: ["/og-image.png"],
     creator: "@dakotajmckenzie",
   },
   alternates: {
