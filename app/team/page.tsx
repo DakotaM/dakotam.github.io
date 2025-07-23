@@ -210,13 +210,15 @@ export default function Page() {
             </h1>
             <div className="max-w-[800px] mx-auto mt-6 lg:mt-8 space-y-4">
               <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
-                We support technical Founders and their teams pre-seed to pre-IPO in accelerating growth and hitting
-                fundraising milestones faster by applying best practices and learnings from hands-on execution alongside
-                the best GTM and Product leaders in the world.
+                Dynamic Growth Partners is focused on Founder-led company building and modern organizational design. We
+                work exclusively with technical Founders ranging from pre-seed through pre-IPO to help them grow faster,
+                execute better, and raise capital more effectively.
               </p>
               <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
-                We're the go-to partner for technical founders who want to turn product excellence into commercial
-                outcomes — over 25% of our clients have gone on to raise Tier-1 venture rounds.
+                Our approach is grounded in hands-on execution, and shaped by working alongside the best GTM and Product
+                leaders in the world. Whether you're building from zero or scaling toward repeatability, we help
+                translate product excellence into commercial outcomes. To date, over 30% of our clients have raised Tier
+                1 venture rounds.
               </p>
             </div>
           </header>
