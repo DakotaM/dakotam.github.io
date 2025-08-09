@@ -20,6 +20,33 @@ export default function KoalaScript({ deferInit = false }: Props) {
 }(window,document);
 ${useProxy ? `_koala("config", { apiHost: "/koala-api" });` : ""}
 ${!deferInit ? `_koala("init", { apiKey: "${apiKey ?? ""}" });` : ""}
+
+// Track page views and send to our webhook
+if (!${deferInit} && "${apiKey}") {
+  _koala("track", "page_view", {
+    page_url: window.location.href,
+    page_title: document.title,
+    referrer: document.referrer
+  });
+  
+  // Send notification to our webhook
+  fetch("/api/koala-webhook", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      type: "visitor",
+      event: "page_view",
+      page_url: window.location.href,
+      page_title: document.title,
+      referrer: document.referrer,
+      timestamp: new Date().toISOString(),
+      visitor: {
+        user_agent: navigator.userAgent,
+        language: navigator.language
+      }
+    })
+  }).catch(err => console.log("Webhook failed:", err));
+}
 `
 
   return <Script id="koala-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: initScript }} />
