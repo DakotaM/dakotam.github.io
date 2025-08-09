@@ -1,9 +1,14 @@
 import "./globals.css"
 import { Inter, Nunito_Sans } from "next/font/google"
 import type React from "react"
-import Script from "next/script"
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
+import KoalaScript from "@/components/KoalaScript"
+import dynamic from "next/dynamic"
+
+const ConsentGate = dynamic(() => import("@/components/ConsentGate"), { ssr: false })
+
+const useConsentGate = process.env.ENABLE_CONSENT_GATE === "true"
 
 const inter = Inter({ subsets: ["latin"] })
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] })
@@ -98,11 +103,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
-        <Script id="koala-tracking" strategy="afterInteractive">
-          {`
-            !function(t){var k="ko",i=(window.globalKoalaKey=window.globalKoalaKey||k);if(window[i])return;var ko=(window[i]=[]);["identify","track","removeListeners","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_2427fc378dbd5d883fdb804826144c72352c/sdk.js"),(document.body || document.head).appendChild(n)}();
-          `}
-        </Script>
+        {useConsentGate ? <ConsentGate /> : <KoalaScript />}
         <Analytics />
       </body>
     </html>
