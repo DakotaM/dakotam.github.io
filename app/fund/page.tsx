@@ -404,7 +404,7 @@ export default function Fund() {
                     index === investmentLogos.length - 1 && investmentLogos.length % 3 === 1 ? "sm:col-start-2" : ""
                   }`}
                 >
-                  <div className="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 flex items-center justify-center p-3">
+                  <div className="relative w-28 h-20 sm:w-32 sm:h-24 lg:w-36 lg:h-28 flex items-center justify-center p-3">
                     <Image
                       src={logo.src || "/placeholder.svg"}
                       alt={logo.alt}
