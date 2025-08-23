@@ -265,8 +265,8 @@ const investmentLogos = [
   {
     src: "/images/judgment-labs-new-logo.png",
     alt: "Judgment Labs - AI decision-making platform",
-    width: 80,
-    height: 40,
+    width: 120,
+    height: 60,
     isSpecial: true,
   },
   {
@@ -408,7 +408,7 @@ export default function Fund() {
                   <div
                     className={`relative overflow-hidden rounded-lg flex items-center justify-center ${
                       logo.isSpecial
-                        ? "w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 p-4"
+                        ? "w-32 h-20 sm:w-36 sm:h-24 lg:w-40 lg:h-28 p-3"
                         : "w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 p-2"
                     }`}
                   >
@@ -417,7 +417,9 @@ export default function Fund() {
                       alt={logo.alt}
                       width={logo.width}
                       height={logo.height}
-                      className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                      className={`opacity-80 group-hover:opacity-100 transition-opacity duration-300 ${
+                        logo.isSpecial ? "object-contain w-full h-full" : "object-contain"
+                      }`}
                       loading={index < 6 ? "eager" : "lazy"}
                       sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                     />
