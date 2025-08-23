@@ -267,7 +267,6 @@ const investmentLogos = [
     alt: "Judgment Labs - AI decision-making platform",
     width: 120,
     height: 60,
-    isSpecial: true,
   },
   {
     src: "/images/gist-logo.png",
@@ -397,7 +396,7 @@ export default function Fund() {
               Investments
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
               {investmentLogos.map((logo, index) => (
                 <div
                   key={logo.alt}
@@ -405,23 +404,15 @@ export default function Fund() {
                     index === investmentLogos.length - 1 && investmentLogos.length % 3 === 1 ? "sm:col-start-2" : ""
                   }`}
                 >
-                  <div
-                    className={`relative overflow-hidden rounded-lg flex items-center justify-center ${
-                      logo.isSpecial
-                        ? "w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 p-4 bg-white/5"
-                        : "w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 p-2"
-                    }`}
-                  >
+                  <div className="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 flex items-center justify-center p-3">
                     <Image
                       src={logo.src || "/placeholder.svg"}
                       alt={logo.alt}
                       width={logo.width}
                       height={logo.height}
-                      className={`opacity-80 group-hover:opacity-100 transition-opacity duration-300 ${
-                        logo.isSpecial ? "object-contain max-w-full max-h-full" : "object-contain"
-                      }`}
+                      className="object-contain max-w-full max-h-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                       loading={index < 6 ? "eager" : "lazy"}
-                      sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
+                      sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
                     />
                   </div>
                 </div>
