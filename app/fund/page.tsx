@@ -317,10 +317,12 @@ export default function Fund() {
             </h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
-              {investmentLogos.map((logo) => (
+              {investmentLogos.map((logo, index) => (
                 <div
                   key={logo.alt}
-                  className="group flex items-center justify-center transition-all duration-300 hover:scale-105"
+                  className={`group flex items-center justify-center transition-all duration-300 hover:scale-105 ${
+                    index === investmentLogos.length - 1 && investmentLogos.length % 3 === 1 ? "sm:col-start-2" : ""
+                  }`}
                 >
                   <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 overflow-hidden rounded-lg">
                     <Image
