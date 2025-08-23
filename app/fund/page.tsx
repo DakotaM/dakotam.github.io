@@ -253,36 +253,116 @@ const investmentLogos = [
   {
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-99gXgXFOh3uEuyvywS9O1BjZ2UfamZ.png",
     alt: "Infisical - Open-source secret management platform",
+    width: 120,
+    height: 60,
   },
   {
     src: "/images/flightcrew-new-logo.png",
     alt: "Flightcrew - AI-powered customer success platform",
+    width: 120,
+    height: 60,
   },
   {
-    src: "https://www.dynamicgrowth.partners/images/judgment-labs-logo.png",
+    src: "/images/judgment-labs-new-logo.png",
     alt: "Judgment Labs - AI decision-making platform",
+    width: 120,
+    height: 60,
   },
   {
     src: "/images/gist-logo.png",
     alt: "Gist - Developer productivity platform",
+    width: 120,
+    height: 60,
   },
   {
     src: "/images/scalar-field-logo.png",
     alt: "Scalar Field logo",
+    width: 120,
+    height: 60,
   },
   {
     src: "/images/clado-logo.png",
     alt: "Clado logo",
+    width: 120,
+    height: 60,
   },
   {
     src: "/images/e3group-logo.png",
     alt: "e3group logo",
+    width: 120,
+    height: 60,
   },
 ]
 
-export default function Fund() {
-  const imageSizes = "(min-width: 1024px) 128px, (min-width: 640px) 112px, 96px"
+const experienceLogos = [
+  {
+    src: "/images/databricks-new-logo.png",
+    alt: "Databricks - Former GTM team member",
+    width: 75,
+    height: 30,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n2zQYDcuoaZHXmGrIONp78DO7Q6Pxw.png",
+    alt: "Segment - Former GTM team member",
+    width: 75,
+    height: 30,
+  },
+  {
+    src: "/images/unusual-ventures-new-logo.png",
+    alt: "Unusual Ventures - Former investor",
+    width: 75,
+    height: 30,
+  },
+  {
+    src: "/images/sumo-logic-new-logo.png",
+    alt: "Sumo Logic - Former GTM team member",
+    width: 75,
+    height: 30,
+  },
+  {
+    src: "/images/demandware-new-logo.png",
+    alt: "Demandware - Former GTM team member",
+    width: 75,
+    height: 30,
+  },
+]
 
+const personalInvestments = [
+  { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform", width: 56, height: 28 },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
+    alt: "Clay - Data enrichment platform",
+    width: 56,
+    height: 28,
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
+    alt: "Liveblocks - Collaborative software platform",
+    width: 56,
+    height: 28,
+  },
+  { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform", width: 56, height: 28 },
+  { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund", width: 56, height: 28 },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
+    alt: "Zuplo - API management platform",
+    width: 56,
+    height: 28,
+  },
+  { src: "/safetycli-logo.svg", alt: "SafetyCLI - Security scanning tool", width: 56, height: 28 },
+  { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform", width: 56, height: 28 },
+  { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI", width: 56, height: 28 },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
+    alt: "Nango - API integration platform",
+    width: 56,
+    height: 28,
+  },
+  { src: "/images/metaview-new-logo.png", alt: "Metaview - Interview intelligence platform", width: 56, height: 28 },
+  { src: "/images/plain-new-logo.png", alt: "Plain - Customer support platform", width: 56, height: 28 },
+]
+
+export default function Fund() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -328,10 +408,11 @@ export default function Fund() {
                     <Image
                       src={logo.src || "/placeholder.svg"}
                       alt={logo.alt}
-                      layout="fill"
-                      objectFit="contain"
-                      className="opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                      sizes={imageSizes}
+                      width={logo.width}
+                      height={logo.height}
+                      className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                      loading={index < 6 ? "eager" : "lazy"}
+                      sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                     />
                   </div>
                 </div>
@@ -383,51 +464,18 @@ export default function Fund() {
 
               {/* Experience Logos */}
               <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-4 mb-6">
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="/images/databricks-new-logo.png"
-                    alt="Databricks - Former GTM team member"
-                    width={75}
-                    height={30}
-                    className="h-8 sm:h-9 object-contain"
-                  />
-                </div>
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n2zQYDcuoaZHXmGrIONp78DO7Q6Pxw.png"
-                    alt="Segment - Former GTM team member"
-                    width={75}
-                    height={30}
-                    className="h-8 sm:h-9 object-contain"
-                  />
-                </div>
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="/images/unusual-ventures-new-logo.png"
-                    alt="Unusual Ventures - Former investor"
-                    width={75}
-                    height={30}
-                    className="h-8 sm:h-9 object-contain"
-                  />
-                </div>
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="/images/sumo-logic-new-logo.png"
-                    alt="Sumo Logic - Former GTM team member"
-                    width={75}
-                    height={30}
-                    className="h-8 sm:h-9 object-contain"
-                  />
-                </div>
-                <div className="opacity-60 hover:opacity-100 transition-opacity duration-300">
-                  <Image
-                    src="/images/demandware-new-logo.png"
-                    alt="Demandware - Former GTM team member"
-                    width={75}
-                    height={30}
-                    className="h-8 sm:h-9 object-contain"
-                  />
-                </div>
+                {experienceLogos.map((logo, index) => (
+                  <div key={logo.alt} className="opacity-60 hover:opacity-100 transition-opacity duration-300">
+                    <Image
+                      src={logo.src || "/placeholder.svg"}
+                      alt={logo.alt}
+                      width={logo.width}
+                      height={logo.height}
+                      className="h-8 sm:h-9 object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
               </div>
 
               {/* Bio */}
@@ -463,32 +511,7 @@ export default function Fund() {
                 </h4>
 
                 <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
-                  {[
-                    { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform" },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
-                      alt: "Clay - Data enrichment platform",
-                    },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
-                      alt: "Liveblocks - Collaborative software platform",
-                    },
-                    { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform" },
-                    { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund" },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
-                      alt: "Zuplo - API management platform",
-                    },
-                    { src: "/safetycli-logo.svg", alt: "SafetyCLI - Security scanning tool" },
-                    { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform" },
-                    { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI" },
-                    {
-                      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
-                      alt: "Nango - API integration platform",
-                    },
-                    { src: "/images/metaview-new-logo.png", alt: "Metaview - Interview intelligence platform" },
-                    { src: "/images/plain-new-logo.png", alt: "Plain - Customer support platform" },
-                  ].map((logo, index) => (
+                  {personalInvestments.map((logo, index) => (
                     <div
                       key={index}
                       className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
@@ -497,9 +520,10 @@ export default function Fund() {
                         <Image
                           src={logo.src || "/placeholder.svg"}
                           alt={logo.alt}
-                          width={56}
-                          height={28}
+                          width={logo.width}
+                          height={logo.height}
                           className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          loading="lazy"
                         />
                       </div>
                     </div>
