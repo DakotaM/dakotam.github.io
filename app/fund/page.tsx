@@ -241,7 +241,7 @@ const structuredData = {
           name: "How can founders apply for investment from Dynamic Fund?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Founders seeking investment can email dakota@dynamicgrowth.partners with their pitch deck and company information. We prioritize long-term partnerships and focus on technical founders building developer-focused products.",
+            text: "Founders seeking investment can email us <Link href='mailto:dakota@dynamicgrowth.partners'>here</Link>.",
           },
         },
       ],
@@ -265,8 +265,8 @@ const investmentLogos = [
   {
     src: "/images/judgment-labs-new-logo.png",
     alt: "Judgment Labs - AI decision-making platform",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
   {
     src: "/images/gist-logo.png",
@@ -404,15 +404,16 @@ export default function Fund() {
                     index === investmentLogos.length - 1 && investmentLogos.length % 3 === 1 ? "sm:col-start-2" : ""
                   }`}
                 >
-                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 overflow-hidden rounded-lg">
+                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 overflow-hidden rounded-lg flex items-center justify-center p-2">
                     <Image
                       src={logo.src || "/placeholder.svg"}
                       alt={logo.alt}
                       width={logo.width}
                       height={logo.height}
-                      className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                      className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 max-w-full max-h-full"
                       loading={index < 6 ? "eager" : "lazy"}
                       sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
+                      style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "100%" }}
                     />
                   </div>
                 </div>
