@@ -274,6 +274,10 @@ const investmentLogos = [
     src: "/images/clado-logo.png",
     alt: "Clado logo",
   },
+  {
+    src: "/images/e3group-logo.png",
+    alt: "e3group logo",
+  },
 ]
 
 export default function Fund() {
@@ -342,6 +346,7 @@ export default function Fund() {
                 <li>Gist: Developer productivity platform for code collaboration and review</li>
                 <li>Scalar Field: [Description of Scalar Field - please provide]</li>
                 <li>Clado: [Description of Clado - please provide]</li>
+                <li>e3group: [Description of e3group - please provide]</li>
               </ul>
             </div>
           </section>
