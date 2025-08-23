@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 import KoalaScript from "@/components/KoalaScript"
 import dynamic from "next/dynamic"
+import { getKoalaKey } from "@/lib/get-koala-key"
 
 const ConsentGate = dynamic(() => import("@/components/ConsentGate"), { ssr: false })
 
@@ -91,6 +92,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const koalaKey = getKoalaKey()
+
   return (
     <html lang="en">
       <head>
@@ -103,7 +106,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
-        {useConsentGate ? <ConsentGate /> : <KoalaScript />}
+        {useConsentGate ? <ConsentGate apiKey={koalaKey} /> : <KoalaScript apiKey={koalaKey} />}
         <Analytics />
       </body>
     </html>

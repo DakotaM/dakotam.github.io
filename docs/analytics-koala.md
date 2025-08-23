@@ -1,7 +1,7 @@
 # Koala Analytics
 
 1. Set env vars:
-   - NEXT_PUBLIC_KOALA_API_KEY=YOUR_PUBLIC_KEY
+   - KOALA_PUBLIC_KEY=YOUR_PUBLIC_KEY
    - ENABLE_KOALA_PROXY=false (or true)
    - ENABLE_CONSENT_GATE=false (or true)
 

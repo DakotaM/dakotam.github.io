@@ -3,15 +3,21 @@
 import { useEffect, useState } from "react"
 import KoalaScript from "@/components/KoalaScript"
 
-const apiKey = process.env.NEXT_PUBLIC_KOALA_API_KEY
+type Props = {
+  apiKey?: string
+}
 
-export default function ConsentGate() {
+export default function ConsentGate({ apiKey }: Props) {
   const [consent, setConsent] = useState<boolean | null>(null)
 
   useEffect(() => {
     const saved = localStorage.getItem("consent-koala")
     if (saved) setConsent(saved === "true")
   }, [])
+
+  if (!apiKey) {
+    return null
+  }
 
   if (consent === null) {
     return (
@@ -55,11 +61,11 @@ export default function ConsentGate() {
     // Load Koala with defer and then init after mount
     return (
       <>
-        <KoalaScript deferInit />
+        <KoalaScript deferInit apiKey={apiKey} />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              if (window._koala) { window._koala("init", { apiKey: "${apiKey ?? ""}" }); }
+              if (window._koala) { window._koala("init", { apiKey: "${apiKey}" }); }
             `,
           }}
         />
