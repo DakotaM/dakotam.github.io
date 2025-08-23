@@ -265,8 +265,9 @@ const investmentLogos = [
   {
     src: "/images/judgment-labs-new-logo.png",
     alt: "Judgment Labs - AI decision-making platform",
-    width: 160,
-    height: 80,
+    width: 80,
+    height: 40,
+    isSpecial: true,
   },
   {
     src: "/images/gist-logo.png",
@@ -404,16 +405,21 @@ export default function Fund() {
                     index === investmentLogos.length - 1 && investmentLogos.length % 3 === 1 ? "sm:col-start-2" : ""
                   }`}
                 >
-                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 overflow-hidden rounded-lg flex items-center justify-center p-2">
+                  <div
+                    className={`relative overflow-hidden rounded-lg flex items-center justify-center ${
+                      logo.isSpecial
+                        ? "w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 p-4"
+                        : "w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 p-2"
+                    }`}
+                  >
                     <Image
                       src={logo.src || "/placeholder.svg"}
                       alt={logo.alt}
                       width={logo.width}
                       height={logo.height}
-                      className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 max-w-full max-h-full"
+                      className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                       loading={index < 6 ? "eager" : "lazy"}
                       sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
-                      style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "100%" }}
                     />
                   </div>
                 </div>
