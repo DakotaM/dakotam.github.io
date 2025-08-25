@@ -98,9 +98,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
-        <Script id="koala-tracking" strategy="afterInteractive">
+        <Script id="apollo-tracking" strategy="afterInteractive">
           {`
-            !function(t){var k="ko",i=(window.globalKoalaKey=window.globalKoalaKey||k);if(window[i])return;var ko=(window[i]=[]);["identify","track","removeListeners","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_2427fc378dbd5d883fdb804826144c72352c/sdk.js"),(document.body || document.head).appendChild(n)}();
+            function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"664ceaf7d4571d04a6b744e3"})},document.head.appendChild(o)}initApollo();
           `}
         </Script>
         <Analytics />
