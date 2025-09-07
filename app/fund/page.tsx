@@ -360,6 +360,7 @@ const personalInvestments = [
   },
   { src: "/images/metaview-new-logo.png", alt: "Metaview - Interview intelligence platform", width: 56, height: 28 },
   { src: "/images/plain-new-logo.png", alt: "Plain - Customer support platform", width: 56, height: 28 },
+  { src: "/images/cara-ai-logo.png", alt: "Cara AI - AI platform", width: 56, height: 28 },
 ]
 
 export default function Fund() {
