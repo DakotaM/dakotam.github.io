@@ -2,8 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Inter } from "next/font/google"
 import "../team-styles.css"
-import { Suspense } from "react"
-import LogoGrid from "./logo-grid"
 import type { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -202,19 +200,19 @@ export default function Page() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className={`min-h-screen bg-black text-white ${inter.className} antialiased`}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
           {/* Hero Section (v110 style) */}
-          <header className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 lg:mb-8">
+          <header className="text-center mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4 lg:mb-6">
               Dynamic Growth Partners
             </h1>
-            <div className="max-w-[800px] mx-auto mt-6 lg:mt-8 space-y-4">
+            <div className="max-w-[800px] mx-auto mt-4 lg:mt-6 space-y-3">
               <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
                 Dynamic Growth Partners is focused on Founder-led company building and modern organizational design. We
                 work exclusively with technical Founders ranging from pre-seed through pre-IPO to help them grow faster,
                 execute better, and raise capital more effectively.
               </p>
-              <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
+              <p className="text-xs sm:text-sm font-medium text-gray-400 tracking-wide">
                 Our approach is grounded in hands-on execution, and shaped by working alongside the best GTM and Product
                 leaders in the world. Whether you're building from zero or scaling toward repeatability, we help
                 translate product excellence into commercial outcomes. To date, over 30% of our clients have raised Tier
@@ -224,22 +222,22 @@ export default function Page() {
           </header>
 
           {/* Team Section - Adapted for 3 members */}
-          <section className="mb-12" aria-labelledby="team">
-            <div className="w-full h-px bg-gray-900 mb-10" />
+          <section className="mb-8" aria-labelledby="team">
+            <div className="w-full h-px bg-gray-900 mb-6" />
             <h2 id="team" className="sr-only">
               Our Team
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 max-w-5xl mx-auto">
               {/* Dakota McKenzie */}
               <div className="flex flex-col items-center">
-                <div className="w-56 h-56 sm:w-64 sm:h-64 relative mb-4 team-photo-container">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg"
                     alt="Dakota McKenzie - CEO of Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 224px, 256px"
+                    sizes="(max-width: 640px) 192px, 224px"
                   />
                 </div>
                 <Link
@@ -248,19 +246,19 @@ export default function Page() {
                 >
                   <h3>Dakota McKenzie</h3>
                 </Link>
-                <p className="text-sm text-gray-400">CEO</p>
+                <p className="text-xs sm:text-sm text-gray-400">CEO</p>
               </div>
 
               {/* Trey Johnson */}
               <div className="flex flex-col items-center">
-                <div className="w-56 h-56 sm:w-64 sm:h-64 relative mb-4 team-photo-container">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Trey-EPgexA01iWSJgBZzf8NZQUyuSh0R4y.jpeg"
                     alt="Trey Johnson - Operating Partner at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 224px, 256px"
+                    sizes="(max-width: 640px) 192px, 224px"
                   />
                 </div>
                 <Link
@@ -269,19 +267,19 @@ export default function Page() {
                 >
                   <h3>Trey Johnson</h3>
                 </Link>
-                <p className="text-sm text-gray-400">Operating Partner</p>
+                <p className="text-xs sm:text-sm text-gray-400">Operating Partner</p>
               </div>
 
               {/* Ben Cappellacci */}
               <div className="flex flex-col items-center">
-                <div className="w-56 h-56 sm:w-64 sm:h-64 relative mb-4 team-photo-container">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
                   <Image
                     src="/images/ben-cappellacci.jpeg"
                     alt="Ben Cappellacci - Deployment Advisor at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 224px, 256px"
+                    sizes="(max-width: 640px) 192px, 224px"
                   />
                 </div>
                 <Link
@@ -290,11 +288,11 @@ export default function Page() {
                 >
                   <h3>Ben Cappellacci</h3>
                 </Link>
-                <p className="text-sm text-gray-400">Deployment Advisor</p>
+                <p className="text-xs sm:text-sm text-gray-400">Deployment Advisor</p>
               </div>
             </div>
 
-            <div className="max-w-4xl mx-auto text-gray-200 space-y-4 leading-relaxed text-sm sm:text-base">
+            <div className="max-w-4xl mx-auto text-gray-200 space-y-3 leading-relaxed text-xs sm:text-sm">
               <p>
                 Our experience includes working for and partnering with firms led by Midas-list investors, operating at
                 world-class GTM teams from pre-$1m in ARR to $1.5B ARR, and being in the seat with founders on their
@@ -308,118 +306,13 @@ export default function Page() {
             </div>
           </section>
 
-          {/* Areas of Focus Section (v110 style) */}
-          <section className="mb-12" aria-labelledby="services">
-            <div className="w-full h-px bg-gray-900 mb-10" />
-            <div className="max-w-4xl mx-auto">
-              <h2
-                id="services"
-                className="text-2xl sm:text-3xl font-medium text-center mb-8"
-                style={{ color: "#ABBDBD" }}
-              >
-                Areas of Focus
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Sales Process & Repeatability</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Conducting comprehensive reviews of current opportunities and guiding through existing sales
-                      processes to find repeatability.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Open Source + PLG Optimization</h3>
-                    <p className="mb-4 text-sm sm:text-base text-gray-200">
-                      Uncover the key motivations and reasons why your top users leverage your open source project and
-                      what are they key levers to conversion.
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Understand the adoption path of top-of-funnel users leveraging your self-service product to
-                      acknowledge what levers are required to justify a purchase (or upgrades).
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">User / Buyer Journey</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Ensuring a solid user/buyer journey to help navigate tougher "bottoms up" sales cycles.
-                    </p>
-                  </div>
-                </div>
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Sales Management</h3>
-                    <p className="mb-4 text-sm sm:text-base text-gray-200">
-                      Coaching and partnering with sales leadership
-                    </p>
-                    <p className="mb-4 text-sm sm:text-base text-gray-200">
-                      Conducting pipeline and deal reviews with AEs
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Managing Account Executives on full-sales cycles
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Pipeline Focus</h3>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Exercises to test and building pipeline (outbound and leveraging inbound for faster wins).
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-medium mb-3 text-white">Build the right product</h3>
-                    <p className="mb-4 text-sm sm:text-base text-gray-200">
-                      Collecting product feedback to identify current and future roadmap opportunities
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-200">
-                      Look for ways to identify what your developer community needs to be successful through discovery
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Experience Section (v110 style) */}
-          <section className="mb-12" aria-labelledby="experience">
-            <div className="w-full h-px bg-gray-900 mb-10" />
-            <div className="max-w-4xl mx-auto">
-              <h2
-                id="experience"
-                className="text-2xl sm:text-3xl font-medium text-center mb-8"
-                style={{ color: "#ABBDBD" }}
-              >
-                Experience
-              </h2>
-              <p className="mb-8 text-sm sm:text-base text-gray-200 leading-relaxed">
-                We have worked at a range of SaaS companies in the earlier stages of growth based on our drive to build
-                and grow new functions. We are inspired by building alongside world-class founders and teams.
-              </p>
-              <Suspense
-                fallback={
-                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 sm:gap-6 items-center justify-items-center">
-                    {Array(25)
-                      .fill(0)
-                      .map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-24 sm:w-28 md:w-32 h-16 sm:h-20 flex items-center justify-center logo-container animate-pulse bg-gray-800 rounded-md"
-                        ></div>
-                      ))}
-                  </div>
-                }
-              >
-                <LogoGrid />
-              </Suspense>
-            </div>
-          </section>
-
           {/* Contact Section (v110 style) */}
-          <section className="text-center py-6" aria-labelledby="contact">
-            <div className="w-full h-px bg-gray-900 mb-8" />
+          <section className="text-center py-4" aria-labelledby="contact">
+            <div className="w-full h-px bg-gray-900 mb-6" />
             <div className="max-w-[800px] mx-auto">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-10 py-3 text-base font-medium text-black bg-white rounded-full shadow-sm hover:bg-gray-100 transition-colors duration-300 min-w-[220px] mb-6"
+                className="inline-flex items-center justify-center px-10 py-3 text-base font-medium text-black bg-white rounded-full shadow-sm hover:bg-gray-100 transition-colors duration-300 min-w-[220px] mb-4"
               >
                 Book an intro call
               </Link>
