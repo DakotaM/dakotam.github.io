@@ -515,7 +515,11 @@ export default function Fund() {
                   {personalInvestments.map((logo, index) => (
                     <div
                       key={index}
-                      className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
+                      className={`group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105 ${
+                        index === personalInvestments.length - 1 && personalInvestments.length % 3 === 1
+                          ? "col-start-2"
+                          : ""
+                      }`}
                     >
                       <Image
                         src={logo.src || "/placeholder.svg"}
