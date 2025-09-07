@@ -88,12 +88,6 @@ export default function LogoGrid() {
       height: 50,
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XqYDodZTYxd7vD1XADRO3lzcnTG1f4.png",
-      alt: "HumanSignal logo",
-      width: 100,
-      height: 50,
-    },
-    {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-z7q6qYrQwigaIDJ1qd8qYZbFzIeLjl.png",
       alt: "Flightcrew logo",
       width: 100,
