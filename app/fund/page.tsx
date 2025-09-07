@@ -517,16 +517,14 @@ export default function Fund() {
                       key={index}
                       className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
                     >
-                      <div className="relative overflow-hidden rounded-lg flex items-center justify-center w-full">
-                        <Image
-                          src={logo.src || "/placeholder.svg"}
-                          alt={logo.alt}
-                          width={logo.width}
-                          height={logo.height}
-                          className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 mx-auto"
-                          loading="lazy"
-                        />
-                      </div>
+                      <Image
+                        src={logo.src || "/placeholder.svg"}
+                        alt={logo.alt}
+                        width={logo.width}
+                        height={logo.height}
+                        className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                        loading="lazy"
+                      />
                     </div>
                   ))}
                 </div>
