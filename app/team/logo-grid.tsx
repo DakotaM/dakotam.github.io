@@ -118,7 +118,7 @@ export default function LogoGrid() {
       height: 50,
     },
     {
-      src: "/images/crew_only_logo-a8bPDxvc3alLTW2ZsgjcMUmf4Fj2RX.png",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/crew_only_logo-a8bPDxvc3alLTW2ZsgjcMUmf4Fj2RX.png",
       alt: "CrewAI logo",
       width: 100,
       height: 50,
