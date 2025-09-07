@@ -367,14 +367,14 @@ export default function Fund() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className={`min-h-screen bg-black text-white ${inter.className} antialiased`}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
           {/* Hero Section */}
-          <header className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 lg:mb-8">
+          <header className="text-center mb-6 lg:mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4 lg:mb-6">
               Dynamic Fund
             </h1>
 
-            <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-6 lg:mt-8">
+            <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-4 lg:mt-6">
               <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
                 Dynamic invests in the best <strong>technical Founders</strong> looking to accelerate growth from{" "}
                 <strong>pre-seed onward</strong>.
@@ -386,17 +386,17 @@ export default function Fund() {
           </header>
 
           {/* Portfolio Companies Section */}
-          <section className="mb-12" aria-labelledby="portfolio">
-            <div className="w-full h-px bg-gray-900 mb-8" />
+          <section className="mb-6 lg:mb-8" aria-labelledby="portfolio">
+            <div className="w-full h-px bg-gray-900 mb-4 lg:mb-6" />
             <h2
               id="portfolio"
-              className="text-2xl sm:text-3xl font-medium text-center mb-8"
+              className="text-2xl sm:text-3xl font-medium text-center mb-4 lg:mb-6"
               style={{ color: "#ABBDBD" }}
             >
               Investments
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-3 max-w-4xl mx-auto">
               {investmentLogos.map((logo, index) => (
                 <div
                   key={logo.alt}
@@ -404,7 +404,7 @@ export default function Fund() {
                     index === investmentLogos.length - 1 && investmentLogos.length % 3 === 1 ? "sm:col-start-2" : ""
                   }`}
                 >
-                  <div className="relative w-28 h-20 sm:w-32 sm:h-24 lg:w-36 lg:h-28 flex items-center justify-center p-3">
+                  <div className="relative w-24 h-16 sm:w-28 sm:h-20 lg:w-32 lg:h-24 flex items-center justify-center p-3">
                     <Image
                       src={logo.src || "/placeholder.svg"}
                       alt={logo.alt}
@@ -435,8 +435,8 @@ export default function Fund() {
           </section>
 
           {/* About Dakota Section */}
-          <section className="mb-12" aria-labelledby="general-partner">
-            <div className="w-full h-px bg-gray-900 mb-10" />
+          <section className="mb-6 lg:mb-8" aria-labelledby="general-partner">
+            <div className="w-full h-px bg-gray-900 mb-6 lg:mb-8" />
 
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               <div className="w-24 sm:w-28 h-24 sm:h-28 mb-4 rounded-full overflow-hidden ring-1 ring-gray-800">
