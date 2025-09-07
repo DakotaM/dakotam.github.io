@@ -171,6 +171,31 @@ export default function LogoGrid() {
       width: 100,
       height: 50,
     },
+    // New logos
+    {
+      src: "/images/koddi-logo.png",
+      alt: "Koddi - Digital advertising platform",
+      width: 100,
+      height: 50,
+    },
+    {
+      src: "/images/popsink-logo.png",
+      alt: "Popsink - Data integration platform",
+      width: 100,
+      height: 50,
+    },
+    {
+      src: "/images/paradime-logo.png",
+      alt: "Paradime - Analytics engineering platform",
+      width: 100,
+      height: 50,
+    },
+    {
+      src: "/images/steep-logo.png",
+      alt: "Steep - Technology platform",
+      width: 100,
+      height: 50,
+    },
   ]
 
   return (
