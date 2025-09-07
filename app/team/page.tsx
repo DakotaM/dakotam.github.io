@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Inter } from "next/font/google"
 import "../team-styles.css"
 import type { Metadata } from "next"
+import { Suspense } from "react"
+import LogoGrid from "./logo-grid"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -303,6 +305,40 @@ export default function Page() {
                 tools to ensure you're making the right strides towards product-market fit and building the best team
                 possible to achieve your goals as a business.
               </p>
+            </div>
+          </section>
+
+          {/* Experience Section (v110 style) */}
+          <section className="mb-8" aria-labelledby="experience">
+            <div className="w-full h-px bg-gray-900 mb-6" />
+            <div className="max-w-4xl mx-auto">
+              <h2
+                id="experience"
+                className="text-xl sm:text-2xl font-medium text-center mb-6"
+                style={{ color: "#ABBDBD" }}
+              >
+                Experience
+              </h2>
+              <p className="mb-6 text-xs sm:text-sm text-gray-200 leading-relaxed text-center">
+                We have worked at a range of SaaS companies in the earlier stages of growth based on our drive to build
+                and grow new functions. We are inspired by building alongside world-class founders and teams.
+              </p>
+              <Suspense
+                fallback={
+                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-4 items-center justify-items-center">
+                    {Array(25)
+                      .fill(0)
+                      .map((_, i) => (
+                        <div
+                          key={i}
+                          className="w-20 sm:w-24 md:w-28 h-12 sm:h-16 flex items-center justify-center logo-container animate-pulse bg-gray-800 rounded-md"
+                        ></div>
+                      ))}
+                  </div>
+                }
+              >
+                <LogoGrid />
+              </Suspense>
             </div>
           </section>
 
