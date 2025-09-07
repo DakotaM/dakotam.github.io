@@ -486,7 +486,7 @@ export default function Fund() {
                   <strong className="text-white font-medium">Clay (Sequoia)</strong>,{" "}
                   <strong className="text-white font-medium">Thatch (Index)</strong>,{" "}
                   <strong className="text-white font-medium">WorkOS (Greenoaks)</strong>, and{" "}
-                  <strong className="text-white font-medium">Plain (Index)</strong> to accelerate their current sales
+                  <strong className="text-white font-medium">Plain (Battery)</strong> to accelerate their current sales
                   efforts to the next level or build their first GTM motion from the ground up.
                 </p>
                 <p className="text-left">
@@ -517,13 +517,13 @@ export default function Fund() {
                       key={index}
                       className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
                     >
-                      <div className="relative overflow-hidden rounded-lg">
+                      <div className="relative overflow-hidden rounded-lg flex items-center justify-center w-full">
                         <Image
                           src={logo.src || "/placeholder.svg"}
                           alt={logo.alt}
                           width={logo.width}
                           height={logo.height}
-                          className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 mx-auto"
                           loading="lazy"
                         />
                       </div>
