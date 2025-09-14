@@ -3,6 +3,7 @@ import { Inter, Nunito_Sans } from "next/font/google"
 import type React from "react"
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] })
@@ -98,6 +99,18 @@ export default function RootLayout({
       <body className={inter.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
         <Analytics />
+        <Script id="reb2b-tracking" strategy="afterInteractive">
+          {`
+            !function(key) {
+              if (window.reb2b) return;
+              window.reb2b = {loaded: true};
+              var s = document.createElement("script");
+              s.async = true;
+              s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
+              document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
+            }("4O7Z0HJ1DVNX");
+          `}
+        </Script>
       </body>
     </html>
   )
