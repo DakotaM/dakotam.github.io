@@ -1,7 +1,6 @@
 import "./globals.css"
 import { Inter, Nunito_Sans } from "next/font/google"
 import type React from "react"
-import Script from "next/script"
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 
@@ -78,7 +77,7 @@ export const metadata = {
   verification: {
     google: "your-google-verification-code",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -98,11 +97,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
-        <Script id="apollo-tracking" strategy="afterInteractive">
-          {`
-            function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"664ceaf7d4571d04a6b744e3"})},document.head.appendChild(o)}initApollo();
-          `}
-        </Script>
         <Analytics />
       </body>
     </html>
