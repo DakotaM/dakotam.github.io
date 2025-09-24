@@ -248,17 +248,17 @@ export default function Page() {
             <h2 id="team" className="sr-only">
               Our Team
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 max-w-6xl mx-auto">
               {/* Dakota McKenzie */}
               <div className="flex flex-col items-center">
-                <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg"
                     alt="Dakota McKenzie - CEO of Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 192px, 224px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
                   />
                 </div>
                 <Link
@@ -272,14 +272,14 @@ export default function Page() {
 
               {/* Trey Johnson */}
               <div className="flex flex-col items-center">
-                <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Trey-EPgexA01iWSJgBZzf8NZQUyuSh0R4y.jpeg"
                     alt="Trey Johnson - Operating Partner at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 192px, 224px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
                   />
                 </div>
                 <Link
@@ -293,14 +293,14 @@ export default function Page() {
 
               {/* Ben Cappellacci */}
               <div className="flex flex-col items-center">
-                <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
                   <Image
                     src="/images/ben-cappellacci.jpeg"
                     alt="Ben Cappellacci - FDE Advisor at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 192px, 224px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
                   />
                 </div>
                 <Link
@@ -314,14 +314,14 @@ export default function Page() {
 
               {/* Cindy Boulous */}
               <div className="flex flex-col items-center">
-                <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
                   <Image
                     src="/images/cindy-boulous.jpeg"
                     alt="Cindy Boulous - Executive Assistant at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 192px, 224px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
                   />
                 </div>
                 <Link
