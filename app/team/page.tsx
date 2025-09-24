@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
   description:
-    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), and Ben Cappellacci (Deployment Advisor). Over 25% of clients raise Tier-1 venture rounds.",
+    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), Ben Cappellacci (FDE Advisor), and Cindy Boulous (Executive Assistant). Over 25% of clients raise Tier-1 venture rounds.",
   keywords: [
     "growth partners",
     "GTM consulting",
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "Dakota McKenzie",
     "Trey Johnson",
     "Ben Cappellacci", // Added
+    "Cindy Boulous", // Added
     "startup growth",
     "venture capital preparation",
     "deployment advisory", // Added
@@ -85,6 +86,7 @@ const structuredData = {
         { "@id": "https://dynamic.vc/team/#dakota-mckenzie" },
         { "@id": "https://dynamic.vc/team/#trey-johnson" },
         { "@id": "https://dynamic.vc/team/#ben-cappellacci" },
+        { "@id": "https://dynamic.vc/team/#cindy-boulous" }, // Added
       ],
       contactPoint: {
         "@type": "ContactPoint",
@@ -152,7 +154,7 @@ const structuredData = {
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#ben-cappellacci",
       name: "Ben Cappellacci",
-      jobTitle: "Deployment Advisor",
+      jobTitle: "FDE Advisor", // Updated title
       worksFor: { "@id": "https://dynamic.vc/team/#organization" },
       url: "https://www.linkedin.com/in/bencappellacci/",
       image: {
@@ -164,6 +166,23 @@ const structuredData = {
       description: "Deployment Advisor at Dynamic Growth Partners, focusing on technical implementation and strategy.",
       knowsAbout: ["Deployment Strategy", "Technical Advisory", "Cloud Infrastructure", "DevOps"],
       sameAs: ["https://www.linkedin.com/in/bencappellacci/"],
+    },
+    {
+      // New Person schema for Cindy
+      "@type": "Person",
+      "@id": "https://dynamic.vc/team/#cindy-boulous",
+      name: "Cindy Boulous",
+      jobTitle: "Executive Assistant",
+      worksFor: { "@id": "https://dynamic.vc/team/#organization" },
+      image: {
+        "@type": "ImageObject",
+        url: "/images/cindy-boulous.jpeg",
+        width: 400,
+        height: 400,
+      },
+      description: "Executive Assistant at Dynamic Growth Partners, supporting team operations and administration.",
+      knowsAbout: ["Executive Support", "Operations Management", "Administrative Services", "Team Coordination"],
+      sameAs: ["https://www.linkedin.com/in/cindyboulous/"],
     },
     {
       "@type": "FAQPage", // This FAQ section is from v110
@@ -223,13 +242,13 @@ export default function Page() {
             </div>
           </header>
 
-          {/* Team Section - Adapted for 3 members */}
+          {/* Team Section - Adapted for 4 members */}
           <section className="mb-8" aria-labelledby="team">
             <div className="w-full h-px bg-gray-900 mb-6" />
             <h2 id="team" className="sr-only">
               Our Team
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-8 max-w-6xl mx-auto">
               {/* Dakota McKenzie */}
               <div className="flex flex-col items-center">
                 <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
@@ -277,7 +296,7 @@ export default function Page() {
                 <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
                   <Image
                     src="/images/ben-cappellacci.jpeg"
-                    alt="Ben Cappellacci - Deployment Advisor at Dynamic Growth Partners"
+                    alt="Ben Cappellacci - FDE Advisor at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
@@ -290,7 +309,28 @@ export default function Page() {
                 >
                   <h3>Ben Cappellacci</h3>
                 </Link>
-                <p className="text-xs sm:text-sm text-gray-400">Deployment Advisor</p>
+                <p className="text-xs sm:text-sm text-gray-400">FDE Advisor</p>
+              </div>
+
+              {/* Cindy Boulous */}
+              <div className="flex flex-col items-center">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 relative mb-3 team-photo-container">
+                  <Image
+                    src="/images/cindy-boulous.jpeg"
+                    alt="Cindy Boulous - Executive Assistant at Dynamic Growth Partners"
+                    fill
+                    priority
+                    className="object-cover team-photo"
+                    sizes="(max-width: 640px) 192px, 224px"
+                  />
+                </div>
+                <Link
+                  href="https://www.linkedin.com/in/cindyboulous/"
+                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                >
+                  <h3>Cindy Boulous</h3>
+                </Link>
+                <p className="text-xs sm:text-sm text-gray-400">Executive Assistant</p>
               </div>
             </div>
 
