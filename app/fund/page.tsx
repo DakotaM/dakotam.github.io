@@ -404,26 +404,31 @@ export default function Fund() {
             </h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-3 max-w-4xl mx-auto">
-              {investmentLogos.map((logo, index) => (
-                <div
-                  key={logo.alt}
-                  className={`group flex items-center justify-center transition-all duration-300 hover:scale-105 ${
-                    index === investmentLogos.length - 1 && investmentLogos.length % 3 === 1 ? "sm:col-start-2" : ""
-                  }`}
-                >
-                  <div className="relative w-24 h-16 sm:w-28 sm:h-20 lg:w-32 lg:h-24 flex items-center justify-center p-3">
-                    <Image
-                      src={logo.src || "/placeholder.svg"}
-                      alt={logo.alt}
-                      width={logo.width}
-                      height={logo.height}
-                      className="object-contain max-w-full max-h-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                      loading={index < 6 ? "eager" : "lazy"}
-                      sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
-                    />
+              {investmentLogos.map((logo, index) => {
+                // Check if this is the last row with only 2 items
+                const isLastRowFirstItem = investmentLogos.length % 3 === 2 && index === investmentLogos.length - 2
+
+                return (
+                  <div
+                    key={logo.alt}
+                    className={`group flex items-center justify-center transition-all duration-300 hover:scale-105 ${
+                      isLastRowFirstItem ? "sm:col-start-2" : ""
+                    }`}
+                  >
+                    <div className="relative w-24 h-16 sm:w-28 sm:h-20 lg:w-32 lg:h-24 flex items-center justify-center p-3">
+                      <Image
+                        src={logo.src || "/placeholder.svg"}
+                        alt={logo.alt}
+                        width={logo.width}
+                        height={logo.height}
+                        className="object-contain max-w-full max-h-full opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                        loading={index < 6 ? "eager" : "lazy"}
+                        sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
 
             {/* Portfolio descriptions for AI crawlers */}
