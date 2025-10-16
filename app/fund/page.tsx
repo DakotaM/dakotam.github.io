@@ -426,7 +426,7 @@ export default function Fund() {
               </div>
 
               {/* Last row centered */}
-              <div className="flex justify-center gap-2 md:gap-3 mt-2 md:mt-3">
+              <div className="flex justify-center gap-8 sm:gap-16 md:gap-24 lg:gap-32 mt-2 md:mt-3">
                 {investmentLogos.slice(6).map((logo, index) => (
                   <div
                     key={logo.alt}
