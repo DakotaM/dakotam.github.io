@@ -1,11 +1,11 @@
 import Link from "next/link"
-import { Header } from "@/components/layout/header"
+import { nunitoSans } from "./layout"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Dynamic - Venture Capital & Growth Partners for Technical Founders",
   description:
-    "Dynamic provides venture capital funding and growth partnership for technical founders building developer tools, infrastructure, and B2B SaaS. Led by Dakota McKenzie.",
+    "Dynamic provides venture capital funding and growth partnership for technical founders. We invest in developer tools, infrastructure, and B2B SaaS from pre-seed onward. Led by Dakota McKenzie.",
   keywords: [
     "venture capital",
     "technical founders",
@@ -17,11 +17,7 @@ export const metadata: Metadata = {
     "Dynamic Fund",
     "Dakota McKenzie",
     "pre-seed funding",
-    "seed funding",
-    "series A",
     "infrastructure investing",
-    "sales acceleration",
-    "technical startup funding",
   ],
   openGraph: {
     title: "Dynamic - Venture Capital & Growth Partners for Technical Founders",
@@ -52,6 +48,7 @@ export const metadata: Metadata = {
   },
 }
 
+// Enhanced structured data for AI search engines
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -64,6 +61,16 @@ const structuredData = {
       publisher: {
         "@id": "https://dynamic.vc/#organization",
       },
+      potentialAction: [
+        {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://dynamic.vc/search?q={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
+      ],
     },
     {
       "@type": "Organization",
@@ -71,15 +78,87 @@ const structuredData = {
       name: "Dynamic",
       alternateName: ["Dynamic Fund", "Dynamic Growth Partners"],
       url: "https://dynamic.vc",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://dynamic.vc/logo.png",
+        width: 400,
+        height: 400,
+      },
       description:
         "Venture capital fund and growth partnership firm investing in technical founders building developer tools, infrastructure, and B2B SaaS from pre-seed onward",
       foundingDate: "2023",
       industry: ["Venture Capital", "Investment Management", "Business Consulting"],
+      serviceArea: {
+        "@type": "Place",
+        name: "Global",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Investment and Growth Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Venture Capital Funding",
+              description: "Pre-seed to Series A funding for technical founders building developer tools and B2B SaaS",
+              serviceType: "Investment",
+              areaServed: "Global",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Growth Partnership",
+              description: "GTM expertise, sales acceleration, and business development for technical startups",
+              serviceType: "Consulting",
+              areaServed: "Global",
+            },
+          },
+        ],
+      },
       founder: {
         "@type": "Person",
+        "@id": "https://dynamic.vc/#dakota-mckenzie",
         name: "Dakota McKenzie",
         jobTitle: "General Partner",
+        url: "https://www.linkedin.com/in/dakotajmckenzie/",
+        description:
+          "Former GTM leader at Databricks, Segment, Sumo Logic, and Demandware. Former investor at Unusual Ventures.",
+        alumniOf: ["Databricks", "Segment", "Sumo Logic", "Demandware", "Unusual Ventures"],
       },
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          contactType: "Investment Inquiries",
+          email: "dakota@dynamicgrowth.partners",
+          availableLanguage: "English",
+        },
+        {
+          "@type": "ContactPoint",
+          contactType: "General Inquiries",
+          url: "https://dynamic.vc/contact",
+          availableLanguage: "English",
+        },
+      ],
+      sameAs: [
+        "https://www.linkedin.com/company/dynamic-growth-partners",
+        "https://www.yellingatcloud.ai/archive?sort=top",
+      ],
+      knowsAbout: [
+        "Venture Capital",
+        "Technical Founders",
+        "Developer Tools",
+        "B2B SaaS",
+        "Infrastructure Software",
+        "Go-to-Market Strategy",
+        "Sales Acceleration",
+        "Startup Growth",
+        "Pre-seed Funding",
+        "Seed Funding",
+        "Series A Funding",
+      ],
     },
   ],
 }
@@ -88,38 +167,31 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <Header />
-      <main className="flex flex-col items-center justify-center min-h-screen bg-black px-4 pt-20">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 animate-fade-in-up">
+      <main className="flex flex-col items-center justify-center min-h-screen bg-black px-4 py-8">
+        <header className="text-center mb-12 md:mb-16">
+          <h1 className={`${nunitoSans.className} text-5xl sm:text-6xl md:text-8xl font-bold text-white text-center`}>
             DYNAMIC
           </h1>
-
-          <p
-            className="text-xl sm:text-2xl md:text-3xl text-white/70 mb-12 max-w-3xl mx-auto animate-fade-in-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Venture capital and growth partners for technical founders
+          <p className="sr-only">
+            Dynamic - Venture capital and growth partners for technical founders building developer tools,
+            infrastructure, and B2B SaaS
           </p>
+        </header>
 
-          <div
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            <Link
-              href="/team"
-              className="group inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-bg-tertiary border border-white/20 rounded-button hover:border-accent-blue/50 hover:bg-bg-elevated transition-all hover:-translate-y-0.5 min-w-[200px]"
-            >
+        <nav className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-12 md:space-x-16">
+          <Link href="/team" className="group text-xl sm:text-2xl text-white text-center">
+            <span className="relative">
               Growth Partners
-            </Link>
-            <Link
-              href="/fund"
-              className="group inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-accent-blue rounded-button hover:bg-accent-blue-hover glow-accent glow-accent-hover transition-all hover:-translate-y-0.5 min-w-[200px]"
-            >
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </span>
+          </Link>
+          <Link href="/fund" className="group text-xl sm:text-2xl text-white text-center">
+            <span className="relative">
               Fund
-            </Link>
-          </div>
-        </div>
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </span>
+          </Link>
+        </nav>
       </main>
     </>
   )
