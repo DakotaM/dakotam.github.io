@@ -82,8 +82,8 @@ export default function LogoGrid() {
       height: 50,
     },
     {
-      src: "/images/grepr-logo.png",
-      alt: "Grepr logo",
+      src: "/images/framer-logo.png",
+      alt: "Framer logo",
       width: 100,
       height: 50,
     },
