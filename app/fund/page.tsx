@@ -398,10 +398,20 @@ export default function Fund() {
             <h2
               id="portfolio"
               className="text-2xl sm:text-3xl font-medium text-center mb-4 lg:mb-6"
-              style={{ color: "#ABBDBD" }}
+              style={{ color: "#fac746" }}
             >
               Investments
             </h2>
+
+            <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-4 lg:mt-6">
+              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
+                Dynamic invests in the best <strong>technical Founders</strong> looking to accelerate growth from{" "}
+                <strong>pre-seed onward</strong>.
+              </p>
+              <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
+                We prioritize long-term partnerships and obsess over your business.
+              </p>
+            </div>
 
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-3">
@@ -488,7 +498,7 @@ export default function Fund() {
               >
                 <h3 id="general-partner">Dakota McKenzie</h3>
               </Link>
-              <p className="text-base sm:text-lg tracking-wide mb-4" style={{ color: "#ABBDBD" }}>
+              <p className="text-base sm:text-lg tracking-wide mb-4" style={{ color: "#fac746" }}>
                 General Partner, Dynamic Fund
               </p>
 
@@ -536,7 +546,7 @@ export default function Fund() {
 
               {/* Personal Investments */}
               <div className="mt-12 w-full max-w-5xl">
-                <h4 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#ABBDBD" }}>
+                <h4 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#fac746" }}>
                   Personal Investments
                 </h4>
 
@@ -570,7 +580,7 @@ export default function Fund() {
             <div className="w-full h-px bg-gray-900 mb-8" />
 
             <div className="max-w-[800px] mx-auto">
-              <h2 id="contact" className="text-xl font-medium mb-4" style={{ color: "#ABBDBD" }}>
+              <h2 id="contact" className="text-xl font-medium mb-4" style={{ color: "#fac746" }}>
                 Investment Inquiries
               </h2>
               <p className="text-base sm:text-lg text-gray-400 mb-6 tracking-wide">
