@@ -19,65 +19,64 @@ export default function LogoGrid() {
     setIsVisible(true)
   }, [])
 
-  // All logos data with proper dimensions
   const logos: Logo[] = [
     {
-      src: "/images/image.png",
+      src: "/images/databricks-new-logo.png",
       alt: "Databricks logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Segment logo",
+      src: "/images/sumo-logic-new-logo.png",
+      alt: "Sumo Logic logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Mintlify logo",
+      src: "/images/demandware-new-logo.png",
+      alt: "Demandware logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Clay logo",
+      src: "/images/heyday-logo.png",
+      alt: "Heyday logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Infisical logo",
+      src: "/images/unusual-ventures-new-logo.png",
+      alt: "Unusual Ventures logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Datameer logo",
+      src: "/images/mtf-logo.png",
+      alt: "MTF logo",
       width: 100,
       height: 50,
     },
     {
       src: "/images/screenshot-202025-04-01-20at-209.png",
-      alt: "WorkOS logo",
+      alt: "Restate logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/plain-new-logo.png",
       alt: "Plain logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/thatch-logo.png",
       alt: "Thatch logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Granola logo",
+      src: "/images/dock-logo.png",
+      alt: "Dock logo",
       width: 100,
       height: 50,
     },
@@ -88,25 +87,25 @@ export default function LogoGrid() {
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/flightcrew-new-logo.png",
       alt: "Flightcrew logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Radial logo",
+      src: "/images/ours-privacy-logo.png",
+      alt: "Ours Privacy logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Nango logo",
+      src: "/images/malachyte-logo.svg",
+      alt: "Malachyte logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/metaview-new-logo.png",
       alt: "Metaview logo",
       width: 100,
       height: 50,
@@ -131,7 +130,7 @@ export default function LogoGrid() {
     },
     {
       src: "/images/screenshot-202025-04-01-20at-208.png",
-      alt: "OpsLevel logo",
+      alt: "Metronome logo",
       width: 100,
       height: 50,
     },
@@ -147,7 +146,6 @@ export default function LogoGrid() {
       width: 100,
       height: 50,
     },
-    // New logos
     {
       src: "/images/koddi-logo.png",
       alt: "Koddi - Digital advertising platform",
