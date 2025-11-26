@@ -34,7 +34,7 @@ export default function LogoGrid() {
     { src: "/images/granola-logo.jpg", alt: "Granola logo", width: 100, height: 50 },
     // Row 3
     { src: "/images/framer-logo.png", alt: "Framer logo", width: 100, height: 50 },
-    { src: "/images/flightcrew-logo.jpg", alt: "Flightcrew logo", width: 100, height: 50 },
+    { src: "/images/flightcrew-new-logo.png", alt: "Flightcrew logo", width: 100, height: 50 },
     { src: "/images/radial-logo.jpg", alt: "Radial logo", width: 100, height: 50 },
     { src: "/images/nango-logo.jpg", alt: "Nango logo", width: 100, height: 50 },
     { src: "/images/metaview-new-logo.png", alt: "Metaview logo", width: 100, height: 50 },
