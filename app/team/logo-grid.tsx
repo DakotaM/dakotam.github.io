@@ -20,150 +20,36 @@ export default function LogoGrid() {
   }, [])
 
   const logos: Logo[] = [
-    {
-      src: "/images/databricks-new-logo.png",
-      alt: "Databricks logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/sumo-logic-new-logo.png",
-      alt: "Sumo Logic logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/demandware-new-logo.png",
-      alt: "Demandware logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/heyday-logo.png",
-      alt: "Heyday logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/unusual-ventures-new-logo.png",
-      alt: "Unusual Ventures logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/mtf-logo.png",
-      alt: "MTF logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/restate-logo.png",
-      alt: "Restate logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/plain-new-logo.png",
-      alt: "Plain logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/thatch-logo.png",
-      alt: "Thatch logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/dock-logo.png",
-      alt: "Dock logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/framer-logo.png",
-      alt: "Framer logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/flightcrew-new-logo.png",
-      alt: "Flightcrew logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/ours-privacy-logo.png",
-      alt: "Ours Privacy logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/malachyte-logo.svg",
-      alt: "Malachyte logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/metaview-new-logo.png",
-      alt: "Metaview logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/themednet-logo.png",
-      alt: "The Mednet logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/crewai-logo.png",
-      alt: "CrewAI logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/gradient-labs-logo.png",
-      alt: "Gradient Labs logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/metronome-logo.png",
-      alt: "Metronome logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/restate-logo.png",
-      alt: "Restate logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/koddi-logo.png",
-      alt: "Koddi logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/ambrook-logo.png",
-      alt: "Ambrook logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/paradime-updated-logo.png",
-      alt: "Paradime logo",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/steep-logo.png",
-      alt: "Steep logo",
-      width: 100,
-      height: 50,
-    },
+    // Row 1
+    { src: "/images/databricks-logo.png", alt: "Databricks logo", width: 100, height: 50 },
+    { src: "/images/segment-logo.png", alt: "Twilio Segment logo", width: 100, height: 50 },
+    { src: "/images/mintlify-logo.png", alt: "Mintlify logo", width: 100, height: 50 },
+    { src: "/images/clay-logo.png", alt: "Clay logo", width: 100, height: 50 },
+    { src: "/images/infisical-logo.png", alt: "Infisical logo", width: 100, height: 50 },
+    // Row 2
+    { src: "/images/datameer-logo.png", alt: "Datameer logo", width: 100, height: 50 },
+    { src: "/images/workos-logo.png", alt: "WorkOS logo", width: 100, height: 50 },
+    { src: "/images/plain-logo.png", alt: "Plain logo", width: 100, height: 50 },
+    { src: "/images/thatch-logo.png", alt: "Thatch logo", width: 100, height: 50 },
+    { src: "/images/granola-logo.png", alt: "Granola logo", width: 100, height: 50 },
+    // Row 3
+    { src: "/images/framer-logo.png", alt: "Framer logo", width: 100, height: 50 },
+    { src: "/images/flightcrew-logo.png", alt: "Flightcrew logo", width: 100, height: 50 },
+    { src: "/images/radial-logo.png", alt: "Radial logo", width: 100, height: 50 },
+    { src: "/images/nango-logo.png", alt: "Nango logo", width: 100, height: 50 },
+    { src: "/images/metaview-logo.png", alt: "Metaview logo", width: 100, height: 50 },
+    // Row 4
+    { src: "/images/themednet-logo.png", alt: "The Mednet logo", width: 100, height: 50 },
+    { src: "/images/crewai-logo.png", alt: "CrewAI logo", width: 100, height: 50 },
+    { src: "/images/gradient-labs-logo.png", alt: "Gradient Labs logo", width: 100, height: 50 },
+    { src: "/images/opslevel-logo.png", alt: "OpsLevel logo", width: 100, height: 50 },
+    { src: "/images/metronome-logo.png", alt: "Metronome logo", width: 100, height: 50 },
+    // Row 5
+    { src: "/images/restate-logo.png", alt: "Restate logo", width: 100, height: 50 },
+    { src: "/images/koddi-logo.png", alt: "Koddi logo", width: 100, height: 50 },
+    { src: "/images/paradime-logo.png", alt: "Paradime logo", width: 100, height: 50 },
+    { src: "/images/ambrook-logo.png", alt: "Ambrook logo", width: 100, height: 50 },
+    { src: "/images/steep-logo.png", alt: "Steep logo", width: 100, height: 50 },
   ]
 
   return (
