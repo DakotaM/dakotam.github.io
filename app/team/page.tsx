@@ -117,7 +117,7 @@ const structuredData = {
       url: "https://linkedin.com/in/dakotajmckenzie",
       image: {
         "@type": "ImageObject",
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg",
+        url: "/images/dakota.jpeg",
         width: 400,
         height: 400,
       },
@@ -140,7 +140,7 @@ const structuredData = {
       url: "https://www.linkedin.com/in/trey-j-07156924/",
       image: {
         "@type": "ImageObject",
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Trey-EPgexA01iWSJgBZzf8NZQUyuSh0R4y.jpeg",
+        url: "/images/trey.jpeg",
         width: 400,
         height: 400,
       },
@@ -220,20 +220,20 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <div className={`min-h-screen bg-black text-white ${inter.className} antialiased`}>
+      <div className={`min-h-screen bg-surface text-text-primary ${inter.className} antialiased`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
           {/* Hero Section (v110 style) */}
           <header className="text-center mb-8">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4 lg:mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-text-primary mb-4 lg:mb-6">
               Dynamic Growth Partners
             </h1>
             <div className="max-w-[800px] mx-auto mt-4 lg:mt-6 space-y-3">
-              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
+              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-text-secondary tracking-wide">
                 Dynamic Growth Partners is focused on Founder-led company building and modern organizational design. We
                 work exclusively with technical Founders ranging from pre-seed through pre-IPO to help them grow faster,
                 execute better, and raise capital more effectively.
               </p>
-              <p className="text-xs sm:text-sm font-medium text-gray-400 tracking-wide">
+              <p className="text-xs sm:text-sm font-medium text-text-muted tracking-wide">
                 Our approach is grounded in hands-on execution, and shaped by working alongside the best GTM and Product
                 leaders in the world. Whether you're building from zero or scaling toward repeatability, we help
                 translate product excellence into commercial outcomes. To date, over 30% of our clients have raised Tier
@@ -244,7 +244,7 @@ export default function Page() {
 
           {/* Team Section - Adapted for 4 members */}
           <section className="mb-8" aria-labelledby="team">
-            <div className="w-full h-px bg-gray-900 mb-6" />
+            <div className="w-full h-px bg-divider mb-6" />
             <h2 id="team" className="sr-only">
               Our Team
             </h2>
@@ -253,7 +253,7 @@ export default function Page() {
               <div className="flex flex-col items-center">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg"
+                    src="/images/dakota.jpeg"
                     alt="Dakota McKenzie - CEO of Dynamic Growth Partners"
                     fill
                     priority
@@ -263,18 +263,18 @@ export default function Page() {
                 </div>
                 <Link
                   href="http://linkedin.com/in/dakotajmckenzie"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-text-primary font-medium tracking-wide"
                 >
                   <h3>Dakota McKenzie</h3>
                 </Link>
-                <p className="text-xs sm:text-sm text-gray-400">CEO</p>
+                <p className="text-xs sm:text-sm text-text-muted">CEO</p>
               </div>
 
               {/* Trey Johnson */}
               <div className="flex flex-col items-center">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Trey-EPgexA01iWSJgBZzf8NZQUyuSh0R4y.jpeg"
+                    src="/images/trey.jpeg"
                     alt="Trey Johnson - Operating Partner at Dynamic Growth Partners"
                     fill
                     priority
@@ -284,11 +284,11 @@ export default function Page() {
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/trey-j-07156924/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-text-primary font-medium tracking-wide"
                 >
                   <h3>Trey Johnson</h3>
                 </Link>
-                <p className="text-xs sm:text-sm text-gray-400">Operating Partner</p>
+                <p className="text-xs sm:text-sm text-text-muted">Operating Partner</p>
               </div>
 
               {/* Ben Cappellacci */}
@@ -305,11 +305,11 @@ export default function Page() {
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/bencappellacci/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-text-primary font-medium tracking-wide"
                 >
                   <h3>Ben Cappellacci</h3>
                 </Link>
-                <p className="text-xs sm:text-sm text-gray-400">FDE Advisor</p>
+                <p className="text-xs sm:text-sm text-text-muted">FDE Advisor</p>
               </div>
 
               {/* Cindy Boulous */}
@@ -326,15 +326,15 @@ export default function Page() {
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/cindyboulous/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-text-primary font-medium tracking-wide"
                 >
                   <h3>Cindy Boulous</h3>
                 </Link>
-                <p className="text-xs sm:text-sm text-gray-400">Executive Assistant</p>
+                <p className="text-xs sm:text-sm text-text-muted">Executive Assistant</p>
               </div>
             </div>
 
-            <div className="max-w-4xl mx-auto text-gray-200 space-y-3 leading-relaxed text-xs sm:text-sm">
+            <div className="max-w-4xl mx-auto text-text-secondary space-y-3 leading-relaxed text-xs sm:text-sm">
               <p>
                 Our experience includes working for and partnering with firms led by Midas-list investors, operating at
                 world-class GTM teams from pre-$1m in ARR to $1.5B ARR, and being in the seat with founders on their
@@ -350,16 +350,12 @@ export default function Page() {
 
           {/* Experience Section (v110 style) */}
           <section className="mb-8" aria-labelledby="experience">
-            <div className="w-full h-px bg-gray-900 mb-6" />
+            <div className="w-full h-px bg-divider mb-6" />
             <div className="max-w-4xl mx-auto">
-              <h2
-                id="experience"
-                className="text-xl sm:text-2xl font-medium text-center mb-6"
-                style={{ color: "#fac746" }}
-              >
+              <h2 id="experience" className="text-xl sm:text-2xl font-medium text-center mb-6 text-accent-gold">
                 Experience
               </h2>
-              <p className="mb-6 text-xs sm:text-sm text-gray-200 leading-relaxed text-center">
+              <p className="mb-6 text-xs sm:text-sm text-text-secondary leading-relaxed text-center">
                 We have worked at a range of SaaS companies in the earlier stages of growth based on our drive to build
                 and grow new functions. We are inspired by building alongside world-class founders and teams.
               </p>
@@ -371,7 +367,7 @@ export default function Page() {
                       .map((_, i) => (
                         <div
                           key={i}
-                          className="w-20 sm:w-24 md:w-28 h-12 sm:h-16 flex items-center justify-center logo-container animate-pulse bg-gray-800 rounded-md"
+                          className="w-20 sm:w-24 md:w-28 h-12 sm:h-16 flex items-center justify-center logo-container animate-pulse bg-surface-elevated rounded-md"
                         ></div>
                       ))}
                   </div>
@@ -384,33 +380,33 @@ export default function Page() {
 
           {/* Contact Section (v110 style) */}
           <section className="text-center py-4" aria-labelledby="contact">
-            <div className="w-full h-px bg-gray-900 mb-6" />
+            <div className="w-full h-px bg-divider mb-6" />
             <div className="max-w-[800px] mx-auto">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-10 py-3 text-base font-medium text-black bg-white rounded-full shadow-sm hover:bg-gray-100 transition-colors duration-300 min-w-[220px] mb-4"
+                className="inline-flex items-center justify-center px-10 py-3 text-base font-medium text-surface bg-text-primary rounded-full shadow-sm hover:bg-text-secondary transition-colors duration-300 min-w-[220px] mb-4"
               >
                 Book an intro call
               </Link>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
                 <Link
                   href="/"
-                  className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
+                  className="group inline-flex items-center text-base sm:text-lg text-text-muted hover:text-text-primary transition-colors duration-300"
                 >
                   <span className="relative">
                     Back to Home
-                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-text-primary transition-all duration-300 group-hover:w-full group-hover:left-0" />
                   </span>
                 </Link>
                 <Link
                   href="https://www.yellingatcloud.ai/archive?sort=top"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
+                  className="group inline-flex items-center text-base sm:text-lg text-text-muted hover:text-text-primary transition-colors duration-300"
                 >
                   <span className="relative">
                     Insights
-                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-text-primary transition-all duration-300 group-hover:w-full group-hover:left-0" />
                   </span>
                 </Link>
               </div>

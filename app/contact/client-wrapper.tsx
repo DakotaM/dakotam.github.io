@@ -10,10 +10,10 @@ export default function ContactFormWrapper() {
   return (
     <Suspense
       fallback={
-        <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg p-8 animate-pulse">
-          <div className="h-10 bg-gray-800 rounded mb-6"></div>
-          <div className="h-32 bg-gray-800 rounded mb-6"></div>
-          <div className="h-12 bg-gray-800 rounded"></div>
+        <div className="bg-surface-elevated/50 backdrop-blur-sm border border-divider rounded-lg p-8 animate-pulse">
+          <div className="h-10 bg-surface-elevated rounded mb-6"></div>
+          <div className="h-32 bg-surface-elevated rounded mb-6"></div>
+          <div className="h-12 bg-surface-elevated rounded"></div>
         </div>
       }
     >

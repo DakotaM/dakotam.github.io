@@ -91,10 +91,13 @@ export default function ContactPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-surface text-text-primary">
         <div className="max-w-3xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <Link href="/" className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center">
+            <Link
+              href="/"
+              className="text-text-muted hover:text-text-primary transition-colors duration-200 flex items-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -115,7 +118,7 @@ export default function ContactPage() {
 
           <header className="text-center mb-10">
             <h1 className={`${nunitoSans.className} text-4xl sm:text-5xl font-bold tracking-tight`}>Talk with us</h1>
-            <p className="mt-4 text-lg text-gray-400">
+            <p className="mt-4 text-lg text-text-muted">
               Get in touch for investment inquiries or growth partnership consulting
             </p>
           </header>
@@ -128,11 +131,11 @@ export default function ContactPage() {
               href="https://www.yellingatcloud.ai/archive?sort=top"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300"
+              className="group inline-flex items-center text-sm text-text-muted hover:text-text-secondary transition-colors duration-300"
             >
               <span className="relative">
                 Insights
-                <span className="absolute bottom-0 left-1/2 w-0 h-px bg-gray-300 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-px bg-text-secondary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </span>
             </Link>
           </footer>

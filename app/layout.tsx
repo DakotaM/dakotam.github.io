@@ -97,7 +97,7 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
       </head>
       <body className={inter.className}>
-        <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
+        <Suspense fallback={<div className="min-h-screen bg-surface"></div>}>{children}</Suspense>
         <Analytics />
         <Script id="reb2b-tracking" strategy="afterInteractive">
           {`
