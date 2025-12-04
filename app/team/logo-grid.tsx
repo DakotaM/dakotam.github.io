@@ -19,68 +19,70 @@ export default function LogoGrid() {
     setIsVisible(true)
   }, [])
 
-  // All logos data with proper dimensions
   const logos: Logo[] = [
+    // Row 1
     {
-      src: "/images/image.png",
+      src: "/images/databricks-new-logo.png",
       alt: "Databricks logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
-      alt: "Segment logo",
+      src: "/images/segment-logo.jpg",
+      alt: "Twilio Segment logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/mintlify-logo.jpg",
       alt: "Mintlify logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/clay-logo.jpg",
       alt: "Clay logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/infisical-logo.jpg",
       alt: "Infisical logo",
       width: 100,
       height: 50,
     },
+    // Row 2
     {
-      src: "/images/image.png",
+      src: "/images/datameer-logo.jpg",
       alt: "Datameer logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/screenshot-202025-04-01-20at-209.png",
+      src: "/images/workos-logo.jpg",
       alt: "WorkOS logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/plain-new-logo.png",
       alt: "Plain logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/thatch-logo.png",
       alt: "Thatch logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/granola-logo.jpg",
       alt: "Granola logo",
       width: 100,
       height: 50,
     },
+    // Row 3
     {
       src: "/images/framer-logo.png",
       alt: "Framer logo",
@@ -88,31 +90,32 @@ export default function LogoGrid() {
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/flightcrew-new-logo.png",
       alt: "Flightcrew logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/radial-logo.jpg",
       alt: "Radial logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/nango-logo.jpg",
       alt: "Nango logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/image.png",
+      src: "/images/metaview-new-logo.png",
       alt: "Metaview logo",
       width: 100,
       height: 50,
     },
+    // Row 4
     {
-      src: "/images/image.png",
+      src: "/images/themednet-logo.jpg",
       alt: "The Mednet logo",
       width: 100,
       height: 50,
@@ -130,45 +133,45 @@ export default function LogoGrid() {
       height: 50,
     },
     {
-      src: "/images/screenshot-202025-04-01-20at-208.png",
+      src: "/images/opslevel-logo.jpg",
       alt: "OpsLevel logo",
       width: 100,
       height: 50,
     },
     {
-      src: "/images/screenshot-202025-04-01-20at-208.png",
+      src: "/images/metronome-logo.jpg",
       alt: "Metronome logo",
       width: 100,
       height: 50,
     },
+    // Row 5
     {
-      src: "/images/screenshot-202025-04-01-20at-209.png",
+      src: "/images/restate-logo.jpg",
       alt: "Restate logo",
       width: 100,
       height: 50,
     },
-    // New logos
     {
       src: "/images/koddi-logo.png",
-      alt: "Koddi - Digital advertising platform",
+      alt: "Koddi logo",
+      width: 100,
+      height: 50,
+    },
+    {
+      src: "/images/paradime-logo.png",
+      alt: "Paradime logo",
       width: 100,
       height: 50,
     },
     {
       src: "/images/ambrook-logo.png",
-      alt: "Ambrook - Financial platform for farms",
-      width: 100,
-      height: 50,
-    },
-    {
-      src: "/images/paradime-updated-logo.png",
-      alt: "Paradime - Analytics engineering platform",
+      alt: "Ambrook logo",
       width: 100,
       height: 50,
     },
     {
       src: "/images/steep-logo.png",
-      alt: "Steep - Technology platform",
+      alt: "Steep logo",
       width: 100,
       height: 50,
     },
