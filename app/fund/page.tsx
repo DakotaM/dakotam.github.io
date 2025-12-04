@@ -163,7 +163,7 @@ const structuredData = {
       url: "https://www.linkedin.com/in/dakotajmckenzie/",
       image: {
         "@type": "ImageObject",
-        url: "/images/dakota.jpeg",
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg",
         width: 400,
         height: 400,
       },
@@ -251,7 +251,7 @@ const structuredData = {
 
 const investmentLogos = [
   {
-    src: "/images/image.png",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-99gXgXFOh3uEuyvywS9O1BjZ2UfamZ.png",
     alt: "Infisical - Open-source secret management platform",
     width: 120,
     height: 60,
@@ -308,7 +308,7 @@ const experienceLogos = [
     height: 30,
   },
   {
-    src: "/images/image.png",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n2zQYDcuoaZHXmGrIONp78DO7Q6Pxw.png",
     alt: "Segment - Former GTM team member",
     width: 75,
     height: 30,
@@ -336,13 +336,13 @@ const experienceLogos = [
 const personalInvestments = [
   { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform", width: 56, height: 28 },
   {
-    src: "/images/image.png",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
     alt: "Clay - Data enrichment platform",
     width: 56,
     height: 28,
   },
   {
-    src: "/images/image.png",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
     alt: "Liveblocks - Collaborative software platform",
     width: 56,
     height: 28,
@@ -350,7 +350,7 @@ const personalInvestments = [
   { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform", width: 56, height: 28 },
   { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund", width: 56, height: 28 },
   {
-    src: "/images/image.png",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
     alt: "Zuplo - API management platform",
     width: 56,
     height: 28,
@@ -359,7 +359,7 @@ const personalInvestments = [
   { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform", width: 56, height: 28 },
   { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI", width: 56, height: 28 },
   {
-    src: "/images/image.png",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
     alt: "Nango - API integration platform",
     width: 56,
     height: 28,
@@ -373,20 +373,20 @@ export default function Fund() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <div className={`min-h-screen bg-surface text-text-primary ${inter.className} antialiased`}>
+      <div className={`min-h-screen bg-black text-white ${inter.className} antialiased`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
           {/* Hero Section */}
           <header className="text-center mb-6 lg:mb-8">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-text-primary mb-4 lg:mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4 lg:mb-6">
               Dynamic Fund
             </h1>
 
             <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-4 lg:mt-6">
-              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-text-secondary tracking-wide">
+              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
                 Dynamic invests in the best <strong>technical Founders</strong> looking to accelerate growth from{" "}
                 <strong>pre-seed onward</strong>.
               </p>
-              <p className="text-base sm:text-lg font-medium text-text-muted tracking-wide">
+              <p className="text-base sm:text-lg font-medium text-gray-400 tracking-wide">
                 We prioritize long-term partnerships and obsess over your business.
               </p>
             </div>
@@ -394,20 +394,14 @@ export default function Fund() {
 
           {/* Portfolio Companies Section */}
           <section className="mb-6 lg:mb-8" aria-labelledby="portfolio">
-            <div className="w-full h-px bg-divider mb-4 lg:mb-6" />
-            <h2 id="portfolio" className="text-2xl sm:text-3xl font-medium text-center mb-4 lg:mb-6 text-accent-gold">
+            <div className="w-full h-px bg-gray-900 mb-4 lg:mb-6" />
+            <h2
+              id="portfolio"
+              className="text-2xl sm:text-3xl font-medium text-center mb-4 lg:mb-6"
+              style={{ color: "#ABBDBD" }}
+            >
               Investments
             </h2>
-
-            <div className="max-w-[700px] mx-auto space-y-3 lg:space-y-4 mt-4 lg:mt-6">
-              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-text-secondary tracking-wide">
-                Dynamic invests in the best <strong>technical Founders</strong> looking to accelerate growth from{" "}
-                <strong>pre-seed onward</strong>.
-              </p>
-              <p className="text-base sm:text-lg font-medium text-text-muted tracking-wide">
-                We prioritize long-term partnerships and obsess over your business.
-              </p>
-            </div>
 
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-3">
@@ -472,12 +466,12 @@ export default function Fund() {
 
           {/* About Dakota Section */}
           <section className="mb-6 lg:mb-8" aria-labelledby="general-partner">
-            <div className="w-full h-px bg-divider mb-6 lg:mb-8" />
+            <div className="w-full h-px bg-gray-900 mb-6 lg:mb-8" />
 
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-              <div className="w-24 sm:w-28 h-24 sm:h-28 mb-4 rounded-full overflow-hidden ring-1 ring-divider">
+              <div className="w-24 sm:w-28 h-24 sm:h-28 mb-4 rounded-full overflow-hidden ring-1 ring-gray-800">
                 <Image
-                  src="/images/dakota.jpeg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg"
                   alt="Dakota McKenzie - General Partner at Dynamic Fund"
                   width={112}
                   height={112}
@@ -490,11 +484,13 @@ export default function Fund() {
                 href="https://www.linkedin.com/in/dakotajmckenzie/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl sm:text-2xl font-medium text-text-primary mb-1 tracking-wide hover:text-text-secondary transition-colors duration-300"
+                className="text-xl sm:text-2xl font-medium text-white mb-1 tracking-wide hover:text-gray-300 transition-colors duration-300"
               >
                 <h3 id="general-partner">Dakota McKenzie</h3>
               </Link>
-              <p className="text-base sm:text-lg tracking-wide mb-4 text-accent-gold">General Partner, Dynamic Fund</p>
+              <p className="text-base sm:text-lg tracking-wide mb-4" style={{ color: "#ABBDBD" }}>
+                General Partner, Dynamic Fund
+              </p>
 
               {/* Experience Logos */}
               <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 sm:gap-4 mb-6">
@@ -513,35 +509,34 @@ export default function Fund() {
               </div>
 
               {/* Bio */}
-              <div className="mt-6 text-text-secondary space-y-4 leading-relaxed text-sm sm:text-base w-full max-w-4xl">
+              <div className="mt-6 text-gray-200 space-y-4 leading-relaxed text-sm sm:text-base w-full max-w-4xl">
                 <p className="text-left">
                   Dakota supports founding teams at companies like{" "}
-                  <strong className="text-text-primary font-medium">Clay (Sequoia)</strong>,{" "}
-                  <strong className="text-text-primary font-medium">Thatch (Index)</strong>,{" "}
-                  <strong className="text-text-primary font-medium">WorkOS (Greenoaks)</strong>, and{" "}
-                  <strong className="text-text-primary font-medium">Plain (Battery)</strong> to accelerate their current
-                  sales efforts to the next level.
+                  <strong className="text-white font-medium">Clay (Sequoia)</strong>,{" "}
+                  <strong className="text-white font-medium">Thatch (Index)</strong>,{" "}
+                  <strong className="text-white font-medium">WorkOS (Greenoaks)</strong>, and{" "}
+                  <strong className="text-white font-medium">Plain (Battery)</strong> to accelerate their current sales
+                  efforts to the next level or build their first GTM motion from the ground up.
                 </p>
                 <p className="text-left">
                   His experience includes working for firms led by <strong>Midas-list investors</strong>{" "}
-                  <strong className="text-text-primary font-medium">(Unusual Ventures)</strong>, operating for
-                  world-class GTM teams from pre-$1M to $150M+ ARR{" "}
-                  <strong className="text-text-primary font-medium">(Databricks, Segment)</strong>, and being in the
-                  seat with founders on their journey from $0-100M ARR prior to raising subsequent rounds from Tier-1
-                  investors.
+                  <strong className="text-white font-medium">(Unusual Ventures)</strong>, operating for world-class GTM
+                  teams from pre-$1M to $150M+ ARR{" "}
+                  <strong className="text-white font-medium">(Databricks, Segment)</strong>, and being in the seat with
+                  founders on their journey from $0-100M ARR prior to raising subsequent rounds from Tier-1 investors.
                 </p>
                 <p className="text-left">
                   Before running his fund, Dakota was on early GTM teams of companies like{" "}
-                  <strong className="text-text-primary font-medium">Demandware (IPO/Acq)</strong>,{" "}
-                  <strong className="text-text-primary font-medium">Sumo Logic (IPO)</strong>,{" "}
-                  <strong className="text-text-primary font-medium">Databricks</strong>, and{" "}
-                  <strong className="text-text-primary font-medium">Segment (Acq)</strong>.
+                  <strong className="text-white font-medium">Demandware (IPO/Acq)</strong>,{" "}
+                  <strong className="text-white font-medium">Sumo Logic (IPO)</strong>,{" "}
+                  <strong className="text-white font-medium">Databricks</strong>, and{" "}
+                  <strong className="text-white font-medium">Segment (Acq)</strong>.
                 </p>
               </div>
 
               {/* Personal Investments */}
               <div className="mt-12 w-full max-w-5xl">
-                <h4 className="text-lg sm:text-xl font-medium text-center mb-6 text-accent-gold">
+                <h4 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#ABBDBD" }}>
                   Personal Investments
                 </h4>
 
@@ -572,13 +567,13 @@ export default function Fund() {
 
           {/* Contact Section */}
           <section className="text-center py-6" aria-labelledby="contact">
-            <div className="w-full h-px bg-divider mb-8" />
+            <div className="w-full h-px bg-gray-900 mb-8" />
 
             <div className="max-w-[800px] mx-auto">
-              <h2 id="contact" className="text-xl font-medium mb-4 text-accent-gold">
+              <h2 id="contact" className="text-xl font-medium mb-4" style={{ color: "#ABBDBD" }}>
                 Investment Inquiries
               </h2>
-              <p className="text-base sm:text-lg text-text-muted mb-6 tracking-wide">
+              <p className="text-base sm:text-lg text-gray-400 mb-6 tracking-wide">
                 <strong>Founders seeking investment</strong> or <strong>prospective LPs</strong> can email us{" "}
                 <Link
                   href="mailto:dakota@dynamicgrowth.partners"
@@ -592,11 +587,11 @@ export default function Fund() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
                 <Link
                   href="/"
-                  className="group inline-flex items-center text-base sm:text-lg text-text-muted hover:text-text-primary transition-colors duration-300"
+                  className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   <span className="relative">
                     Back to Home
-                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-text-primary transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
                   </span>
                 </Link>
 
@@ -604,11 +599,11 @@ export default function Fund() {
                   href="https://www.yellingatcloud.ai/archive?sort=top"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center text-base sm:text-lg text-text-muted hover:text-text-primary transition-colors duration-300"
+                  className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   <span className="relative">
                     Insights
-                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-text-primary transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
                   </span>
                 </Link>
               </div>

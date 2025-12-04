@@ -64,7 +64,7 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-surface-elevated/50 backdrop-blur-sm border border-divider rounded-lg p-8 text-center">
+      <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg p-8 text-center">
         <div className="w-12 h-12 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,10 +82,10 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3 className="text-2xl font-bold mb-2">Thank you for reaching out!</h3>
-        <p className="text-text-muted mb-6">We'll get back to you shortly to schedule a time.</p>
+        <p className="text-gray-400 mb-6">We'll get back to you shortly to schedule a time.</p>
         <button
           onClick={() => setIsSubmitted(false)}
-          className="px-6 py-2 bg-text-primary/10 hover:bg-text-primary/20 text-text-primary font-medium rounded-md transition-colors"
+          className="px-6 py-2 bg-white/10 hover:bg-white/20 text-white font-medium rounded-md transition-colors"
         >
           Submit another request
         </button>
@@ -94,12 +94,12 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-surface-elevated/50 backdrop-blur-sm border border-divider rounded-lg p-8">
+    <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg p-8">
       {error && <div className="mb-6 p-4 bg-red-900/20 border border-red-800/50 rounded-md text-red-300">{error}</div>}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-text-muted mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
             Email address
           </label>
           <input
@@ -109,13 +109,13 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 bg-surface-elevated/50 border border-divider rounded-md focus:outline-none focus:ring-1 focus:ring-text-primary/30 focus:border-text-primary/30 text-text-primary"
+            className="w-full px-4 py-2.5 bg-gray-800/50 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-white/30 focus:border-white/30 text-white"
             placeholder="you@company.com"
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-text-muted mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
             How can we help?
           </label>
           <textarea
@@ -125,7 +125,7 @@ export default function ContactForm() {
             required
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 bg-surface-elevated/50 border border-divider rounded-md focus:outline-none focus:ring-1 focus:ring-text-primary/30 focus:border-text-primary/30 text-text-primary"
+            className="w-full px-4 py-2.5 bg-gray-800/50 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-white/30 focus:border-white/30 text-white"
             placeholder="Tell us about your current challenges or goals..."
           ></textarea>
         </div>
@@ -134,7 +134,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-6 py-3 bg-text-primary text-surface font-medium rounded-md hover:bg-text-secondary transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full px-6 py-3 bg-white text-black font-medium rounded-md hover:bg-gray-200 transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </button>
