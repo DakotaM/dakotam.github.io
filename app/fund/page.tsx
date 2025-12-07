@@ -589,71 +589,52 @@ export default function Fund() {
                   ))}
                 </div>
               </div>
-
-              {/* Testimonials Section */}
-              <section className="mt-12 w-full max-w-5xl">
-                <h4 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#ABBDBD" }}>
-                  Testimonials
-                </h4>
-
-                <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
-                  {testimonials.map((testimonial, index) => (
-                    <div key={index} className="bg-gray-800 p-6 rounded-lg">
-                      <div className="flex items-center space-x-4 mb-4">
-                        <Image
-                          src={testimonial.headshot || "/placeholder.svg"}
-                          alt={testimonial.name}
-                          width={60}
-                          height={60}
-                          className="rounded-full"
-                        />
-                        <div>
-                          <h5 className="text-xl font-medium text-white">{testimonial.name}</h5>
-                          <p className="text-base font-medium text-gray-400">{testimonial.title}</p>
-                        </div>
-                      </div>
-                      <p className="text-base text-gray-200 leading-relaxed">{testimonial.quote}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
             </div>
           </section>
 
           {/* Updated Testimonials Section */}
-          <section className="mb-6 lg:mb-8" aria-labelledby="testimonials">
-            <div className="w-full h-px bg-gray-900 mb-6 lg:mb-8" />
+          <section className="mb-8 lg:mb-12" aria-labelledby="testimonials">
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent mb-10 lg:mb-14" />
 
             <h2
               id="testimonials"
-              className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-10 lg:mb-12"
+              className="text-2xl sm:text-3xl font-medium text-center mb-12 lg:mb-16"
+              style={{ color: "#ABBDBD" }}
             >
-              Founders are excited to have us on the cap table
+              The best partner to technical Founders
             </h2>
 
-            <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-[#1a2332] rounded-2xl p-6 sm:p-8">
-                  {/* Header with headshot and name/title */}
-                  <div className="flex items-center gap-4 mb-5">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden ring-2 ring-gray-600/50 flex-shrink-0">
-                      <Image
-                        src={testimonial.headshot || "/placeholder.svg"}
-                        alt={testimonial.name}
-                        width={80}
-                        height={80}
-                        className="object-cover w-full h-full grayscale"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div>
-                      <p className="text-white font-semibold text-lg sm:text-xl">{testimonial.name}</p>
-                      <p className="text-gray-400 text-sm sm:text-base">{testimonial.title}</p>
-                    </div>
+                <div key={index} className="flex flex-col items-center text-center">
+                  {/* Headshot */}
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-1 ring-white/10 mb-6">
+                    <Image
+                      src={testimonial.headshot || "/placeholder.svg"}
+                      alt={testimonial.name}
+                      width={128}
+                      height={128}
+                      className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+                      loading="lazy"
+                    />
                   </div>
 
+                  {/* Name and Title with Company Icon */}
+                  <div className="flex items-center gap-2 mb-2">
+                    <Image
+                      src={testimonial.companyIcon || "/placeholder.svg"}
+                      alt={testimonial.title}
+                      width={20}
+                      height={20}
+                      className="w-5 h-5 object-contain"
+                      loading="lazy"
+                    />
+                    <p className="text-white font-semibold text-lg">{testimonial.name}</p>
+                  </div>
+                  <p className="text-gray-500 text-sm mb-6">{testimonial.title}</p>
+
                   {/* Quote */}
-                  <p className="text-gray-200 text-base sm:text-lg leading-relaxed text-center">{testimonial.quote}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed italic">"{testimonial.quote}"</p>
                 </div>
               ))}
             </div>
