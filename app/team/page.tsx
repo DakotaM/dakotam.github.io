@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "deployment advisory",
   ],
   openGraph: {
-    title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
+    title: "Dynamic Growth Partners - GTM Consulting Team",
     description:
       "We support founding teams looking to accelerate their business and achieve fundraising milestones faster. Over 25% of our clients have gone on to raise Tier-1 venture rounds.",
     url: "https://dynamic.vc/team",
@@ -396,7 +396,7 @@ export default function Page() {
                 className="text-xl sm:text-2xl font-medium text-center mb-6"
                 style={{ color: "#ABBDBD" }}
               >
-                Experience
+                Our Partners
               </h2>
               <p className="mb-6 text-xs sm:text-sm text-gray-200 leading-relaxed text-center">
                 We have worked at a range of SaaS companies in the earlier stages of growth based on our drive to build
