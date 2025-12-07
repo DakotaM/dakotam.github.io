@@ -163,7 +163,7 @@ const structuredData = {
       url: "https://www.linkedin.com/in/dakotajmckenzie/",
       image: {
         "@type": "ImageObject",
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg",
+        url: "/images/dakota.jpeg",
         width: 400,
         height: 400,
       },
@@ -251,7 +251,7 @@ const structuredData = {
 
 const investmentLogos = [
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-99gXgXFOh3uEuyvywS9O1BjZ2UfamZ.png",
+    src: "/images/image.png",
     alt: "Infisical - Open-source secret management platform",
     width: 120,
     height: 60,
@@ -308,7 +308,7 @@ const experienceLogos = [
     height: 30,
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-n2zQYDcuoaZHXmGrIONp78DO7Q6Pxw.png",
+    src: "/images/image.png",
     alt: "Segment - Former GTM team member",
     width: 75,
     height: 30,
@@ -336,13 +336,13 @@ const experienceLogos = [
 const personalInvestments = [
   { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform", width: 56, height: 28 },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U95kAn6sHfQv98gCN2C0DyDHbkAB6R.png",
+    src: "/images/image.png",
     alt: "Clay - Data enrichment platform",
     width: 56,
     height: 28,
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-A55jqUZYS4ibLSfKQjLK8as4yddq28.png",
+    src: "/images/image.png",
     alt: "Liveblocks - Collaborative software platform",
     width: 56,
     height: 28,
@@ -350,7 +350,7 @@ const personalInvestments = [
   { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform", width: 56, height: 28 },
   { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund", width: 56, height: 28 },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zXC8K7Jq5We5pbkRW6LBafhIe2Jv8B.png",
+    src: "/images/image.png",
     alt: "Zuplo - API management platform",
     width: 56,
     height: 28,
@@ -359,7 +359,7 @@ const personalInvestments = [
   { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform", width: 56, height: 28 },
   { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI", width: 56, height: 28 },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BOHeIJcBXUpUXmU4mkB64jtp3BRaOH.png",
+    src: "/images/image.png",
     alt: "Nango - API integration platform",
     width: 56,
     height: 28,
@@ -367,6 +367,33 @@ const personalInvestments = [
   { src: "/images/metaview-new-logo.png", alt: "Metaview - Interview intelligence platform", width: 56, height: 28 },
   { src: "/images/plain-new-logo.png", alt: "Plain - Customer support platform", width: 56, height: 28 },
   { src: "/images/cara-ai-logo.png", alt: "Cara AI - AI platform", width: 56, height: 28 },
+]
+
+const testimonials = [
+  {
+    name: "Alex Shan",
+    title: "CEO, Judgment Labs",
+    headshot: "/images/alex-shan-headshot.png",
+    companyIcon: "/images/judgment-labs-icon.png",
+    quote:
+      "Dakota is the rare investor who behaves like a true company builder. He has exceptional sales acumen as a CRO counterpart to my team, but also puts into key consideration the most important factors of my business as CEO. Whether it's a last-minute topic or company defining conversation, Dakota is always there to respond and partner with us. It's an honor to have him as an investor in Judgment.",
+  },
+  {
+    name: "Vlad Matsiiako",
+    title: "CEO, Infisical",
+    headshot: "/images/vlad-matsiiako-headshot.png",
+    companyIcon: "/images/infisical-icon.png",
+    quote:
+      "Dakota is the kind of investor every founder hopes for. He is accessible, deeply engaged, and a genuine partner in the decisions that shape our growth. His guidance has been essential in strategic deals, major company choices, and critical hires as we've progressed into our Series A and beyond. Infisical is stronger because he is in our corner.",
+  },
+  {
+    name: "Tal Drori",
+    title: "CEO, Gist Security",
+    headshot: "/images/tal-drori-headshot.png",
+    companyIcon: "/images/gist-security-icon.png",
+    quote:
+      "Dakota has been a true partner to me since the start of our company. From landing our first design partners to converting formal enterprise contracts with executives. He's been a strategic asset to our success.",
+  },
 ]
 
 export default function Fund() {
@@ -471,7 +498,7 @@ export default function Fund() {
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               <div className="w-24 sm:w-28 h-24 sm:h-28 mb-4 rounded-full overflow-hidden ring-1 ring-gray-800">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dakota-z20aTzzEzkNBMRmrT4VaqQN5xSjDNv.jpeg"
+                  src="/images/dakota.jpeg"
                   alt="Dakota McKenzie - General Partner at Dynamic Fund"
                   width={112}
                   height={112}
@@ -562,6 +589,80 @@ export default function Fund() {
                   ))}
                 </div>
               </div>
+
+              {/* Testimonials Section */}
+              <section className="mt-12 w-full max-w-5xl">
+                <h4 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#ABBDBD" }}>
+                  Testimonials
+                </h4>
+
+                <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
+                  {testimonials.map((testimonial, index) => (
+                    <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <Image
+                          src={testimonial.headshot || "/placeholder.svg"}
+                          alt={testimonial.name}
+                          width={60}
+                          height={60}
+                          className="rounded-full"
+                        />
+                        <div>
+                          <h5 className="text-xl font-medium text-white">{testimonial.name}</h5>
+                          <p className="text-base font-medium text-gray-400">{testimonial.title}</p>
+                        </div>
+                      </div>
+                      <p className="text-base text-gray-200 leading-relaxed">{testimonial.quote}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+          </section>
+
+          {/* Testimonials Section */}
+          <section className="mb-6 lg:mb-8" aria-labelledby="testimonials">
+            <div className="w-full h-px bg-gray-900 mb-6 lg:mb-8" />
+
+            <h2 id="testimonials" className="text-2xl sm:text-3xl font-semibold text-white text-center mb-8 lg:mb-12">
+              Founders are excited to have us on the cap table
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="flex flex-col items-center text-center">
+                  {/* Headshot */}
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 mb-4 rounded-full overflow-hidden ring-1 ring-gray-700">
+                    <Image
+                      src={testimonial.headshot || "/placeholder.svg"}
+                      alt={testimonial.name}
+                      width={128}
+                      height={128}
+                      className="object-cover w-full h-full grayscale"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Name and Title with Company Icon */}
+                  <div className="flex items-center gap-2 mb-3">
+                    <Image
+                      src={testimonial.companyIcon || "/placeholder.svg"}
+                      alt={testimonial.title.split(", ")[1]}
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-contain"
+                      loading="lazy"
+                    />
+                    <div className="text-left">
+                      <p className="text-white font-semibold text-sm">{testimonial.name}</p>
+                      <p className="text-gray-400 text-xs">{testimonial.title}</p>
+                    </div>
+                  </div>
+
+                  {/* Quote */}
+                  <p className="text-gray-300 text-sm italic leading-relaxed">"{testimonial.quote}"</p>
+                </div>
+              ))}
             </div>
           </section>
 
