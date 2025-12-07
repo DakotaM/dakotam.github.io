@@ -398,10 +398,6 @@ export default function Page() {
               >
                 Our Partners
               </h2>
-              <p className="mb-6 text-xs sm:text-sm text-gray-200 leading-relaxed text-center">
-                We have worked at a range of SaaS companies in the earlier stages of growth based on our drive to build
-                and grow new functions. We are inspired by building alongside world-class founders and teams.
-              </p>
               <Suspense
                 fallback={
                   <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-4 items-center justify-items-center">
