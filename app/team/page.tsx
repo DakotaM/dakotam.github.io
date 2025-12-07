@@ -254,8 +254,8 @@ export default function Page() {
               <p className="text-xs sm:text-sm font-medium text-gray-400 tracking-wide">
                 Our approach is grounded in hands-on execution, and shaped by working alongside the best GTM and Product
                 leaders in the world. Whether you're building from zero or scaling toward repeatability, we help
-                translate product excellence into commercial outcomes. To date, over 30% of our clients have raised Tier
-                1 venture rounds.
+                translate product excellence into commercial outcomes. To date, over 50% of our clients have raised Tier
+                1 venture rounds since partnering with Dynamic.
               </p>
             </div>
           </header>
@@ -371,19 +371,6 @@ export default function Page() {
                 </Link>
                 <p className="text-xs sm:text-sm text-gray-400">Executive Assistant</p>
               </div>
-            </div>
-
-            <div className="max-w-4xl mx-auto text-gray-200 space-y-3 leading-relaxed text-xs sm:text-sm">
-              <p>
-                Our experience includes working for and partnering with firms led by Midas-list investors, operating at
-                world-class GTM teams from pre-$1m in ARR to $1.5B ARR, and being in the seat with founders on their
-                journey from $0-100M+ ARR through strong product execution and a GTM machine bolted on.
-              </p>
-              <p>
-                Dynamic is the go-to partner for technical Founders because we know how and when to deploy the right
-                tools to ensure you're making the right strides towards product-market fit and building the best team
-                possible to achieve your goals as a business.
-              </p>
             </div>
           </section>
 
