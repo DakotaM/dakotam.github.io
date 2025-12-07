@@ -336,13 +336,13 @@ const experienceLogos = [
 const personalInvestments = [
   { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform", width: 56, height: 28 },
   {
-    src: "/images/image.png",
+    src: "/images/clay-logo.png",
     alt: "Clay - Data enrichment platform",
     width: 56,
     height: 28,
   },
   {
-    src: "/images/image.png",
+    src: "/images/liveblocks-logo.png",
     alt: "Liveblocks - Collaborative software platform",
     width: 56,
     height: 28,
@@ -350,16 +350,16 @@ const personalInvestments = [
   { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform", width: 56, height: 28 },
   { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund", width: 56, height: 28 },
   {
-    src: "/images/image.png",
+    src: "/images/zuplo-logo.png",
     alt: "Zuplo - API management platform",
     width: 56,
     height: 28,
   },
-  { src: "/safetycli-logo.svg", alt: "SafetyCLI - Security scanning tool", width: 56, height: 28 },
+  { src: "/images/safety-logo.png", alt: "Safety - Security scanning tool", width: 56, height: 28 },
   { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform", width: 56, height: 28 },
   { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI", width: 56, height: 28 },
   {
-    src: "/images/image.png",
+    src: "/images/nango-logo.png",
     alt: "Nango - API integration platform",
     width: 56,
     height: 28,
