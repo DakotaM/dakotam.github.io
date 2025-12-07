@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
   description:
-    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), Ben Cappellacci (FDE Advisor), Cindy Boulous (Executive Assistant), and Mike Haylon (Operating Partner). Over 25% of clients raise Tier-1 venture rounds.",
+    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), Mike Haylon (Operating Partner), Ben Cappellacci (FDE Advisor), and Cindy Boulous (Executive Assistant). Over 25% of clients raise Tier-1 venture rounds.",
   keywords: [
     "growth partners",
     "GTM consulting",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     "business development",
     "Dakota McKenzie",
     "Trey Johnson",
+    "Mike Haylon", // Added
     "Ben Cappellacci",
     "Cindy Boulous",
-    "Mike Haylon", // Added
     "startup growth",
     "venture capital preparation",
     "deployment advisory",
@@ -83,11 +83,12 @@ const structuredData = {
       industry: ["Business Consulting", "Sales Consulting", "Go-to-Market Strategy"],
       areaServed: "Global",
       employee: [
+        // Updated employee list
         { "@id": "https://dynamic.vc/team/#dakota-mckenzie" },
         { "@id": "https://dynamic.vc/team/#trey-johnson" },
+        { "@id": "https://dynamic.vc/team/#mike-haylon" }, // Added
         { "@id": "https://dynamic.vc/team/#ben-cappellacci" },
         { "@id": "https://dynamic.vc/team/#cindy-boulous" },
-        { "@id": "https://dynamic.vc/team/#mike-haylon" }, // Added
       ],
       contactPoint: {
         "@type": "ContactPoint",
@@ -151,6 +152,7 @@ const structuredData = {
       sameAs: ["https://www.linkedin.com/in/trey-j-07156924/"],
     },
     {
+      // New Person schema for Ben
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#ben-cappellacci",
       name: "Ben Cappellacci",
@@ -168,6 +170,7 @@ const structuredData = {
       sameAs: ["https://www.linkedin.com/in/bencappellacci/"],
     },
     {
+      // New Person schema for Cindy
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#cindy-boulous",
       name: "Cindy Boulous",
@@ -196,11 +199,11 @@ const structuredData = {
         height: 400,
       },
       description:
-        "Operating Partner at Dynamic Growth Partners, focusing on strategic growth initiatives and operational excellence.",
-      knowsAbout: ["Strategic Growth", "Operations", "Business Development", "Go-to-Market Strategy"],
+        "Operating Partner at Dynamic Growth Partners, specializing in go-to-market strategy and business development.",
+      knowsAbout: ["Go-to-Market Strategy", "Business Development", "Sales Operations", "Technical Founders"],
     },
     {
-      "@type": "FAQPage",
+      "@type": "FAQPage", // This FAQ section is from v110
       mainEntity: [
         {
           "@type": "Question",
@@ -263,22 +266,22 @@ export default function Page() {
             <h2 id="team" className="sr-only">
               Our Team
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 mb-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-8 max-w-6xl mx-auto">
               {/* Dakota McKenzie */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
                   <Image
                     src="/images/dakota.jpeg"
                     alt="Dakota McKenzie - CEO of Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
                   />
                 </div>
                 <Link
                   href="http://linkedin.com/in/dakotajmckenzie"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide whitespace-nowrap"
                 >
                   <h3>Dakota McKenzie</h3>
                 </Link>
@@ -287,19 +290,19 @@ export default function Page() {
 
               {/* Trey Johnson */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
                   <Image
                     src="/images/trey.jpeg"
                     alt="Trey Johnson - Operating Partner at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
                   />
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/trey-j-07156924/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide whitespace-nowrap"
                 >
                   <h3>Trey Johnson</h3>
                 </Link>
@@ -308,19 +311,19 @@ export default function Page() {
 
               {/* Mike Haylon */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
                   <Image
                     src="/images/mike-haylon.png"
                     alt="Mike Haylon - Operating Partner at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
                   />
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/mikehaylon/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide whitespace-nowrap"
                 >
                   <h3>Mike Haylon</h3>
                 </Link>
@@ -329,19 +332,19 @@ export default function Page() {
 
               {/* Ben Cappellacci */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
                   <Image
                     src="/images/ben-cappellacci.jpeg"
                     alt="Ben Cappellacci - FDE Advisor at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
                   />
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/bencappellacci/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide whitespace-nowrap"
                 >
                   <h3>Ben Cappellacci</h3>
                 </Link>
@@ -350,19 +353,19 @@ export default function Page() {
 
               {/* Cindy Boulous */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-44 lg:h-44 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
                   <Image
                     src="/images/cindy-boulous.jpeg"
                     alt="Cindy Boulous - Executive Assistant at Dynamic Growth Partners"
                     fill
                     priority
                     className="object-cover team-photo"
-                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 176px"
+                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
                   />
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/cindyboulous/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide"
+                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide whitespace-nowrap"
                 >
                   <h3>Cindy Boulous</h3>
                 </Link>
