@@ -308,7 +308,7 @@ const experienceLogos = [
     height: 30,
   },
   {
-    src: "/images/image.png",
+    src: "/images/segment-logo.png",
     alt: "Segment - Former GTM team member",
     width: 75,
     height: 30,
