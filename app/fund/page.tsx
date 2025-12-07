@@ -251,7 +251,7 @@ const structuredData = {
 
 const investmentLogos = [
   {
-    src: "/images/image.png",
+    src: "/images/infisical-logo.png",
     alt: "Infisical - Open-source secret management platform",
     width: 120,
     height: 60,
@@ -564,7 +564,7 @@ export default function Fund() {
               {/* Personal Investments */}
               <div className="mt-12 w-full max-w-5xl">
                 <h4 className="text-lg sm:text-xl font-medium text-center mb-6" style={{ color: "#ABBDBD" }}>
-                  Personal Investments
+                  Select Personal Investments
                 </h4>
 
                 <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
