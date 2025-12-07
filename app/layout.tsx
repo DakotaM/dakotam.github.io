@@ -1,12 +1,15 @@
 import "./globals.css"
-import { Inter, Nunito_Sans } from "next/font/google"
+import { Nunito_Sans } from "next/font/google"
 import type React from "react"
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 import Script from "next/script"
 
-const inter = Inter({ subsets: ["latin"] })
-const nunitoSans = Nunito_Sans({ subsets: ["latin"] })
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+  variable: "--font-nunito-sans",
+})
 
 export const metadata = {
   title: {
@@ -87,7 +90,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${nunitoSans.variable}`}>
       <head>
         <link rel="canonical" href="https://dynamic.vc" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -96,7 +99,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <meta name="format-detection" content="telephone=no" />
       </head>
-      <body className={inter.className}>
+      <body className={nunitoSans.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
         <Analytics />
         <Script id="reb2b-tracking" strategy="afterInteractive">
