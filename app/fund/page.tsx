@@ -421,7 +421,6 @@ export default function Fund() {
 
           {/* Portfolio Companies Section */}
           <section className="mb-6 lg:mb-8" aria-labelledby="portfolio">
-            <div className="w-full h-px bg-gray-900 mb-4 lg:mb-6" />
             <h2
               id="portfolio"
               className="text-2xl sm:text-3xl font-medium text-center mb-4 lg:mb-6"
@@ -491,10 +490,54 @@ export default function Fund() {
             </div>
           </section>
 
+          {/* Testimonials Section */}
+          <section className="mb-8 lg:mb-12" aria-labelledby="testimonials">
+            <h2
+              id="testimonials"
+              className="text-2xl sm:text-3xl font-medium text-center mb-12 lg:mb-16"
+              style={{ color: "#ABBDBD" }}
+            >
+              The best partner to technical Founders
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="flex flex-col items-center text-center">
+                  {/* Headshot */}
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-1 ring-white/10 mb-6">
+                    <Image
+                      src={testimonial.headshot || "/placeholder.svg"}
+                      alt={testimonial.name}
+                      width={128}
+                      height={128}
+                      className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Name and Title with Company Icon */}
+                  <div className="flex items-center gap-2 mb-2">
+                    <Image
+                      src={testimonial.companyIcon || "/placeholder.svg"}
+                      alt={testimonial.title}
+                      width={20}
+                      height={20}
+                      className="w-5 h-5 object-contain"
+                      loading="lazy"
+                    />
+                    <p className="text-white font-semibold text-lg">{testimonial.name}</p>
+                  </div>
+                  <p className="text-gray-500 text-sm mb-6">{testimonial.title}</p>
+
+                  {/* Quote */}
+                  <p className="text-gray-400 text-sm leading-relaxed italic">"{testimonial.quote}"</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* About Dakota Section */}
           <section className="mb-6 lg:mb-8" aria-labelledby="general-partner">
-            <div className="w-full h-px bg-gray-900 mb-6 lg:mb-8" />
-
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
               <div className="w-24 sm:w-28 h-24 sm:h-28 mb-4 rounded-full overflow-hidden ring-1 ring-gray-800">
                 <Image
@@ -592,96 +635,44 @@ export default function Fund() {
             </div>
           </section>
 
-          {/* Updated Testimonials Section */}
-          <section className="mb-8 lg:mb-12" aria-labelledby="testimonials">
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent mb-10 lg:mb-14" />
-
-            <h2
-              id="testimonials"
-              className="text-2xl sm:text-3xl font-medium text-center mb-12 lg:mb-16"
-              style={{ color: "#ABBDBD" }}
-            >
-              The best partner to technical Founders
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
-                  {/* Headshot */}
-                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-1 ring-white/10 mb-6">
-                    <Image
-                      src={testimonial.headshot || "/placeholder.svg"}
-                      alt={testimonial.name}
-                      width={128}
-                      height={128}
-                      className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  {/* Name and Title with Company Icon */}
-                  <div className="flex items-center gap-2 mb-2">
-                    <Image
-                      src={testimonial.companyIcon || "/placeholder.svg"}
-                      alt={testimonial.title}
-                      width={20}
-                      height={20}
-                      className="w-5 h-5 object-contain"
-                      loading="lazy"
-                    />
-                    <p className="text-white font-semibold text-lg">{testimonial.name}</p>
-                  </div>
-                  <p className="text-gray-500 text-sm mb-6">{testimonial.title}</p>
-
-                  {/* Quote */}
-                  <p className="text-gray-400 text-sm leading-relaxed italic">"{testimonial.quote}"</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
           {/* Contact Section */}
           <section className="text-center py-6" aria-labelledby="contact">
-            <div className="w-full h-px bg-gray-900 mb-8" />
+            <h3 id="contact" className="text-xl sm:text-2xl font-medium mb-4" style={{ color: "#ABBDBD" }}>
+              Investment Inquiries
+            </h3>
+            <p className="text-base sm:text-lg text-gray-400 mb-6 tracking-wide">
+              <strong>Founders seeking investment</strong> or <strong>prospective LPs</strong> can email us{" "}
+              <Link
+                href="mailto:dakota@dynamicgrowth.partners"
+                className="text-blue-400 hover:text-blue-300 underline transition-colors duration-300"
+              >
+                here
+              </Link>
+              .
+            </p>
 
-            <div className="max-w-[800px] mx-auto">
-              <h2 id="contact" className="text-xl font-medium mb-4" style={{ color: "#ABBDBD" }}>
-                Investment Inquiries
-              </h2>
-              <p className="text-base sm:text-lg text-gray-400 mb-6 tracking-wide">
-                <strong>Founders seeking investment</strong> or <strong>prospective LPs</strong> can email us{" "}
-                <Link
-                  href="mailto:dakota@dynamicgrowth.partners"
-                  className="text-blue-400 hover:text-blue-300 underline transition-colors duration-300"
-                >
-                  here
-                </Link>
-                .
-              </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+              <Link
+                href="/"
+                className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <span className="relative">
+                  Back to Home
+                  <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                </span>
+              </Link>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-                <Link
-                  href="/"
-                  className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  <span className="relative">
-                    Back to Home
-                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
-                  </span>
-                </Link>
-
-                <Link
-                  href="https://www.yellingatcloud.ai/archive?sort=top"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  <span className="relative">
-                    Insights
-                    <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
-                  </span>
-                </Link>
-              </div>
+              <Link
+                href="https://www.yellingatcloud.ai/archive?sort=top"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center text-base sm:text-lg text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <span className="relative">
+                  Insights
+                  <span className="absolute bottom-0 left-1/2 w-0 h-px bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
+                </span>
+              </Link>
             </div>
           </section>
         </div>
