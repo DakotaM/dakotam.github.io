@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { nunitoSans } from "./layout"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -167,25 +166,23 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <main className="flex flex-col items-center justify-center min-h-screen bg-black px-4 py-8">
+      <main className="flex flex-col items-center justify-center min-h-screen bg-black px-4 py-8 font-sans">
         <header className="text-center mb-12 md:mb-16">
-          <h1 className={`${nunitoSans.className} text-5xl sm:text-6xl md:text-8xl font-bold text-white text-center`}>
-            DYNAMIC
-          </h1>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-white text-center">DYNAMIC</h1>
           <p className="sr-only">
             Dynamic - Venture capital and growth partners for technical founders building developer tools,
             infrastructure, and B2B SaaS
           </p>
         </header>
 
-        <nav className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-12 md:space-x-16">
-          <Link href="/team" className="group text-xl sm:text-2xl text-white text-center">
+        <nav className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-12 md:space-x-16 font-sans">
+          <Link href="/team" className="group text-xl sm:text-2xl text-white text-center font-semibold">
             <span className="relative">
               Growth Partners
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
             </span>
           </Link>
-          <Link href="/fund" className="group text-xl sm:text-2xl text-white text-center">
+          <Link href="/fund" className="group text-xl sm:text-2xl text-white text-center font-semibold">
             <span className="relative">
               Fund
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>

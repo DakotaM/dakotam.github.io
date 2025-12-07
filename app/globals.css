@@ -123,6 +123,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Apply Nunito Sans font globally */
+    font-family: var(--font-nunito-sans), "Nunito Sans", system-ui, sans-serif;
   }
 }
 
@@ -133,6 +135,8 @@
 body {
   background-color: black;
   color: white;
+  /* Ensure font-family is applied at root level */
+  font-family: var(--font-nunito-sans), "Nunito Sans", system-ui, sans-serif;
 }
 
 .text-balance {
