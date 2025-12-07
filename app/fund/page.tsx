@@ -620,49 +620,40 @@ export default function Fund() {
             </div>
           </section>
 
-          {/* Testimonials Section */}
+          {/* Updated Testimonials Section */}
           <section className="mb-6 lg:mb-8" aria-labelledby="testimonials">
             <div className="w-full h-px bg-gray-900 mb-6 lg:mb-8" />
 
-            <h2 id="testimonials" className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-12 lg:mb-16">
+            <h2
+              id="testimonials"
+              className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-10 lg:mb-12"
+            >
               Founders are excited to have us on the cap table
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 max-w-6xl mx-auto">
+            <div className="flex flex-col gap-6 max-w-4xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
-                  {/* Headshot - larger with subtle ring */}
-                  <div className="w-36 h-36 sm:w-40 sm:h-40 lg:w-44 lg:h-44 mb-6 rounded-full overflow-hidden ring-2 ring-gray-700/50">
-                    <Image
-                      src={testimonial.headshot || "/placeholder.svg"}
-                      alt={testimonial.name}
-                      width={176}
-                      height={176}
-                      className="object-cover w-full h-full grayscale"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  {/* Company Icon + Name/Title inline */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <Image
-                      src={testimonial.companyIcon || "/placeholder.svg"}
-                      alt={testimonial.title.split(", ")[1]}
-                      width={28}
-                      height={28}
-                      className="w-7 h-7 object-contain"
-                      loading="lazy"
-                    />
-                    <div className="text-left">
-                      <p className="text-white font-semibold text-base">{testimonial.name}</p>
-                      <p className="text-gray-400 text-sm">{testimonial.title}</p>
+                <div key={index} className="bg-[#1a2332] rounded-2xl p-6 sm:p-8">
+                  {/* Header with headshot and name/title */}
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden ring-2 ring-gray-600/50 flex-shrink-0">
+                      <Image
+                        src={testimonial.headshot || "/placeholder.svg"}
+                        alt={testimonial.name}
+                        width={80}
+                        height={80}
+                        className="object-cover w-full h-full grayscale"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold text-lg sm:text-xl">{testimonial.name}</p>
+                      <p className="text-gray-400 text-sm sm:text-base">{testimonial.title}</p>
                     </div>
                   </div>
 
-                  {/* Quote - more prominent italicized text */}
-                  <p className="text-gray-200 text-base sm:text-lg italic leading-relaxed font-light">
-                    "{testimonial.quote}"
-                  </p>
+                  {/* Quote */}
+                  <p className="text-gray-200 text-base sm:text-lg leading-relaxed text-center">{testimonial.quote}</p>
                 </div>
               ))}
             </div>
