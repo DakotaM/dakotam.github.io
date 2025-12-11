@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
   description:
-    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), Mike Haylon (Operating Partner), Ben Cappellacci (FDE Advisor), and Cindy Boulous (Executive Assistant). Over 25% of clients raise Tier-1 venture rounds.",
+    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), Mike Haylon (Operating Partner), and Cindy Boulous (Executive Assistant). Over 25% of clients raise Tier-1 venture rounds.",
   keywords: [
     "growth partners",
     "GTM consulting",
@@ -22,8 +22,7 @@ export const metadata: Metadata = {
     "business development",
     "Dakota McKenzie",
     "Trey Johnson",
-    "Mike Haylon", // Added
-    "Ben Cappellacci",
+    "Mike Haylon",
     "Cindy Boulous",
     "startup growth",
     "venture capital preparation",
@@ -83,31 +82,10 @@ const structuredData = {
       industry: ["Business Consulting", "Sales Consulting", "Go-to-Market Strategy"],
       areaServed: "Global",
       employee: [
-        // Updated employee list
         { "@id": "https://dynamic.vc/team/#dakota-mckenzie" },
         { "@id": "https://dynamic.vc/team/#trey-johnson" },
-        { "@id": "https://dynamic.vc/team/#mike-haylon" }, // Added
-        { "@id": "https://dynamic.vc/team/#ben-cappellacci" },
+        { "@id": "https://dynamic.vc/team/#mike-haylon" },
         { "@id": "https://dynamic.vc/team/#cindy-boulous" },
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "General Inquiries",
-        url: "https://dynamic.vc/contact",
-        availableLanguage: "English",
-      },
-      knowsAbout: [
-        "Go-to-Market Strategy",
-        "Sales Acceleration",
-        "Product-Led Growth",
-        "Technical Founders",
-        "Developer Tools",
-        "B2B SaaS",
-        "Startup Growth",
-        "Sales Process Optimization",
-        "Open Source Strategy",
-        "Venture Capital Preparation",
-        "Deployment Advisory",
       ],
     },
     {
@@ -152,41 +130,6 @@ const structuredData = {
       sameAs: ["https://www.linkedin.com/in/trey-j-07156924/"],
     },
     {
-      // New Person schema for Ben
-      "@type": "Person",
-      "@id": "https://dynamic.vc/team/#ben-cappellacci",
-      name: "Ben Cappellacci",
-      jobTitle: "FDE Advisor", // Updated title
-      worksFor: { "@id": "https://dynamic.vc/team/#organization" },
-      url: "https://www.linkedin.com/in/bencappellacci/",
-      image: {
-        "@type": "ImageObject",
-        url: "/images/ben-cappellacci.jpeg", // Local path for Ben's image
-        width: 400, // Assuming similar dimensions
-        height: 400,
-      },
-      description: "Deployment Advisor at Dynamic Growth Partners, focusing on technical implementation and strategy.",
-      knowsAbout: ["Deployment Strategy", "Technical Advisory", "Cloud Infrastructure", "DevOps"],
-      sameAs: ["https://www.linkedin.com/in/bencappellacci/"],
-    },
-    {
-      // New Person schema for Cindy
-      "@type": "Person",
-      "@id": "https://dynamic.vc/team/#cindy-boulous",
-      name: "Cindy Boulous",
-      jobTitle: "Executive Assistant",
-      worksFor: { "@id": "https://dynamic.vc/team/#organization" },
-      image: {
-        "@type": "ImageObject",
-        url: "/images/cindy-boulous.jpeg",
-        width: 400,
-        height: 400,
-      },
-      description: "Executive Assistant at Dynamic Growth Partners, supporting team operations and administration.",
-      knowsAbout: ["Executive Support", "Operations Management", "Administrative Services", "Team Coordination"],
-      sameAs: ["https://www.linkedin.com/in/cindyboulous/"],
-    },
-    {
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#mike-haylon",
       name: "Mike Haylon",
@@ -201,6 +144,22 @@ const structuredData = {
       description:
         "Operating Partner at Dynamic Growth Partners, specializing in go-to-market strategy and business development.",
       knowsAbout: ["Go-to-Market Strategy", "Business Development", "Sales Operations", "Technical Founders"],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://dynamic.vc/team/#cindy-boulous",
+      name: "Cindy Boulous",
+      jobTitle: "Executive Assistant",
+      worksFor: { "@id": "https://dynamic.vc/team/#organization" },
+      image: {
+        "@type": "ImageObject",
+        url: "/images/cindy-boulous.jpeg",
+        width: 400,
+        height: 400,
+      },
+      description: "Executive Assistant at Dynamic Growth Partners, supporting team operations and administration.",
+      knowsAbout: ["Executive Support", "Operations Management", "Administrative Services", "Team Coordination"],
+      sameAs: ["https://www.linkedin.com/in/cindyboulous/"],
     },
     {
       "@type": "FAQPage", // This FAQ section is from v110
@@ -251,7 +210,7 @@ export default function Page() {
                 work exclusively with technical Founders ranging from pre-seed through pre-IPO to help them grow faster,
                 execute better, and raise capital more effectively.
               </p>
-              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
+              <p className="text-xs sm:text-sm font-medium text-gray-400 tracking-wide">
                 Our approach is grounded in hands-on execution, and shaped by working alongside the best GTM and Product
                 leaders in the world. Whether you're building from zero or scaling toward repeatability, we help
                 translate product excellence into commercial outcomes. To date, over 50% of our clients have raised Tier
@@ -328,27 +287,6 @@ export default function Page() {
                   <h3>Mike Haylon</h3>
                 </Link>
                 <p className="text-xs sm:text-sm text-gray-400">Operating Partner</p>
-              </div>
-
-              {/* Ben Cappellacci */}
-              <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
-                  <Image
-                    src="/images/ben-cappellacci.jpeg"
-                    alt="Ben Cappellacci - FDE Advisor at Dynamic Growth Partners"
-                    fill
-                    loading="lazy"
-                    className="object-cover team-photo"
-                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
-                  />
-                </div>
-                <Link
-                  href="https://www.linkedin.com/in/bencappellacci/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide whitespace-nowrap"
-                >
-                  <h3>Ben Cappellacci</h3>
-                </Link>
-                <p className="text-xs sm:text-sm text-gray-400">FDE Advisor</p>
               </div>
 
               {/* Cindy Boulous */}
