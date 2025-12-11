@@ -253,50 +253,50 @@ const investmentLogos = [
   {
     src: "/images/infisical-logo.png",
     alt: "Infisical - Open-source secret management platform",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
   {
     src: "/images/flightcrew-new-logo.png",
     alt: "Flightcrew - AI-powered customer success platform",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
   {
     src: "/images/judgment-labs-logo.png",
     alt: "Judgment Labs - AI decision-making platform",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
   {
     src: "/images/gist-logo.png",
     alt: "Gist - Developer productivity platform",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
   {
     src: "/images/scalar-field-logo.png",
     alt: "Scalar Field logo",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
   {
     src: "/images/clado-logo.png",
     alt: "Clado logo",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
   {
     src: "/images/e3group-logo.png",
     alt: "e3group logo",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
   {
     src: "/images/precigenetics-logo.png",
     alt: "Precigenetics - Precision genetics platform",
-    width: 120,
-    height: 60,
+    width: 160,
+    height: 80,
   },
 ]
 
@@ -334,39 +334,39 @@ const experienceLogos = [
 ]
 
 const personalInvestments = [
-  { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform", width: 56, height: 28 },
+  { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform", width: 80, height: 40 },
   {
     src: "/images/clay-logo.png",
     alt: "Clay - Data enrichment platform",
-    width: 56,
-    height: 28,
+    width: 80,
+    height: 40,
   },
   {
     src: "/images/liveblocks-logo.png",
     alt: "Liveblocks - Collaborative software platform",
-    width: 56,
-    height: 28,
+    width: 80,
+    height: 40,
   },
-  { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform", width: 56, height: 28 },
-  { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund", width: 56, height: 28 },
+  { src: "/images/dock-logo.png", alt: "Dock - Customer workspace platform", width: 80, height: 40 },
+  { src: "/images/mtf-logo.png", alt: "MTF.vc - Venture capital fund", width: 80, height: 40 },
   {
     src: "/images/zuplo-logo.png",
     alt: "Zuplo - API management platform",
-    width: 56,
-    height: 28,
+    width: 80,
+    height: 40,
   },
-  { src: "/images/safety-logo.png", alt: "Safety - Security scanning tool", width: 56, height: 28 },
-  { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform", width: 56, height: 28 },
-  { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI", width: 56, height: 28 },
+  { src: "/images/safety-logo.png", alt: "Safety - Security scanning tool", width: 80, height: 40 },
+  { src: "/images/ours-privacy-logo.png", alt: "Ours Privacy - Privacy-focused platform", width: 80, height: 40 },
+  { src: "/images/heyday-logo.png", alt: "Heyday - Memory assistant AI", width: 80, height: 40 },
   {
     src: "/images/nango-logo.png",
     alt: "Nango - API integration platform",
-    width: 56,
-    height: 28,
+    width: 80,
+    height: 40,
   },
-  { src: "/images/metaview-new-logo.png", alt: "Metaview - Interview intelligence platform", width: 56, height: 28 },
-  { src: "/images/plain-new-logo.png", alt: "Plain - Customer support platform", width: 56, height: 28 },
-  { src: "/images/cara-ai-logo.png", alt: "Cara AI - AI platform", width: 56, height: 28 },
+  { src: "/images/metaview-new-logo.png", alt: "Metaview - Interview intelligence platform", width: 80, height: 40 },
+  { src: "/images/plain-new-logo.png", alt: "Plain - Customer support platform", width: 80, height: 40 },
+  { src: "/images/cara-ai-logo.png", alt: "Cara AI - AI platform", width: 80, height: 40 },
 ]
 
 const testimonials = [
@@ -436,7 +436,7 @@ export default function Fund() {
                     key={logo.alt}
                     className="group flex items-center justify-center transition-all duration-300 hover:scale-105"
                   >
-                    <div className="relative w-24 h-16 sm:w-28 sm:h-20 lg:w-32 lg:h-24 flex items-center justify-center p-3">
+                    <div className="relative w-40 h-20 sm:w-44 sm:h-24 lg:w-50 lg:h-28 flex items-center justify-center p-3">
                       <Image
                         src={logo.src || "/placeholder.svg"}
                         alt={logo.alt}
@@ -458,7 +458,7 @@ export default function Fund() {
                     key={logo.alt}
                     className="group flex items-center justify-center transition-all duration-300 hover:scale-105"
                   >
-                    <div className="relative w-24 h-16 sm:w-28 sm:h-20 lg:w-32 lg:h-24 flex items-center justify-center p-3">
+                    <div className="relative w-40 h-20 sm:w-44 sm:h-24 lg:w-50 lg:h-28 flex items-center justify-center p-3">
                       <Image
                         src={logo.src || "/placeholder.svg"}
                         alt={logo.alt}

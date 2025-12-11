@@ -204,13 +204,13 @@ export default function Page() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-4 lg:mb-6">
               Dynamic Growth Partners
             </h1>
-            <div className="max-w-[800px] mx-auto mt-4 lg:mt-6 space-y-3">
-              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
+            <div className="max-w-[800px] mx-auto mt-4 lg:mt-6 space-y-4">
+              <p className="text-sm sm:text-base lg:text-lg font-light leading-relaxed text-gray-200 tracking-wide">
                 Dynamic Growth Partners is focused on Founder-led company building and modern organizational design. We
                 work exclusively with technical Founders ranging from pre-seed through pre-IPO to help them grow faster,
                 execute better, and raise capital more effectively.
               </p>
-              <p className="text-xs sm:text-sm font-medium text-gray-400 tracking-wide">
+              <p className="text-sm sm:text-base lg:text-lg font-light leading-relaxed text-gray-300 tracking-wide">
                 Our approach is grounded in hands-on execution, and shaped by working alongside the best GTM and Product
                 leaders in the world. Whether you're building from zero or scaling toward repeatability, we help
                 translate product excellence into commercial outcomes. To date, over 50% of our clients have raised Tier
@@ -219,16 +219,16 @@ export default function Page() {
             </div>
           </header>
 
-          {/* Team Section - Adapted for 5 members */}
+          {/* Team Section - Adapted for 4 members */}
           <section className="mb-8" aria-labelledby="team">
             <div className="w-full h-px bg-gray-900 mb-6" />
             <h2 id="team" className="sr-only">
               Our Team
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 max-w-5xl mx-auto justify-items-center">
               {/* Dakota McKenzie */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-40 lg:h-40 relative mb-3 team-photo-container">
                   <Image
                     src="/images/dakota.jpeg"
                     alt="Dakota McKenzie - CEO of Dynamic Growth Partners"
@@ -249,7 +249,7 @@ export default function Page() {
 
               {/* Trey Johnson */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-40 lg:h-40 relative mb-3 team-photo-container">
                   <Image
                     src="/images/trey.jpeg"
                     alt="Trey Johnson - Operating Partner at Dynamic Growth Partners"
@@ -270,7 +270,7 @@ export default function Page() {
 
               {/* Mike Haylon */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-40 lg:h-40 relative mb-3 team-photo-container">
                   <Image
                     src="/images/mike-haylon.png"
                     alt="Mike Haylon - Operating Partner at Dynamic Growth Partners"
@@ -291,7 +291,7 @@ export default function Page() {
 
               {/* Cindy Boulous */}
               <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-36 lg:h-36 relative mb-3 team-photo-container">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-40 lg:h-40 relative mb-3 team-photo-container">
                   <Image
                     src="/images/cindy-boulous.jpeg"
                     alt="Cindy Boulous - Executive Assistant at Dynamic Growth Partners"
