@@ -188,6 +188,24 @@ export default function LogoGrid() {
       width: 100,
       height: 50,
     },
+    {
+      src: "/images/malachyte-logo.png",
+      alt: "Malachyte - Technology platform",
+      width: 100,
+      height: 50,
+    },
+    {
+      src: "/images/safety-logo.png",
+      alt: "Safety - Security platform",
+      width: 100,
+      height: 50,
+    },
+    {
+      src: "/images/ours-privacy-logo.png",
+      alt: "Ours Privacy - Privacy platform",
+      width: 100,
+      height: 50,
+    },
   ]
 
   return (
