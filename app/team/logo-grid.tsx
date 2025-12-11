@@ -123,8 +123,8 @@ export default function LogoGrid() {
     {
       src: "/images/crew-only-logo.png",
       alt: "CrewAI - AI agent framework",
-      width: 100,
-      height: 50,
+      width: 85,
+      height: 42,
     },
     {
       src: "/images/gradient-labs-logo.png",
@@ -154,8 +154,8 @@ export default function LogoGrid() {
     {
       src: "/images/koddi-logo.png",
       alt: "Koddi - Digital advertising platform",
-      width: 100,
-      height: 50,
+      width: 85,
+      height: 42,
     },
     {
       src: "/images/paradime-logo.png",
