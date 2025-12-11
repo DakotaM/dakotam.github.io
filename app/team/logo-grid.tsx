@@ -1,7 +1,4 @@
-"use client"
-
 import Image from "next/image"
-import { useEffect, useState } from "react"
 
 // Define the logo data structure
 interface Logo {
@@ -12,13 +9,6 @@ interface Logo {
 }
 
 export default function LogoGrid() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    // Set visible after component mounts to enable lazy loading
-    setIsVisible(true)
-  }, [])
-
   const logos: Logo[] = [
     // Row 1
     {
@@ -212,17 +202,15 @@ export default function LogoGrid() {
     <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 sm:gap-6 items-center justify-items-center">
       {logos.map((logo, index) => (
         <div key={index} className="w-24 sm:w-28 md:w-32 h-16 sm:h-20 flex items-center justify-center logo-container">
-          {isVisible && (
-            <Image
-              src={logo.src || "/placeholder.svg"}
-              alt={logo.alt}
-              width={logo.width}
-              height={logo.height}
-              className="object-contain logo-image mix-blend-lighten"
-              loading={index < 10 ? "eager" : "lazy"}
-              sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
-            />
-          )}
+          <Image
+            src={logo.src || "/placeholder.svg"}
+            alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
+            className="object-contain logo-image mix-blend-lighten"
+            loading={index < 10 ? "eager" : "lazy"}
+            sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
+          />
         </div>
       ))}
     </div>

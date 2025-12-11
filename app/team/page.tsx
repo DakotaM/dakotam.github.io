@@ -316,7 +316,7 @@ export default function Page() {
                     src="/images/mike-haylon.png"
                     alt="Mike Haylon - Operating Partner at Dynamic Growth Partners"
                     fill
-                    priority
+                    loading="eager"
                     className="object-cover team-photo"
                     sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
                   />
@@ -337,7 +337,7 @@ export default function Page() {
                     src="/images/ben-cappellacci.jpeg"
                     alt="Ben Cappellacci - FDE Advisor at Dynamic Growth Partners"
                     fill
-                    priority
+                    loading="lazy"
                     className="object-cover team-photo"
                     sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
                   />
@@ -358,7 +358,7 @@ export default function Page() {
                     src="/images/cindy-boulous.jpeg"
                     alt="Cindy Boulous - Executive Assistant at Dynamic Growth Partners"
                     fill
-                    priority
+                    loading="lazy"
                     className="object-cover team-photo"
                     sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
                   />
