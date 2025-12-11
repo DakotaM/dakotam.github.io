@@ -251,7 +251,7 @@ export default function Page() {
                 work exclusively with technical Founders ranging from pre-seed through pre-IPO to help them grow faster,
                 execute better, and raise capital more effectively.
               </p>
-              <p className="text-xs sm:text-sm font-medium text-gray-400 tracking-wide">
+              <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed text-gray-200 tracking-wide">
                 Our approach is grounded in hands-on execution, and shaped by working alongside the best GTM and Product
                 leaders in the world. Whether you're building from zero or scaling toward repeatability, we help
                 translate product excellence into commercial outcomes. To date, over 50% of our clients have raised Tier
