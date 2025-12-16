@@ -3,7 +3,6 @@ import Link from "next/link"
 import { Inter } from "next/font/google"
 import "../team-styles.css"
 import type { Metadata } from "next"
-import { Suspense } from "react"
 import LogoGrid from "./logo-grid"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -220,8 +219,7 @@ export default function Page() {
           </header>
 
           {/* Team Section - Adapted for 4 members */}
-          <section className="mb-8" aria-labelledby="team">
-            <div className="w-full h-px bg-gray-900 mb-6" />
+          <section className="mb-8 mt-12" aria-labelledby="team">
             <h2 id="team" className="sr-only">
               Our Team
             </h2>
@@ -313,8 +311,7 @@ export default function Page() {
           </section>
 
           {/* Experience Section (v110 style) */}
-          <section className="mb-8" aria-labelledby="experience">
-            <div className="w-full h-px bg-gray-900 mb-6" />
+          <section className="mb-8 mt-12" aria-labelledby="experience">
             <div className="max-w-4xl mx-auto">
               <h2
                 id="experience"
@@ -323,28 +320,12 @@ export default function Page() {
               >
                 Our Partners
               </h2>
-              <Suspense
-                fallback={
-                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-4 items-center justify-items-center">
-                    {Array(25)
-                      .fill(0)
-                      .map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-20 sm:w-24 md:w-28 h-12 sm:h-16 flex items-center justify-center logo-container animate-pulse bg-gray-800 rounded-md"
-                        ></div>
-                      ))}
-                  </div>
-                }
-              >
-                <LogoGrid />
-              </Suspense>
+              <LogoGrid />
             </div>
           </section>
 
           {/* Contact Section (v110 style) */}
-          <section className="text-center py-4" aria-labelledby="contact">
-            <div className="w-full h-px bg-gray-900 mb-6" />
+          <section className="text-center py-4 mt-12" aria-labelledby="contact">
             <div className="max-w-[800px] mx-auto">
               <Link
                 href="/contact"

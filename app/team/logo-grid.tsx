@@ -80,8 +80,8 @@ export default function LogoGrid() {
       height: 50,
     },
     {
-      src: "/images/flightcrew-new-logo.png",
-      alt: "Flightcrew - Aviation technology platform",
+      src: "/images/restate-new-logo.png",
+      alt: "Restate - Durable execution platform",
       width: 100,
       height: 50,
     },
@@ -208,7 +208,8 @@ export default function LogoGrid() {
             width={logo.width}
             height={logo.height}
             className="object-contain logo-image mix-blend-lighten"
-            loading={index < 10 ? "eager" : "lazy"}
+            loading={index < 5 ? "eager" : "lazy"}
+            priority={index < 5}
             sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
           />
         </div>
