@@ -103,7 +103,9 @@ export default function RootLayout({
       <body className={nunitoSans.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
         <Analytics />
-        <Tracker />
+        <Suspense fallback={null}>
+          <Tracker />
+        </Suspense>
         <Script id="reb2b-tracking" strategy="afterInteractive">
           {`
             !function(key) {
