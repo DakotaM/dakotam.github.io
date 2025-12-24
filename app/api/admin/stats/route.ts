@@ -7,19 +7,16 @@ export async function GET(request: NextRequest) {
   try {
     const supabase = createAdminClient()
 
-    // Get date range from query params
     const searchParams = request.nextUrl.searchParams
     const days = Number.parseInt(searchParams.get("days") || "30")
     const startDate = new Date()
     startDate.setDate(startDate.getDate() - days)
 
-    // Total page views
     const { count: totalViews } = await supabase
       .from("page_views")
       .select("*", { count: "exact", head: true })
       .gte("created_at", startDate.toISOString())
 
-    // Unique visitors
     const { data: uniqueVisitorsData } = await supabase
       .from("page_views")
       .select("visitor_id")
@@ -27,7 +24,6 @@ export async function GET(request: NextRequest) {
 
     const uniqueVisitors = new Set(uniqueVisitorsData?.map((v) => v.visitor_id) || []).size
 
-    // Top pages
     const { data: allPages } = await supabase
       .from("page_views")
       .select("page_path")
@@ -46,7 +42,6 @@ export async function GET(request: NextRequest) {
       .slice(0, 10)
       .map(([page, count]) => ({ page, count }))
 
-    // Top referrers
     const { data: allReferrers } = await supabase
       .from("page_views")
       .select("referrer")
@@ -68,7 +63,6 @@ export async function GET(request: NextRequest) {
       .slice(0, 10)
       .map(([referrer, count]) => ({ referrer, count }))
 
-    // UTM source breakdown
     const { data: utmData } = await supabase
       .from("page_views")
       .select("utm_source, utm_campaign")
@@ -89,10 +83,32 @@ export async function GET(request: NextRequest) {
       .slice(0, 10)
       .map(([source, count]) => ({ source, count }))
 
-    // Recent activity
+    const { data: allCountries } = await supabase
+      .from("page_views")
+      .select("country")
+      .gte("created_at", startDate.toISOString())
+      .not("country", "is", null)
+
+    const countryCounts = (allCountries || []).reduce(
+      (acc, { country }) => {
+        if (country) {
+          acc[country] = (acc[country] || 0) + 1
+        }
+        return acc
+      },
+      {} as Record<string, number>,
+    )
+
+    const topCountries = Object.entries(countryCounts)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 10)
+      .map(([country, count]) => ({ country, count }))
+
     const { data: recentViews } = await supabase
       .from("page_views")
-      .select("*")
+      .select(
+        "id, created_at, page_path, referrer, utm_source, utm_campaign, visitor_id, country, country_code, as_name, ip_address",
+      )
       .order("created_at", { ascending: false })
       .limit(20)
 
@@ -102,6 +118,7 @@ export async function GET(request: NextRequest) {
       topPages,
       topReferrers,
       topUtm,
+      topCountries,
       recentViews: recentViews || [],
     })
   } catch (error) {

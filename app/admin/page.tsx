@@ -11,6 +11,7 @@ interface Stats {
   topPages: Array<{ page: string; count: number }>
   topReferrers: Array<{ referrer: string; count: number }>
   topUtm: Array<{ source: string; count: number }>
+  topCountries: Array<{ country: string; count: number }>
   recentViews: Array<{
     id: string
     created_at: string
@@ -19,6 +20,10 @@ interface Stats {
     utm_source: string | null
     utm_campaign: string | null
     visitor_id: string
+    country: string | null
+    country_code: string | null
+    as_name: string | null
+    ip_address: string | null
   }>
 }
 
@@ -103,7 +108,7 @@ export default function AdminPage() {
           </Card>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <Card>
             <CardHeader>
               <CardTitle>Top Pages</CardTitle>
@@ -161,6 +166,39 @@ export default function AdminPage() {
               </Table>
             </CardContent>
           </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Top Countries</CardTitle>
+              <CardDescription>Visitors by location</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Country</TableHead>
+                    <TableHead className="text-right">Views</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {stats.topCountries && stats.topCountries.length > 0 ? (
+                    stats.topCountries.map((country, i) => (
+                      <TableRow key={i}>
+                        <TableCell className="text-sm">{country.country}</TableCell>
+                        <TableCell className="text-right font-medium">{country.count}</TableCell>
+                      </TableRow>
+                    ))
+                  ) : (
+                    <TableRow>
+                      <TableCell colSpan={2} className="text-center text-muted-foreground">
+                        No location data
+                      </TableCell>
+                    </TableRow>
+                  )}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
         </div>
 
         {stats.topUtm.length > 0 && (
@@ -201,6 +239,7 @@ export default function AdminPage() {
                 <TableRow>
                   <TableHead>Time</TableHead>
                   <TableHead>Page</TableHead>
+                  <TableHead>Location</TableHead>
                   <TableHead>Referrer</TableHead>
                   <TableHead>UTM</TableHead>
                 </TableRow>
@@ -210,6 +249,11 @@ export default function AdminPage() {
                   <TableRow key={view.id}>
                     <TableCell className="text-sm">{new Date(view.created_at).toLocaleString()}</TableCell>
                     <TableCell className="font-mono text-sm">{view.page_path}</TableCell>
+                    <TableCell className="text-sm">
+                      {view.country
+                        ? `${view.country_code || ""} ${view.country}`.trim()
+                        : view.as_name || view.ip_address || "—"}
+                    </TableCell>
                     <TableCell className="text-sm max-w-[200px] truncate">{view.referrer || "Direct"}</TableCell>
                     <TableCell className="text-sm">
                       {view.utm_source

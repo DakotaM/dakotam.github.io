@@ -15,6 +15,31 @@ function getClientIp(request: NextRequest): string | null {
   return null
 }
 
+async function getIpInfo(ip: string) {
+  const token = process.env.IPINFO_TOKEN
+  if (!token || !ip) {
+    console.log("[v0] IPInfo lookup skipped - missing token or IP")
+    return null
+  }
+
+  try {
+    console.log("[v0] Fetching IP info for:", ip)
+    const response = await fetch(`https://api.ipinfo.io/lite/${ip}?token=${token}`)
+
+    if (!response.ok) {
+      console.error("[v0] IPInfo API error:", response.status)
+      return null
+    }
+
+    const data = await response.json()
+    console.log("[v0] IPInfo data received:", data)
+    return data
+  } catch (error) {
+    console.error("[v0] Error fetching IP info:", error)
+    return null
+  }
+}
+
 export async function POST(request: NextRequest) {
   console.log("[v0] Track API called")
 
@@ -57,6 +82,8 @@ export async function POST(request: NextRequest) {
     const ip_address = getClientIp(request)
     console.log("[v0] Client IP:", ip_address)
 
+    const ipInfo = ip_address ? await getIpInfo(ip_address) : null
+
     const supabase = await createClient()
 
     console.log("[v0] Checking if visitor is new:", { visitor_id, ip_address })
@@ -69,7 +96,6 @@ export async function POST(request: NextRequest) {
     const isNewVisitor = count === 0
     console.log("[v0] Is new visitor:", isNewVisitor, "Previous count:", count)
 
-    // Insert page view
     console.log("[v0] Inserting page view into database")
     const { data: pageView, error: insertError } = await supabase
       .from("page_views")
@@ -90,6 +116,11 @@ export async function POST(request: NextRequest) {
         language,
         timezone,
         is_new_visitor: isNewVisitor,
+        country: ipInfo?.country || null,
+        country_code: ipInfo?.country_code || null,
+        continent: ipInfo?.continent || null,
+        asn: ipInfo?.asn || null,
+        as_name: ipInfo?.as_name || null,
       })
       .select()
       .single()
@@ -112,6 +143,10 @@ export async function POST(request: NextRequest) {
         visitor_id: visitor_id,
         ip_address: ip_address || undefined,
         is_new_visitor: isNewVisitor,
+        country: ipInfo?.country,
+        country_code: ipInfo?.country_code,
+        city: ipInfo?.city,
+        as_name: ipInfo?.as_name,
       }
       console.log("[v0] Slack notification data:", slackData)
       slackSent = await sendSlackNotification(slackData)

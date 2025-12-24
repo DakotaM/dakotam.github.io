@@ -6,6 +6,10 @@ export async function sendSlackNotification(message: {
   visitor_id: string
   ip_address?: string
   is_new_visitor: boolean
+  country?: string
+  country_code?: string
+  city?: string
+  as_name?: string
 }) {
   const webhookUrl = process.env.SLACK_WEBHOOK_URL || process.env.NEXT_PUBLIC_SLACK_WEBHOOK_URL
 
@@ -26,13 +30,20 @@ export async function sendSlackNotification(message: {
     const ipAddress = message.ip_address || "Unknown"
     const visitorId = message.visitor_id || "Unknown"
 
+    const location = message.country
+      ? `${message.country} ${message.country_code ? `(${message.country_code})` : ""}`
+      : "Unknown"
+    const organization = message.as_name || "Unknown"
+
     const text = `${badge}
 *Page:* ${pagePath}
+*Location:* ${location}
+*Organization:* ${organization}
 *Referrer:* ${referrer}
 *UTM Source:* ${utmSource}
 *UTM Campaign:* ${utmCampaign}
 *IP Address:* ${ipAddress}
-*Visitor ID:* ${visitorId}`
+*Visitor ID:* ${visitorId.substring(0, 12)}...`
 
     console.log("[v0] Formatted Slack message:", text)
 
