@@ -1,11 +1,10 @@
 import { NextResponse } from "next"
 import { sendSlackNotification } from "@/lib/slack"
 
+export const dynamic = "force-dynamic"
+
 export async function GET() {
   try {
-    console.log("[v0] Testing Slack webhook...")
-    console.log("[v0] Webhook URL configured:", !!process.env.SLACK_WEBHOOK_URL)
-
     const result = await sendSlackNotification(
       "🧪 Test Notification",
       "This is a test message to verify your Slack webhook is working correctly!",
@@ -21,7 +20,7 @@ export async function GET() {
       message: result ? "Slack notification sent successfully!" : "Failed to send Slack notification",
     })
   } catch (error) {
-    console.error("[v0] Error in test-slack:", error)
+    console.error("Error in test-slack:", error)
     return NextResponse.json(
       {
         success: false,

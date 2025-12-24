@@ -1,6 +1,8 @@
 import { NextResponse } from "next"
 import { createAdminClient } from "@/lib/supabase/admin"
 
+export const dynamic = "force-dynamic"
+
 export async function GET() {
   try {
     const supabase = createAdminClient()
@@ -13,7 +15,7 @@ export async function GET() {
       .limit(10)
 
     if (viewsError) {
-      console.error("[v0] Error fetching views:", viewsError)
+      console.error("Error fetching views:", viewsError)
       return NextResponse.json({ error: viewsError.message }, { status: 500 })
     }
 
@@ -33,7 +35,7 @@ export async function GET() {
       message: "Tracking data retrieved successfully",
     })
   } catch (error) {
-    console.error("[v0] Error in check-tracking:", error)
+    console.error("Error in check-tracking:", error)
     return NextResponse.json(
       {
         success: false,
