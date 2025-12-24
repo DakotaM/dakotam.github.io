@@ -10,6 +10,7 @@ export async function sendSlackNotification(message: {
   const webhookUrl = process.env.SLACK_WEBHOOK_URL || process.env.NEXT_PUBLIC_SLACK_WEBHOOK_URL
 
   console.log("[v0] Slack webhook URL configured:", !!webhookUrl)
+  console.log("[v0] Notification data received:", message)
 
   if (!webhookUrl) {
     console.error("[v0] Slack webhook URL not configured")
@@ -18,15 +19,22 @@ export async function sendSlackNotification(message: {
 
   try {
     const badge = message.is_new_visitor ? "🎉 NEW VISITOR" : "👤 Returning Visitor"
-    const text = `${badge}
-*Page:* ${message.page_path}
-*Referrer:* ${message.referrer || "Direct"}
-*UTM Source:* ${message.utm_source || "N/A"}
-*UTM Campaign:* ${message.utm_campaign || "N/A"}
-*IP Address:* ${message.ip_address || "Unknown"}
-*Visitor ID:* ${message.visitor_id}`
+    const pagePath = message.page_path || "/"
+    const referrer = message.referrer || "Direct"
+    const utmSource = message.utm_source || "N/A"
+    const utmCampaign = message.utm_campaign || "N/A"
+    const ipAddress = message.ip_address || "Unknown"
+    const visitorId = message.visitor_id || "Unknown"
 
-    console.log("[v0] Sending Slack notification:", { badge, page_path: message.page_path })
+    const text = `${badge}
+*Page:* ${pagePath}
+*Referrer:* ${referrer}
+*UTM Source:* ${utmSource}
+*UTM Campaign:* ${utmCampaign}
+*IP Address:* ${ipAddress}
+*Visitor ID:* ${visitorId}`
+
+    console.log("[v0] Formatted Slack message:", text)
 
     const response = await fetch(webhookUrl, {
       method: "POST",

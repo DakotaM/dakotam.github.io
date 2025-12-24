@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.json()
-    console.log("[v0] Received tracking data:", body)
+    console.log("[v0] Received tracking data:", JSON.stringify(body, null, 2))
 
     const {
       page_path,
@@ -39,8 +39,18 @@ export async function POST(request: NextRequest) {
       timezone,
     } = body
 
+    console.log("[v0] Parsed fields:", {
+      page_path,
+      visitor_id,
+      has_page_path: !!page_path,
+      has_visitor_id: !!visitor_id,
+    })
+
     if (!page_path || !visitor_id) {
-      console.log("[v0] Missing required fields")
+      console.log("[v0] Missing required fields:", {
+        page_path: !!page_path,
+        visitor_id: !!visitor_id,
+      })
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
@@ -94,15 +104,17 @@ export async function POST(request: NextRequest) {
     let slackSent = false
     if (isNewVisitor) {
       console.log("[v0] Attempting to send Slack notification for new visitor")
-      slackSent = await sendSlackNotification({
-        page_path,
+      const slackData = {
+        page_path: page_path,
         referrer: referrer || undefined,
         utm_source: utm_source || undefined,
         utm_campaign: utm_campaign || undefined,
-        visitor_id,
+        visitor_id: visitor_id,
         ip_address: ip_address || undefined,
         is_new_visitor: isNewVisitor,
-      })
+      }
+      console.log("[v0] Slack notification data:", slackData)
+      slackSent = await sendSlackNotification(slackData)
       console.log("[v0] Slack notification sent:", slackSent)
     } else {
       console.log("[v0] Skipping Slack notification for returning visitor")
