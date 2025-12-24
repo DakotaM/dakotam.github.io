@@ -4,6 +4,7 @@ import type React from "react"
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 import Script from "next/script"
+import { Tracker } from "@/components/tracker"
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -102,6 +103,7 @@ export default function RootLayout({
       <body className={nunitoSans.className}>
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>{children}</Suspense>
         <Analytics />
+        <Tracker />
         <Script id="reb2b-tracking" strategy="afterInteractive">
           {`
             !function(key) {
