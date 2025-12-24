@@ -9,15 +9,20 @@ export function Tracker() {
   const searchParams = useSearchParams()
 
   useEffect(() => {
+    console.log("[v0] Tracker mounted, pathname:", pathname)
+
     // Don't track admin pages
     if (pathname?.startsWith("/admin")) {
+      console.log("[v0] Skipping admin page tracking")
       return
     }
 
     const trackPageView = async () => {
       try {
         const visitorId = getVisitorId()
-        const sessionId = getSessionId() // Added session tracking
+        const sessionId = getSessionId()
+
+        console.log("[v0] Tracking data:", { visitorId, sessionId, pathname })
 
         const trackingData = {
           page_path: pathname || "/",
@@ -28,7 +33,7 @@ export function Tracker() {
           utm_term: searchParams?.get("utm_term") || null,
           utm_content: searchParams?.get("utm_content") || null,
           visitor_id: visitorId,
-          session_id: sessionId, // Include session ID in tracking data
+          session_id: sessionId,
           user_agent: navigator.userAgent,
           screen_width: window.screen.width,
           screen_height: window.screen.height,
@@ -36,13 +41,18 @@ export function Tracker() {
           timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         }
 
-        await fetch("/api/track", {
+        console.log("[v0] Sending tracking request to /api/track")
+
+        const response = await fetch("/api/track", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(trackingData),
         })
+
+        const result = await response.json()
+        console.log("[v0] Tracking response:", result)
       } catch (error) {
         console.error("[v0] Tracking error:", error)
       }

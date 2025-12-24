@@ -16,8 +16,11 @@ function getClientIp(request: NextRequest): string | null {
 }
 
 export async function POST(request: NextRequest) {
+  console.log("[v0] Track API called")
+
   try {
     const body = await request.json()
+    console.log("[v0] Received tracking data:", body)
 
     const {
       page_path,
@@ -37,23 +40,27 @@ export async function POST(request: NextRequest) {
     } = body
 
     if (!page_path || !visitor_id) {
+      console.log("[v0] Missing required fields")
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
     const ip_address = getClientIp(request)
+    console.log("[v0] Client IP:", ip_address)
 
     const supabase = await createClient()
 
-    let isNewVisitor = false
+    console.log("[v0] Checking if visitor is new:", { visitor_id, ip_address })
 
     const { count } = await supabase
       .from("page_views")
       .select("*", { count: "exact", head: true })
       .or(`visitor_id.eq.${visitor_id},ip_address.eq.${ip_address}`)
 
-    isNewVisitor = count === 0
+    const isNewVisitor = count === 0
+    console.log("[v0] Is new visitor:", isNewVisitor, "Previous count:", count)
 
     // Insert page view
+    console.log("[v0] Inserting page view into database")
     const { data: pageView, error: insertError } = await supabase
       .from("page_views")
       .insert({
@@ -82,8 +89,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Failed to track page view" }, { status: 500 })
     }
 
+    console.log("[v0] Page view inserted successfully:", pageView?.id)
+
     let slackSent = false
     if (isNewVisitor) {
+      console.log("[v0] Attempting to send Slack notification for new visitor")
       slackSent = await sendSlackNotification({
         page_path,
         referrer: referrer || undefined,
@@ -93,9 +103,13 @@ export async function POST(request: NextRequest) {
         ip_address: ip_address || undefined,
         is_new_visitor: isNewVisitor,
       })
+      console.log("[v0] Slack notification sent:", slackSent)
+    } else {
+      console.log("[v0] Skipping Slack notification for returning visitor")
     }
 
     if (pageView && isNewVisitor) {
+      console.log("[v0] Logging alert to database")
       await supabase.from("alerts").insert({
         page_view_id: pageView.id,
         alert_type: "slack",
