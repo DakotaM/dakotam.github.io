@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Dynamic Growth Partners - GTM Consulting for Technical Founders",
   description:
-    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), Mike Haylon (Operating Partner), and Cindy Boulous (Executive Assistant). Over 25% of clients raise Tier-1 venture rounds.",
+    "Dynamic Growth Partners provides go-to-market consulting, sales acceleration, and business development for technical founders. Led by Dakota McKenzie (CEO), Trey Johnson (Operating Partner), and Cindy Boulous (Executive Assistant). Over 25% of clients raise Tier-1 venture rounds.",
   keywords: [
     "growth partners",
     "GTM consulting",
@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     "business development",
     "Dakota McKenzie",
     "Trey Johnson",
-    "Mike Haylon",
     "Cindy Boulous",
     "startup growth",
     "venture capital preparation",
@@ -83,7 +82,6 @@ const structuredData = {
       employee: [
         { "@id": "https://dynamic.vc/team/#dakota-mckenzie" },
         { "@id": "https://dynamic.vc/team/#trey-johnson" },
-        { "@id": "https://dynamic.vc/team/#mike-haylon" },
         { "@id": "https://dynamic.vc/team/#cindy-boulous" },
       ],
     },
@@ -128,22 +126,7 @@ const structuredData = {
       knowsAbout: ["Sales Operations", "Business Development", "Go-to-Market Strategy", "Technical Founders"],
       sameAs: ["https://www.linkedin.com/in/trey-j-07156924/"],
     },
-    {
-      "@type": "Person",
-      "@id": "https://dynamic.vc/team/#mike-haylon",
-      name: "Mike Haylon",
-      jobTitle: "Operating Partner",
-      worksFor: { "@id": "https://dynamic.vc/team/#organization" },
-      image: {
-        "@type": "ImageObject",
-        url: "/images/mike-haylon.png",
-        width: 400,
-        height: 400,
-      },
-      description:
-        "Operating Partner at Dynamic Growth Partners, specializing in go-to-market strategy and business development.",
-      knowsAbout: ["Go-to-Market Strategy", "Business Development", "Sales Operations", "Technical Founders"],
-    },
+
     {
       "@type": "Person",
       "@id": "https://dynamic.vc/team/#cindy-boulous",
@@ -223,7 +206,7 @@ export default function Page() {
             <h2 id="team" className="sr-only">
               Our Team
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 max-w-5xl mx-auto justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 max-w-4xl mx-auto justify-items-center">
               {/* Dakota McKenzie */}
               <div className="flex flex-col items-center">
                 <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-40 lg:h-40 relative mb-3 team-photo-container">
@@ -262,27 +245,6 @@ export default function Page() {
                   className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide whitespace-nowrap"
                 >
                   <h3>Trey Johnson</h3>
-                </Link>
-                <p className="text-xs sm:text-sm text-gray-400">Operating Partner</p>
-              </div>
-
-              {/* Mike Haylon */}
-              <div className="flex flex-col items-center">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 lg:w-40 lg:h-40 relative mb-3 team-photo-container">
-                  <Image
-                    src="/images/mike-haylon.png"
-                    alt="Mike Haylon - Operating Partner at Dynamic Growth Partners"
-                    fill
-                    loading="eager"
-                    className="object-cover team-photo"
-                    sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 144px"
-                  />
-                </div>
-                <Link
-                  href="https://www.linkedin.com/in/mikehaylon/"
-                  className="text-lg sm:text-xl hover:underline text-white font-medium tracking-wide whitespace-nowrap"
-                >
-                  <h3>Mike Haylon</h3>
                 </Link>
                 <p className="text-xs sm:text-sm text-gray-400">Operating Partner</p>
               </div>
