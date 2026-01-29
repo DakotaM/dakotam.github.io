@@ -616,26 +616,45 @@ export default function Fund() {
                   Select Personal Investments
                 </h4>
 
+                {/* Main grid for complete rows */}
                 <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
-                  {personalInvestments.map((logo, index) => (
-                    <div
-                      key={index}
-                      className={`group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105 ${
-                        index === personalInvestments.length - 1 && personalInvestments.length % 3 === 1
-                          ? "col-start-2"
-                          : ""
-                      }`}
-                    >
-                      <Image
-                        src={logo.src || "/placeholder.svg"}
-                        alt={logo.alt}
-                        width={logo.width}
-                        height={logo.height}
-                        className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-                        loading="lazy"
-                      />
-                    </div>
-                  ))}
+                  {personalInvestments
+                    .slice(0, personalInvestments.length - (personalInvestments.length % 3 || 3))
+                    .map((logo, index) => (
+                      <div
+                        key={index}
+                        className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
+                      >
+                        <Image
+                          src={logo.src || "/placeholder.svg"}
+                          alt={logo.alt}
+                          width={logo.width}
+                          height={logo.height}
+                          className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                </div>
+                {/* Centered last row for remaining logos */}
+                <div className="flex justify-center gap-8 sm:gap-12 md:gap-16 mt-4 max-w-4xl mx-auto">
+                  {personalInvestments
+                    .slice(personalInvestments.length - (personalInvestments.length % 3 || 3))
+                    .map((logo, index) => (
+                      <div
+                        key={`last-${index}`}
+                        className="group flex items-center justify-center h-12 sm:h-14 lg:h-16 transition-all duration-300 hover:scale-105"
+                      >
+                        <Image
+                          src={logo.src || "/placeholder.svg"}
+                          alt={logo.alt}
+                          width={logo.width}
+                          height={logo.height}
+                          className="h-12 sm:h-14 lg:h-16 object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
