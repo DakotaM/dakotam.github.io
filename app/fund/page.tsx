@@ -336,6 +336,12 @@ const experienceLogos = [
 const personalInvestments = [
   { src: "/images/thatch-logo.png", alt: "Thatch - Benefits platform", width: 80, height: 40 },
   {
+    src: "/images/workos-new-logo.png",
+    alt: "WorkOS - Enterprise authentication platform",
+    width: 80,
+    height: 40,
+  },
+  {
     src: "/images/clay-logo.png",
     alt: "Clay - Data enrichment platform",
     width: 80,

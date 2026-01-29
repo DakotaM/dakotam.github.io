@@ -85,12 +85,12 @@ If you don't want Slack notifications, simply don't set the `SLACK_WEBHOOK_URL` 
 
 The admin dashboard (`/admin/*`) is automatically excluded from tracking. To exclude other pages, modify the `Tracker` component:
 
-```typescript
+\`\`\`typescript
 // In components/tracker.tsx
 if (pathname?.startsWith("/admin") || pathname?.startsWith("/your-page")) {
   return
 }
-```
+\`\`\`
 
 ### Customize Slack Messages
 
