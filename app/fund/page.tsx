@@ -637,7 +637,7 @@ export default function Fund() {
                     ))}
                 </div>
                 {/* Centered last row for remaining logos */}
-                <div className="flex justify-center gap-8 sm:gap-12 md:gap-16 mt-4 max-w-4xl mx-auto">
+                <div className="flex justify-center gap-16 sm:gap-24 md:gap-32 mt-4 max-w-4xl mx-auto">
                   {personalInvestments
                     .slice(personalInvestments.length - (personalInvestments.length % 3 || 3))
                     .map((logo, index) => (
